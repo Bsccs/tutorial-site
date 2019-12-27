@@ -24,7 +24,7 @@ cscript OSPP.VBS /inpkey:XXXXX-XXXXX-XXXXX-XXXXX-XXXXX
 cscript OSPP.VBS /sethst:kms5.msguides.com
 cscript OSPP.VBS /act
 
-https://www.youtube.com/watch?v=IOE5KoV--9k
+
 
 
 page 3 sawayam
