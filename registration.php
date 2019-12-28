@@ -38,11 +38,13 @@ if(isset($_POST['button']))
 	$Qualification=$_POST['Qualification'];
 	$Qualification=implode(",",$Qualification);
 	$photo=$_FILES["photo"]["name"];
+	$district=$_POST['select'];
 	$Username=$_POST['usename'];
 	$Password=$_POST['password'];
 	
 	
-	echo $name."<br>".$email."<br>".$Address."<br>".$Phone."<br>".$Gender."<br>".$Qualification."<br>".$photo."<br>".$Username."<br>".$Password;
+	echo $name."<br>".$email."<br>".$Address."<br>".
+	$Phone."<br>".$Gender."<br>".$Qualification."<br>".$photo."<br>".$district."<br>".$Username."<br>".$Password;
 	
 }
 
