@@ -47,6 +47,7 @@ if(isset($_POST['button']))
 	$Phone."<br>".$Gender."<br>".$Qualification."<br>".$photo."<br>".$district."<br>".$Username."<br>".$Password;
 	
 }
+	
 
 ?>
 
