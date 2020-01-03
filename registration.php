@@ -60,7 +60,7 @@ Password:<input type="password" name="password"id="password"><span id="sp10" sty
 
 		var Phone=document.getElementById('phone').value;
 	
-		/*var Gender=document.getElementsByName('gender');
+		var Gender=document.getElementsByName('gender');
 		
 		var Qualification=document.getElementsByName('Qualification[]');
 		
@@ -70,27 +70,27 @@ Password:<input type="password" name="password"id="password"><span id="sp10" sty
 		
 		var Username=document.getElementById('usename').value;
 		
-		var Password=document.getElementById('password').value;*/
+		var Password=document.getElementById('password').value;
 		
 		
 
 		if(name=="")
 		{
-			document.getElementById('sp1').innerHTML="name required";
+			document.getElementById('sp1').innerHTML="------>name required";
 			//alert('name required');
 			return false;
 		}
 
 		if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
 		{
-			document.getElementById('sp2').innerHTML="email required";
+			document.getElementById('sp2').innerHTML="----->email required";
 			//alert('email required');
 			return false;
 		}
 
 		if(add=="")
 		{
-			document.getElementById('sp3').innerHTML="address required";
+			document.getElementById('sp3').innerHTML="----->address required";
 			//alert('name required');
 			return false;
 		}
@@ -99,13 +99,13 @@ Password:<input type="password" name="password"id="password"><span id="sp10" sty
 
 		if(Phone=="" || isNaN(Phone) || Phone.length>10)
 		{
-			document.getElementById('sp4').innerHTML="mobile number required";
+			document.getElementById('sp4').innerHTML="----->mobile number required";
 			//alert('mobile number required');
 			return false;
 		}
 		
 		
-	/*	flag=0;
+		flag=0;
 		for(i=0;i<Gender.length;i++)
 		{
 			if(Gender[i].checked==true)
@@ -116,7 +116,7 @@ Password:<input type="password" name="password"id="password"><span id="sp10" sty
 		}
 		if(flag==0)
 		{
-			document.getElementById('sp5').innerHTML="select a gender ";
+			document.getElementById('sp5').innerHTML="------>select a gender ";
 
 			return false;
 
@@ -133,12 +133,37 @@ Password:<input type="password" name="password"id="password"><span id="sp10" sty
 		}
 			if(flagb==0)
 		{
-			document.getElementById('sp6').innerHTML="select Qualification";
+			document.getElementById('sp6').innerHTML="---->select Qualification";
 
 			return false;
 
 		}
-*/
+
+		if(photo=="")
+		{
+			document.getElementById('sp7').innerHTML="------>photo required";
+			//alert('name required');
+			return false;
+		}
+		if(district=="")
+		{
+			document.getElementById('sp8').innerHTML="------>district required";
+			//alert('name required');
+			return false;
+		}
+		if(Username=="")
+		{
+			document.getElementById('sp9').innerHTML="------>username required";
+			//alert('name required');
+			return false;
+		}
+		if(Password=="")
+		{
+			document.getElementById('sp10').innerHTML="------>password required";
+			//alert('name required');
+			return false;
+		}
+
 
 	}
 
