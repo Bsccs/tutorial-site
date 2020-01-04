@@ -1,8 +1,8 @@
-requirement of tutorial site
+requirements being implemented in this tutorial site
 
 
-1)Video quality and playback options-users are able to change the quality of videos as per there convenience.
-2)search bar to search for topics and conetents .
+1)Video quality and playback options-users are able to change the quality of videos as per their convenience.
+2)search bar to search for topics and contents .
 3)3 levels:level-0:is a responsive page where content gets updated everyday.level-2:is tutorial videos and content and level-3:totally pratical class.
 4)provides no advertisements.
 5)Provide switches to go from bottom to top, links to other websites to read more and links to give info about keywords.
