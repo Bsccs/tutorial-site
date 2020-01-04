@@ -13,6 +13,11 @@ Password:<input type="password" name="password"><br><br>
 <?php
 include 'connection.php';
 session_start();
+if(isset($_SESSION['user_id']))
+{
+	header('location:logtable.php');
+}
+
 if(isset($_POST['button']))
 {
 	$Username=$_POST['usename'];

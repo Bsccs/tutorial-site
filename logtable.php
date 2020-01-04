@@ -1,6 +1,11 @@
 <?php
 include 'connection.php';
 session_start();
+
+if(!isset($_SESSION['user_id']))
+{
+	header('location:login.php');
+}
 $login_id=$_SESSION['user_id'];
 
 
@@ -78,3 +83,6 @@ Password
 </td>
 </tr>
 </table>
+<a href="logout.php">logout</a>
+</body>
+</html>
