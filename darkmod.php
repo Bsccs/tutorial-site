@@ -33,6 +33,3 @@ function myFunction() {
 </body>
 </html>
 
-<?php
-
-?>
