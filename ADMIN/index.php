@@ -29,7 +29,7 @@
 
       <form method="post">
         <div class="input-group mb-3">
-          <input type="text" class="form-control" placeholder="username">
+          <input type="text" name="usename" class="form-control" placeholder="username">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-user"></span>
@@ -37,7 +37,7 @@
           </div>
         </div>
         <div class="input-group mb-3">
-          <input type="password" class="form-control" placeholder="Password">
+          <input type="password" name="password" class="form-control" placeholder="Password">
           <div class="input-group-append">
             <div class="input-group-text">
               <span class="fas fa-lock"></span>
@@ -55,7 +55,7 @@
           </div>
           <!-- /.col -->
           <div class="col-4">
-            <button type="submit" class="btn btn-primary btn-block">Sign In</button>
+            <button type="submit" name="button" value="submit" class="btn btn-primary btn-block">Sign In</button>
           </div>
           <!-- /.col -->
         </div>
@@ -86,13 +86,12 @@
 
 
 
-
 <?php
 include 'connection.php';
 session_start();
 if(isset($_SESSION['user_id']))
 {
-	header('location:logtable.php');
+	header('location:dashboard.php');
 }
 
 if(isset($_POST['button']))
@@ -100,7 +99,7 @@ if(isset($_POST['button']))
 	$Username=$_POST['usename'];
 	$Password=$_POST['password'];
 	$result=mysqli_query($connection,"SELECT * 
-	FROM `registration_table` WHERE  Username ='".$Username."'AND Password ='".$Password."'");
+	FROM `login` WHERE  Username ='".$Username."'AND Password ='".$Password."'");
 	if(mysqli_num_rows($result)==1)
 	{
 		$row_data=mysqli_fetch_assoc($result);
@@ -108,7 +107,7 @@ if(isset($_POST['button']))
 		$_SESSION['user_id']=$row_data['login_id'];
 
 
-        header('location:logtable.php');
+        header('location:dashboard.php');
     }
     else
 	{
