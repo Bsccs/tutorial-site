@@ -13,7 +13,7 @@
     <ul class="navbar-nav ml-auto">
     
       <!-- logout Menu -->
-      <a href="logout.php"><i class="fas fa-sign-out-alt">  LOGOUT</i></a>
+      <a href="logout.php"><i class="fas fa-sign-out-alt">   LOGOUT</i></a>
         
   
 </nav>  
