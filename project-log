@@ -33,3 +33,19 @@ https://www.phptpoint.com/projects/simple-php-blog-script-free-download/
 
 
 change add inspector to manage inspector in admin dfd.
+
+bootstrap :
+<div class= "container-fluid">
+
+<div class="row">
+<div class="col-lg-4">
+<div class="form-group">
+<label>username</label>
+<input type="text" class="form-control" name="email" placeholder="enter your email">
+</div>
+</div>
+//close all the div
+
+
+
+pagination...for pages 
