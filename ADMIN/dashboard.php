@@ -40,17 +40,16 @@ if(!isset($_SESSION['user_id']))
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
 </head>
 
-
 <body class="hold-transition sidebar-mini layout-fixed">
 <div class="wrapper">
 
-  <!-- Navbar -->
+ <!-- Navbar -->
   
-  <!-- /.navbar -->
 <?php include 'navbar.php' ?>
 
-  <!-- Main Sidebar Container -->
-  <?php include 'leftbar.php' ?>
+ <!-- Main Sidebar Container -->
+
+<?php include 'leftbar.php' ?>
 
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
