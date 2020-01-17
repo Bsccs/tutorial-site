@@ -23,3 +23,8 @@ for responsive page.
      <!-- <script src="/js/bootstrap.min.js"></script> -->
           <!-- top-navigation -->
        
+			important
+
+			<?php include 'top-navigation.php'?>
+			<link rel="stylesheet" href="css/login.css">
+			<script src="js/login.js"></script> 

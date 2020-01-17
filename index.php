@@ -17,38 +17,3 @@
   </body>
 </html>
 
-<?php
-include 'connection.php';
-
-
-exit();
-session_start();
-if(isset($_SESSION['user_id']))
-{
-  header('location:dashboard.php');
-}
-
-if(isset($_POST['button']))
-{
-  $Username=$_POST['usename'];
-  $Password=$_POST['password'];
-  $result=mysqli_query($connection,"SELECT * 
-  FROM `login` WHERE  Username ='".$Username."'AND Password ='".$Password."'");
-  if(mysqli_num_rows($result)==1)
-  {
-    $row_data=mysqli_fetch_assoc($result);
-
-    $_SESSION['user_id']=$row_data['login_id'];
-
-
-        header('location:dashboard.php');
-    }
-    else
-  {
-        echo" <script> alert('You Have Entered Incorrect Password!');</script>";
-        exit();
-    }
-
-}
-?>
-
