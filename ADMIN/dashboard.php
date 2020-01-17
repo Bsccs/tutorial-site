@@ -7,11 +7,10 @@ if(!isset($_SESSION['user_id']))
   header('location:index.php');
 }
 ?>
-
+<!-- <------------------------------------------------------------------------------------------------------>
 <!-- html -->
 <!DOCTYPE html>
 <html>
-
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -63,7 +62,7 @@ if(!isset($_SESSION['user_id']))
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
               <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active">Dashboard v1</li>
+              <li class="breadcrumb-item active">Dashboard</li>
             </ol>
           </div><!-- /.col -->
         </div><!-- /.row -->

@@ -1,7 +1,5 @@
 <aside class="main-sidebar sidebar-dark-primary elevation-4">
-
-  	
-    <!-- Brand Logo -->
+ <!-- Brand Logo -->
     <a href="dashboard.php" class="brand-link">
       <img src="dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
            style="opacity: .8">
@@ -16,7 +14,7 @@
           <img src="dist/img/gallery2.jpg" class="img-circle elevation-2" alt="User Image">
         </div>
         <div class="info">
-          <a href="#" class="d-block">hemant p hareesh</a>
+          <a href="#" class="d-block">ADMIN</a>
         </div>
       </div>
 
@@ -29,7 +27,7 @@
             <a href="#" class="nav-link active">
               <i class="nav-icon fas fa-tachometer-alt"></i>
               <p>
-                MODULES
+                VIEW
                 <i class="right fas fa-angle-left"></i>
               </p>
             </a>
@@ -37,13 +35,13 @@
               <li class="nav-item">
                 <a href="student-data.php" class="nav-link active">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>STUDENT-DATA</p>
+                  <p>STUDENT-DETAILS</p>
                 </a>
               </li>
               <li class="nav-item">
                 <a href="./index2.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>CONTENT-DATA</p>
+                  <p>CONTENT FROM TEACHERS</p>
                 </a>
               </li>
               <li class="nav-item">
@@ -55,7 +53,13 @@
                <li class="nav-item">
                 <a href="./index3.html" class="nav-link">
                   <i class="far fa-circle nav-icon"></i>
-                  <p>TEACHER-DATA</p>
+                  <p>FEEDBACK</p>
+                </a>
+              </li>
+                <li class="nav-item">
+                <a href="./index3.html" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>STUDENT-REQUEST</p>
                 </a>
               </li>
             </ul>
