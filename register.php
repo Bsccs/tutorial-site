@@ -55,10 +55,6 @@
             <input type="submit" value="Register" />
         </form>
 
-        <div class="privacy">
-            <a href="#">Privacy Policy</a>
-        </div>
-
         <div class="register">
             Do you already have an account?
             <a href="#"><button id="register-link">Log In here</button></a>
