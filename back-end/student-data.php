@@ -1,20 +1,18 @@
 <!-- php -->
 <?php
 include 'connection.php';
-session_start();
-if(!isset($_SESSION['user_id']))
-{
-  header('location:index.php');
-}
+$reg=mysqli_query($connection,"select * from student_registration order by login_id");
+
 ?>
 
-<!DOCTYPE html>
-<html>
+
+<!DOCTYPE html><html>
+
 
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Admin-Dashboard</title>
+  <title>student details</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Font Awesome -->
@@ -62,7 +60,7 @@ if(!isset($_SESSION['user_id']))
           </div><!-- /.col -->
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
+              <!-- <li class="breadcrumb-item"><a href="#">home</a></li> -->
               <li class="breadcrumb-item active">student data</li>
             </ol>
           </div><!-- /.col -->
@@ -76,106 +74,45 @@ if(!isset($_SESSION['user_id']))
     <!-- Main content -->
     <div class="card">
             <div class="card-header">
-              <h3 class="card-title">DataTable with default features</h3>
+              <h3 class="card-title">STUDENT DETAILS</h3>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
+                  <th>SL.No</th>
+                  <th>FULL-NAME</th>
+                  <th>EMAIL</th>
+                  <th>PHONE NUMBER</th>
+                  <th>PASSWORD</th>
+                  <th>ACTION</th>
+                 </tr>
                 </thead>
                 <tbody>
+                	<?php $count=0; 
+                	while($row_data=mysqli_fetch_assoc($reg)) 
+                	{ $count++; ?>
                 <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                  <td>X</td>
+                  <td><?php echo $count; ?></td>
+                  <td><?php echo $row_data['name']; ?></td>
+                  <td><?php echo $row_data['Email']; ?></td>
+                  <td><?php echo $row_data['Phone']; ?></td>
+                  <td><?php echo $row_data['Password']; ?></td>
+                  <td><a href="">edit</a>/<a href="">delete</a></td>
                 </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5</td>
-                  <td>C</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 5.5
-                  </td>
-                  <td>Win 95+</td>
-                  <td>5.5</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 6
-                  </td>
-                  <td>Win 98+</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet Explorer 7</td>
-                  <td>Win XP SP2+</td>
-                  <td>7</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>AOL browser (AOL desktop)</td>
-                  <td>Win XP</td>
-                  <td>6</td>
-                  <td>A</td>
-                </tr>
-                <tr>
-                  <td>Gecko</td>
-                  <td>Firefox 1.0</td>
-                  <td>Win 98+ / OSX.2+</td>
-                  <td>1.7</td>
-                  <td>A</td>
-                </tr>
-    <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>
-                  <td>U</td>
-                </tr>
+                    <?php } ?>
                 </tbody>
-                <tfoot>
-                <tr>
-                  <th>Rendering engine</th>
-                  <th>Browser</th>
-                  <th>Platform(s)</th>
-                  <th>Engine version</th>
-                  <th>CSS grade</th>
-                </tr>
-                </tfoot>
-              </table>
+                
+               </table>
             </div>
             <!-- /.card-body -->
-          </div>
-          <!-- /.card -->
         </div>
         <!-- /.col -->
-      </div>
-      <!-- /.row -->
-    </section>
-  </footer>
+    </div>
+
+      
+   </div>
 
   <!-- Control Sidebar -->
   <aside class="control-sidebar control-sidebar-dark">
