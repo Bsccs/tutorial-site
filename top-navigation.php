@@ -9,8 +9,8 @@
         <a href="#home" class="active">Home</a>
         <a href="#contact"><i class="fas fa-envelope"></i> feedback</a>
         <a href="#about"><i class="fas fa-address-card"></i> About us</a>
-        <a href="back-end/index.php"><i class="fa fa-fw fa-user"></i> Login</a>
-        <a href="#register"><i class="fas fa-registered"></i></i> register</a>
+        <a href="login.php"><i class="fa fa-fw fa-user"></i> Login</a>
+        <a href="register.php"><i class="fas fa-registered"></i></i> register</a>
         <a href="javascript:void(0);" class="icon" onclick="myFunction()">
        <i class="fas fa-bars"></i>
         </a>
