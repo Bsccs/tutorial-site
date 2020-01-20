@@ -1,3 +1,12 @@
+<?php
+include 'connection.php';
+session_start();
+if(!isset($_SESSION['user_id']))
+{
+  header('location:login.php');
+}
+?>
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -10,7 +19,7 @@
   </head>
 
   <body>
- 	<?php include 'top-navigation.php'?>
+ 	<?php include 'top-navigation2.php'?>
 
   <?php include 'flip-level.php'?>
   </body>
