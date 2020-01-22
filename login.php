@@ -73,7 +73,7 @@ if(isset($_POST['button']))
 	$Username=$_POST['usename'];
 	$Password=$_POST['password'];
 	$result=mysqli_query($connection,"SELECT * 
-	FROM `registration_table` WHERE  Username ='".$Username."'AND Password ='".$Password."'");
+	FROM `login` WHERE  username ='".$Username."'AND password ='".$Password."'");
 	if(mysqli_num_rows($result)==1)
 	{
 		$row_data=mysqli_fetch_assoc($result);
