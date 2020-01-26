@@ -6,7 +6,7 @@
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
   <title>ADMIN</title>
-<?php include 'css_plugin.php' ?>
+<?php include 'includes/css_plugin.php' ?>
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
@@ -21,22 +21,17 @@
         <div class="row mb-2">
           <div class="col-sm-6">
             <h1 class="m-0 text-dark"> ADMIN</h1>
-          </div><!-- /.col -->
-          </div><!-- /.row -->
+          </div>
+        </div>
       </div>
     </div>
   </div>
-
-  
-
-
-
-
     <!-- Main content -->
 
-
+  
 </div>
+
 <!-- REQUIRED SCRIPTS -->
- <?php include 'js_plugin.php' ?>
+ <?php include 'includes/js_plugin.php' ?>
 </body>
 </html>

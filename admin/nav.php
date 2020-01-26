@@ -17,7 +17,7 @@
             <a href="dashboard.php" class="nav-link">ADMIN</a>
           </li>
           <li class="nav-item">
-            <a href="login_details.php" class="nav-link">LOGIN-DATA</a>
+            <a href="tables.php" class="nav-link">TABLES</a>
           </li>
            <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">INSPECTOR</a>
