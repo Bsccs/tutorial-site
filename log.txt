@@ -1,0 +1,1 @@
+<img src="../picture.jpg"> ------	picture.jpg is located in the folder one level up from the current folder

@@ -1,5 +1,5 @@
 <!-- php -->
-<?php include 'includes/connection.php';
+<?php include 'connection.php';
 $reg=mysqli_query($connection,"select * from student_registration order by login_id");
 
 ?>
@@ -12,13 +12,21 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
 
   <title>ADMIN</title>
 
-<?php include 'includes/css_plugin.php' ?>
+  <link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/adminlte.min.css">
+  <!-- Google Font: Source Sans Pro -->
+  <!-- <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet"> -->
+  <link rel="stylesheet" href="dist/css/css.css">
+
+  <link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+
 </head>
 <body class="hold-transition layout-top-nav">
 <div class="wrapper">
 
   <!-- Navbar -->
- <?php include 'nav.php' ?>
+ <?php include 'admin_nav.php' ?>
   <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
@@ -76,8 +84,14 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
 </div>
 
 <!-- REQUIRED SCRIPTS -->
-<!-- jQuery -->
-<?php include 'includes/js_plugin.php' ?>
+ <script src="plugins/jquery/jquery.min.js"></script>
+<!-- Bootstrap 4 -->
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- DataTables -->
+<script src="plugins/datatables/jquery.dataTables.js"></script>
+<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
 <script>
   $(function () {
     $("#example1").DataTable();

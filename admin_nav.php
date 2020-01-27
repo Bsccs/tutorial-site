@@ -1,6 +1,6 @@
 <nav class="main-header navbar navbar-expand navbar-dark navbar-light">
     <div class="container">
-      <a href="dashboard.php" class="navbar-brand">
+      <a href="admin_dashboard.php" class="navbar-brand">
         <!-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
              style="opacity: .8"> -->
         <!-- <span class="brand-text font-weight-light">Admin</span> -->
@@ -14,18 +14,22 @@
         <!-- Left navbar links -->
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a href="dashboard.php" class="nav-link">ADMIN</a>
+            <a href="admin_dashboard.php" class="nav-link">ADMIN</a>
           </li>
-          <li class="nav-item">
-            <a href="tables.php" class="nav-link">TABLES</a>
+          <li class="nav-item dropdown">
+            <a id="dropdownSubMenu1" href="admin_tables.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">DETAILS</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="admin_tables.php" class="dropdown-item">STUDENT</a></li>
+              <li><a href="#" class="dropdown-item">DETAILS</a></li>
+              <li class="dropdown-divider"></li>
           </li>
            <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">INSPECTOR</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               <li><a href="#" class="dropdown-item">ACTION</a></li>
               <li><a href="#" class="dropdown-item">DETAILS</a></li>
-
-              <li class="dropdown-divider"></li>
+</li>
+              </ul>
 
               <!-- Level two dropdown-->
               <li class="dropdown-submenu dropdown-hover">
