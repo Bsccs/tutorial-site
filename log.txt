@@ -1,1 +1,14 @@
 <img src="../picture.jpg"> ------	picture.jpg is located in the folder one level up from the current folder
+
+phpinfo(); to check connection of php.
+
+define("value_of_pie",3.14); 
+echo"pie value".value_of_pie;   -------constants defining
+
+$combination=$red."".$white     . is used for concatination
+
+<?php echo ucfirst($combine); ?>  ------upercase all first letter
+<?php echo ucwords($combine); ?>	--------upercase words
+<?php echo strtolower($combine); ?>	----------- lowercase
+<?php echo strtoupper($combine); ?>	-------------uppercase
+<?php echo str_repeat($combine,2); ?>	--------to repeat string 2 times
