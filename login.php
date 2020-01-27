@@ -20,13 +20,13 @@
 	<form method="post">
     <div id="container-login">
         <div id="title">
-            <!-- <i class="material-icons lock">lock</i> --><i class="fas fa-user-lock"></i> Login
+            <i class="fas fa-user-lock"></i> Login
         </div>
 
         <form>
             <div class="input">
                 <div class="input-addon">
-                    <!-- <i class="material-icons"> --><i class="fas fa-envelope"></i>
+                    <i class="fas fa-envelope"></i>
 </i>
                 </div>
                 <input id="username" placeholder="Enter Email" type="text" name="usename" required class="validate" autocomplete="off">
@@ -36,7 +36,7 @@
 
             <div class="input">
                 <div class="input-addon">
-                    <!-- <i class="material-icons">vpn_key</i> --><i class="fas fa-unlock"></i>
+                    <i class="fas fa-unlock"></i>
                 </div>
                 <input id="password" placeholder="Password" type="password" name="password" required class="validate" autocomplete="off">
             </div>
