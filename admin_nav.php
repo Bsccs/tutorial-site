@@ -16,53 +16,48 @@
           <li class="nav-item">
             <a href="admin_dashboard.php" class="nav-link">ADMIN</a>
           </li>
-          <li class="nav-item dropdown">
-            <a id="dropdownSubMenu1" href="admin_tables.php" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">DETAILS</a>
-            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="admin_tables.php" class="dropdown-item">STUDENT</a></li>
-              <li><a href="#" class="dropdown-item">DETAILS</a></li>
-              <li class="dropdown-divider"></li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">PROFILE</a>
           </li>
-           <li class="nav-item dropdown">
+          <li class="nav-item">
+            <a href="admin_login_details.php" class="nav-link">LOGIN-DETAILS</a>
+          </li>
+          <li class="nav-item dropdown">
             <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">INSPECTOR</a>
             <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              <li><a href="#" class="dropdown-item">ACTION</a></li>
-              <li><a href="#" class="dropdown-item">DETAILS</a></li>
-</li>
-              </ul>
-
-              <!-- Level two dropdown-->
-              <li class="dropdown-submenu dropdown-hover">
-                <a id="dropdownSubMenu2" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">Hover for action</a>
-                <ul aria-labelledby="dropdownSubMenu2" class="dropdown-menu border-0 shadow">
-                  <li>
-                    <a tabindex="-1" href="#" class="dropdown-item">level 2</a>
-                  </li>
-
-                  <!-- Level three dropdown-->
-                  <li class="dropdown-submenu">
-                    <a id="dropdownSubMenu3" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-item dropdown-toggle">level 2</a>
-                    <ul aria-labelledby="dropdownSubMenu3" class="dropdown-menu border-0 shadow">
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
-                      <li><a href="#" class="dropdown-item">3rd level</a></li>
-                    </ul>
-                  </li>
-                  <!-- End Level three -->
-
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
-                  <li><a href="#" class="dropdown-item">level 2</a></li>
-                </ul>
-              </li>
-              <!-- End Level two -->
+              <li><a href="#" class="dropdown-item">Some action </a></li>
+              <li><a href="#" class="dropdown-item">Some other action</a></li>
             </ul>
           </li>
+           <li class="nav-item dropdown">
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">STUDENT</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="admin_std_reg.php" class="dropdown-item">reg-details </a></li>
+              <li><a href="#" class="dropdown-item">Some other action</a></li>
+            </ul>
+          </li>
+            <li class="nav-item dropdown">
+            <a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">TEACHER</a>
+            <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+              <li><a href="#" class="dropdown-item">Some action </a></li>
+              <li><a href="#" class="dropdown-item">Some other action</a></li>
+            </ul>
+          </li>
+
         </ul>
+
       <!-- Right navbar links -->
       <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-
-      <a href="logout.php"><i class="fas fa-sign-out-alt">   LOGOUT</i></a> 
+        <li class="nav-item">
+          <a href="#" class="nav-link">VISIT-SITE</a>
+          </li>
+        <li class="nav-item">
+        <a href="logout.php" class="nav-link"><i class="fas fa-sign-out-alt">   LOGOUT</i></a> 
+        </li>
+        
       </ul>
 
     </div>
   </div>
   </nav>
+
