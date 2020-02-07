@@ -16,19 +16,19 @@
 
 <body>
     
-	<form method="post" enctype="multipart/form-data" >
+	
     <div id="container-login">
+
         <div id="title">
             <i class="fas fa-user-lock"></i> Login
         </div>
 
-        
+        <form method="post" enctype="multipart/form-data" >
             <div class="input">
                 <div class="input-addon">
                     <i class="fas fa-envelope"></i>
-</i>
                 </div>
-                <input id="email" placeholder="name@gmail.com" type="text" name="email" required class="validate">
+                <input id="email" placeholder="name@gmail.com" type="text" name="email"  class="validate">
             </div>
             <span id="sp1" style="color:red"></span>
 
@@ -38,7 +38,7 @@
                 <div class="input-addon">
                     <i class="fas fa-unlock"></i>
                 </div>
-                <input id="password" placeholder="Enter Password" type="password" name="password" required class="validate"><span id="sp2" style="color:red"></span>
+                <input id="password" placeholder="Enter Password" type="password" name="password" class="validate"><span id="sp2" style="color:red"></span>
             </div>
             <span id="sp2" style="color:red"></span><br>
 
@@ -53,6 +53,7 @@
             <a href="register.php"><button id="register-link">Register here</button></a>
         </div>
     </div>
+    
     
 
 </body>
