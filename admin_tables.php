@@ -42,6 +42,7 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
    <!-- Main content -->
  <div class="card">
             <div class="card-header">
+              <div class="table-responsive-sm">
               <h3 class="card-title"><U>STUDENT-REGISTRATION</U></h3>
             </div>
             <!-- /.card-header -->
@@ -76,6 +77,7 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
             </div>
             <!-- /.card-body -->
         </div>
+      </div>
         <!-- /.col -->
     </div>
 

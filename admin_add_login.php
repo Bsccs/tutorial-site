@@ -38,6 +38,7 @@
 
 <section class="content">
       <div class="container-fluid">
+        <form method="post" enctype="multipart/form-data" >
         <div class="row"><label>USERNAME</label>
           <div class="col-lg-4">
             <div class="form-group">
@@ -65,13 +66,16 @@
 
         <input type="submit" name="button" value="add">
       </div><br>
+      </form>
       <div class ="row">
         <a href="admin_login_details.php"><input type="submit"value="cancel"></a>
       </div>
+      
           <!-- ./col -->
         </div>
        
          </section>
+       
 
 <?php
 
@@ -83,7 +87,7 @@ if (isset($_POST['button'])) {
   $User_name=$_POST['username'];
   mysqli_query($connection,"UPDATE `login` SET username='$User_name'WHERE login_id='$login_id'");
 
-  echo "<script>alert('product delete succesfully');</script>";
+  echo "<script>alert('details added succeessfully');</script>";
 echo"<script>window.history.back();</script>";
 }
 

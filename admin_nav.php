@@ -1,4 +1,4 @@
-<nav class="main-header navbar navbar-expand navbar-dark navbar-light">
+<nav class="main-header navbar navbar-expand-lg navbar-dark navbar-light">
     <div class="container">
       <a href="admin_dashboard.php" class="navbar-brand">
         <!-- <img src="../../dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
@@ -43,14 +43,14 @@
               <li><a href="#" class="dropdown-item">Some other action</a></li>
             </ul>
           </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link">VISIT SITE</a>
+          </li>
 
         </ul>
 
       <!-- Right navbar links -->
-      <ul class="order-1 order-md-3 navbar-nav navbar-no-expand ml-auto">
-        <li class="nav-item">
-          <a href="#" class="nav-link">VISIT-SITE</a>
-          </li>
+      <ul class="order-1 order-md-4 navbar-nav navbar-expand ml-auto">
         <li class="nav-item">
         <a href="logout.php" class="nav-link"><i class="fas fa-sign-out-alt">   LOGOUT</i></a> 
         </li>

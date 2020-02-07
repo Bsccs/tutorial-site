@@ -24,11 +24,12 @@
     width: 100%;    
     background-color: #000;
     display: flex;
+    flex-wrap: wrap;
     justify-content:space-between;
     border-bottom: 2px green solid;
-  }
+   }
   .nav_con{
- min-width: 80px;
+    min-width: 80px;
     color: #fff;   
     padding: 15px;
     font-size: 20px;

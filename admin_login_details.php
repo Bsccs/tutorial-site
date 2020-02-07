@@ -42,10 +42,12 @@ $reg=mysqli_query($connection,"select * from login order by login_id");
    <!-- Main content -->
  <div class="card">
             <div class="card-header">
+              <form method="post" enctype="multipart/form-data" >
             <a href="admin_add_login.php?l_id= <?php echo $row_data['login_id'];?>"><button type="button" class="btn btn-danger">ADD</button></a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+              <div class="table-responsive-sm">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -75,9 +77,11 @@ $reg=mysqli_query($connection,"select * from login order by login_id");
                 </tbody>
                 
                </table>
+             </div>
             </div>
             <!-- /.card-body -->
         </div>
+      </form>
         <!-- /.col -->
     </div>
 

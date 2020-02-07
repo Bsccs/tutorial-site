@@ -34,18 +34,20 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
       <div class="container">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <h1 class="m-0 text-dark"> DETAILS</h1>
+            <h1 class="m-0 text-dark"> STUDENT-REGISTRATION</h1>
       </div>
     </div>
   </div>
 </div>
    <!-- Main content -->
  <div class="card">
-            <div class="card-header">
-              <h3 class="card-title"><U>STUDENT-REGISTRATION</U></h3>
+           <div class="card-header">
+              <form method="post" enctype="multipart/form-data" >
+            <a href="admin_add_login.php?l_id= <?php echo $row_data['login_id'];?>"><button type="button" class="btn btn-danger">ADD</button></a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
+              <div class="table-responsive-sm">
               <table id="example1" class="table table-bordered table-striped">
                 <thead>
                 <tr>
@@ -67,7 +69,7 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
                   <td><?php echo $row_data['Email']; ?></td>
                   <td><?php echo $row_data['Phone']; ?></td>
                   <td><?php echo $row_data['Password']; ?></td>
-                  <td><a href="">edit</a>/<a href="">delete</a></td>
+                  <td><a href="admin_delete.php?l_id= <?php echo $row_data['login_id'];?>"onclick="return confirm('do you want to delete');"><button type="button" class="btn btn-secondary">DELETE</button></a>
                 </tr>
                     <?php } ?>
                 </tbody>
@@ -76,6 +78,7 @@ $reg=mysqli_query($connection,"select * from student_registration order by login
             </div>
             <!-- /.card-body -->
         </div>
+      </div>
         <!-- /.col -->
     </div>
 
