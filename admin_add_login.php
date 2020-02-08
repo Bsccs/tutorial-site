@@ -80,16 +80,6 @@
 <?php
 
 include 'connection.php';
-$login_id=$_GET['l_id'];
-$login_query=mysqli_query($connection,"SELECT * FROM `login` WHERE login_id='$login_id'");
-$login_id=mysqli_fetch_assoc($login_query);
-if (isset($_POST['button'])) {
-  $User_name=$_POST['username'];
-  mysqli_query($connection,"UPDATE `login` SET username='$User_name'WHERE login_id='$login_id'");
-
-  echo "<script>alert('details added succeessfully');</script>";
-echo"<script>window.history.back();</script>";
-}
 
 if(isset($_POST['button']))
 {
@@ -100,6 +90,10 @@ if(isset($_POST['button']))
   $type=$_POST['type'];
 
   mysqli_query($connection,"INSERT INTO `login`(`username`, `password`, `type`) VALUES ('$Username','$Password','$type')");
+
+
+  echo "<script>alert('details added succeessfully');</script>";
+echo"<script>window.history.back();</script>";
 
 }
     

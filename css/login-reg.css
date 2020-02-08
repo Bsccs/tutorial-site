@@ -23,7 +23,7 @@ body {
     position: relative;
     top: 20%;
     margin: auto;
-    width: 340px;
+    width: 440px;
     height: 480px;
     border-radius: 0.35em;
     box-shadow: 0 3px 10px 0 rgba(0, 0, 0, 0.2);
@@ -47,7 +47,7 @@ body {
 
 .input {
     margin: auto;
-    width: 240px;
+    width: 340px;
     border-radius: 4px;
     background-color: #373b3d;
     padding: 8px 0px;

@@ -85,78 +85,70 @@ $mail->Body    = "<html>
 
 
 <html>
-<link rel="stylesheet" href="css/bootstrap.min.css">
-<link rel="stylesheet" href="css/bootstrap-grid.min.css">
+
+
 
 <head>
     <meta charset="UTF-8">
     <title>Register</title>
-    <meta name="description" content="Login - Register Template">
-    <meta name="author" content="Lorenzo Angelino aka MrLolok">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/login-reg.css">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
     <style>
-        body {
-            background-color: #303641;
+        .reg_form{
+
+            margin-top: 320px;
+
+
         }
     </style>
 </head>
 
 <body>
-    <div id="container-register">
-        <div id="title">
-            <i class="material-icons lock">lock</i> Register
-        </div>
-
-        <form method="post">
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">email</i>
-                </div>
-                <input id="email" placeholder="name@gmail.com" type="email" name="email" required class="validate" autocomplete="off">
+        <div class="container">
+            <div class="reg_form">
+        <div class="row">
+            <div class="col-sm-3"></div>
+          <div class="col-sm-6">
+            <input id="email" placeholder="name@gmail.com" type="email" name="email" required class="validate form-control" autocomplete="off">
                 <span id="sp1" style="color:red"></span>
-            </div>
-
-            <div class="clearfix"></div>
-
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">face</i>
-                </div>
-                <input id="fullname" placeholder="fullname" name="name" type="text" required class="validate" autocomplete="off">
-                </div>
+            <input id="fullname" placeholder="fullname" name="name" type="text" required class="validate form-control autocomplete="off"> 
                 <span id="sp2" style="color:red"></span>
-            
+                        
+                <input id="password" placeholder="Password" name="password"type="password" required class="validate form-control" autocomplete="off">
+                <span id="sp3" style="color:red"></span>
 
-            <div class="clearfix"></div>
-
-            <div class="input">
-                <div class="input-addon">
-                    <i class="material-icons">vpn_key</i>
-                </div>
-                <input id="password" placeholder="Password" name="password"type="password" required class="validate" autocomplete="off">
-            </div>
-            <span id="sp3" style="color:red"></span>
-
-            <div class="remember-me">
-                <input type="checkbox">
                 <span style="color: #DDD">I accept Terms of Service</span>
-            </div>
+            
 
             <input type="submit" value="Register"name="Register" />
         </form>
 
-        <div class="register">
-            Do you already have an account?
+             Do you already have an account?
             <a href="login.php"><button id="register-link">Log In here</button></a>
-        </div>
+        
     </div>
+</div>
+<div class="col-sm-3"></div>
+</div>
+</div>
+</div>
 </body>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/bootstrap.bundle.min.js"></script>
+
 
 </html>
+<!-- <script src="js/jquery.min.js"></script> -->
+
+<script src="plugins/jquery/jquery.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+<!-- <script src="js/bootstrap.bundle.min.js"></script> -->
+
+<!-- Bootstrap 4 -->
+
 
 <script type="text/javascript">
     

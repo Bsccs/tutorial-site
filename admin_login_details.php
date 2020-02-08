@@ -43,7 +43,7 @@ $reg=mysqli_query($connection,"select * from login order by login_id");
  <div class="card">
             <div class="card-header">
               <form method="post" enctype="multipart/form-data" >
-            <a href="admin_add_login.php?l_id= <?php echo $row_data['login_id'];?>"><button type="button" class="btn btn-danger">ADD</button></a>
+            <a href="admin_add_login.php"><button type="button" class="btn btn-danger">ADD</button></a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
