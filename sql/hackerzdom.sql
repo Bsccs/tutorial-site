@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 07, 2020 at 09:59 AM
+-- Generation Time: Feb 08, 2020 at 06:30 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -19,7 +19,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tutorial_website`
+-- Database: `hackerzdom`
 --
 
 -- --------------------------------------------------------
@@ -97,8 +97,7 @@ CREATE TABLE `content_keyword` (
 CREATE TABLE `inspector` (
   `inspector_id` int(11) NOT NULL,
   `email` varchar(18) NOT NULL,
-  `name` varchar(18) NOT NULL,
-  `expertise_id` int(11) NOT NULL
+  `name` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -108,7 +107,8 @@ CREATE TABLE `inspector` (
 --
 
 CREATE TABLE `insp_expertise` (
-  `expertise id` int(11) NOT NULL,
+  `expertise_id` int(11) NOT NULL,
+  `inspector_id` int(11) NOT NULL,
   `expertise` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -131,6 +131,7 @@ CREATE TABLE `insp_feedback` (
 --
 
 CREATE TABLE `login` (
+  `login_id` int(11) NOT NULL,
   `email` varchar(18) NOT NULL,
   `password` varchar(20) NOT NULL,
   `role` varchar(10) NOT NULL
@@ -181,6 +182,7 @@ CREATE TABLE `search` (
 
 CREATE TABLE `student_details` (
   `student_id` int(11) NOT NULL,
+  `login_id` int(11) NOT NULL,
   `email` varchar(18) NOT NULL,
   `name` varchar(15) NOT NULL,
   `gender` varchar(10) NOT NULL,
@@ -315,7 +317,7 @@ ALTER TABLE `inspector`
 -- Indexes for table `insp_expertise`
 --
 ALTER TABLE `insp_expertise`
-  ADD PRIMARY KEY (`expertise id`);
+  ADD PRIMARY KEY (`expertise_id`);
 
 --
 -- Indexes for table `insp_feedback`
@@ -327,7 +329,8 @@ ALTER TABLE `insp_feedback`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`email`);
+  ADD PRIMARY KEY (`login_id`),
+  ADD UNIQUE KEY `email` (`email`);
 
 --
 -- Indexes for table `payment`
@@ -409,7 +412,13 @@ ALTER TABLE `inspector`
 -- AUTO_INCREMENT for table `insp_expertise`
 --
 ALTER TABLE `insp_expertise`
-  MODIFY `expertise id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `expertise_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `login`
+--
+ALTER TABLE `login`
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `student_details`
