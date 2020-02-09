@@ -43,7 +43,7 @@ $reg=mysqli_query($connection,"select * from login order by login_id");
  <div class="card">
             <div class="card-header">
               <form method="post" enctype="multipart/form-data" >
-            <a href="admin_add_login.php"><button type="button" class="btn btn-danger">ADD</button></a>
+            <a href="add_login.php"><button type="button" class="btn btn-danger">ADD</button></a>
             </div>
             <!-- /.card-header -->
             <div class="card-body">
@@ -68,7 +68,7 @@ $reg=mysqli_query($connection,"select * from login order by login_id");
                   <td><?php echo $row_data['password']; ?></td>
                   <td><?php echo $row_data['type']; ?></td>
                   <div class="btn-group">
-                  <td><a href="admin_delete.php?l_id= <?php echo $row_data['login_id'];?>"onclick="return confirm('do you want to delete');"><button type="button" class="btn btn-secondary">DELETE</button></a>
+                  <td><a href="delete.php?l_id= <?php echo $row_data['login_id'];?>"onclick="return confirm('do you want to delete');"><button type="button" class="btn btn-secondary">DELETE</button></a>
                     </div>
                   </td>
                   

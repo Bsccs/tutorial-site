@@ -1,3 +1,4 @@
+<!-- html opening -->
 <!DOCTYPE html>
 <html lang="en">
 	<!-- head part opening------>
@@ -58,3 +59,4 @@
 	</body>
 	<!-- body part closing ---->
 </html>
+<!-- html closing -->
