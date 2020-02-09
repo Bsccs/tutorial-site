@@ -1,11 +1,17 @@
 <?php
 
-class fb&sugg {
+class fb&sugg 
+{
 
     public $feedbk text;
 
-    public function __construct() {
-    }
+    public $connection;
+    
+      function __construct($connection) 
+      {
+        $this->connection = $connection;
+
+      }
 
     public function view feedback() {
         // TODO implement here
@@ -17,6 +23,8 @@ class fb&sugg {
 
     public function add feedback() {
         // TODO implement here
+
+
     }
 
     public function add suggestion() {

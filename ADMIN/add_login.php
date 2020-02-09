@@ -1,6 +1,6 @@
 <!-- php -->
 <?php
-	include '../connection.php';
+	include 'connection.php';
 	if(isset($_POST['button']))
 		{
   			$Username=$_POST['username'];
