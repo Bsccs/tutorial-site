@@ -8,33 +8,34 @@ class registration {
 
     public $stud_name;
 
+    public $connection;
 
 
+    public function __construct($connection) {
 
-    public function __construct() {
+        $this->connection = $connection;
+
     }
 
-    public function add inspector() {
+    public function add_inspector() {
+        // TODO implemet here
+    }
+
+    public function add_contentdev($name,$email,$expertise,$files) {
+        // TODO implement here
+
+          
+    }
+
+    public function add_student() {
         // TODO implement here
     }
 
-    public function add contentdev() {
+    public function send_otp() {
         // TODO implement here
-    }
+    }   
 
-    public function add student() {
-        // TODO implement here
-    }
-
-    public function Operation1() {
-        // TODO implement here
-    }
-
-    public function send otp() {
-        // TODO implement here
-    }
-
-    public function validate email() {
+    public function validate_email() {
         // TODO implement here
     }
 
