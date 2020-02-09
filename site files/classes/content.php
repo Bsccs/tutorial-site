@@ -1,6 +1,7 @@
 <?php
 
-class content {
+class content
+{
 
     public $content name;
 
@@ -8,9 +9,12 @@ class content {
 
     public $Attribute1;
 
-
-    public function __construct() {
-    }
+    public $connection;
+    
+      function __construct($connection) 
+      {
+        $this->connection = $connection;
+      }
 
     public function add video() {
         // TODO implement here

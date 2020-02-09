@@ -1,6 +1,6 @@
 <?php
 
-class registration {
+class registration{
 
     public $insp_name;
 
