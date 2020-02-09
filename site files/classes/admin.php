@@ -91,6 +91,7 @@ class admin /*implements payment*/ {
 
     public function website_activity() {
         // TODO implement here
+
     }
 
     public function view_keywords() {
