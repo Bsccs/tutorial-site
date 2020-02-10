@@ -1,6 +1,6 @@
 <!-- php -->
 <?php include 'connection.php';
-$reg=mysqli_query($connection,"SELECT * FROM 'login' ORDER BY 'login_id'");
+$reg=mysqli_query($connection,"SELECT * FROM `approvals` order by 'content id'");
 
 ?>
 <!-- html opening -->
@@ -40,29 +40,21 @@ $reg=mysqli_query($connection,"SELECT * FROM 'login' ORDER BY 'login_id'");
       				<div class="container">
         				<div class="row mb-2">
           					<div class="col-sm-6">
-            				  <h1 class="m-0 text-dark">LOGIN-TABLE</h1>
+            				  <h1 class="m-0 text-dark">APPROVED-CONTENTS</h1>
       						</div>
         				</div>
       				</div>
     			</div>  			
     	        <!-- Main content opening -->
     	   		<div class="card">
-            		<div class="card-header">
-              			
-            			<a href="add_login.php"><button type="button" class="btn btn-danger">ADD</button></a>
-            		</div>
-            		<!-- /.card-header -->
-            		<form method="post" enctype="multipart/form-data" >
+             		<form method="post" enctype="multipart/form-data" >
             			<div class="card-body">
               				<div class="table-responsive-sm">              				
               			  		<table id="example1" class="table table-bordered table-striped">
                 					<thead>
                 						<tr>
                   							<th>SL.No</th>
-                  							<th>EMAIL</th>
-                  							<th>PASSWORD</th>
-                  							<th>TYPE</th>
-                  							<th>ACTION</th>
+                  							<th>APPROVED</th>
                  						</tr>
                 					</thead>
                 					<tbody>
@@ -71,14 +63,7 @@ $reg=mysqli_query($connection,"SELECT * FROM 'login' ORDER BY 'login_id'");
                   							{ $count++; ?>
                 							<tr>
                   								<td><?php echo $count; ?></td>
-                  								<td><?php echo $row_data['email']; ?></td>
-                  								<td><?php echo $row_data['password']; ?></td>
-                  								<td><?php echo $row_data['role']; ?></td>
-                  								<div class="btn-group">
-                  										<td><a href="delete.php?l_id= <?php echo $row_data['login_id'];?>"onclick="return confirm('do you want to delete');"><button type="button"
-                  											 class="btn btn-secondary">DELETE</button></a>
-                  										</td>
-                    							</div>                  
+                  								<td><?php echo $row_data['approved']; ?></td>              
                 							</tr>
                     					<?php } ?>
                 					</tbody>

@@ -1,6 +1,6 @@
 <!-- php -->
 <?php include 'connection.php';
-$reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_id");
+$reg=mysqli_query($connection,"SELECT * FROM `insp_feedback` ORDER BY content_id");
 
 ?>
 <!-- html opening -->
@@ -40,7 +40,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_
               <div class="container">
                 <div class="row mb-2">
                     <div class="col-sm-6">
-                      <h1 class="m-0 text-dark"> STUDENT-DETAILS</h1>
+                      <h1 class="m-0 text-dark">INSPECTOR-FEEDBACK</h1>
                     </div>
                 </div>
               </div>
@@ -55,14 +55,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_
                             <thead>
                               <tr>
                                 <th>SL.No</th>
-                                <th>EMAIL</th>
-                                <th>NAME</th>
-                                <th>GENDER</th>
-                                <th>COUNTRY</th>
-                                <th>STATE</th>
-                                <th>PHONE NUMBER</th>
-                                <th>AGE</th>
-                                <th>LAST-LOGIN</th>
+                                <th>FEEDBACK</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -71,14 +64,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_
                                 { $count++; ?>
                               <tr>
                                   <td><?php echo $count; ?></td>
-                                  <td><?php echo $row_data['email']; ?></td>
-                                  <td><?php echo $row_data['name']; ?></td>
-                                  <td><?php echo $row_data['gender']; ?></td>
-                                  <td><?php echo $row_data['country']; ?></td>  
-                                  <td><?php echo $row_data['state']; ?></td>
-                                  <td><?php echo $row_data['phone_number']; ?></td>
-                                  <td><?php echo $row_data['age']; ?></td>
-                                  <td><?php echo $row_data['last_login']; ?></td>              
+                                  <td><?php echo $row_data['feedback']; ?></td>               
                               </tr>
                               <?php } ?>
                             </tbody>
@@ -86,7 +72,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_
                     </div>
                   </div>
                 </form>
-                </div>          
+            </div>          
          <!-- main content closing -->
          <!-- content wrapper closing -->
         </div>

@@ -21,8 +21,10 @@ class fb&sugg
         // TODO implement here
     }
 
-    public function add feedback() {
+    public function add_feedback($feedback) {
         // TODO implement here
+        $_SESSION['sessid']='01';
+        $sql="INSERT INTO 'stud_feedback' VALUES (NULL,'456',) WHERE student_id='".$_SESSION['sessid']."'";
 
 
     }

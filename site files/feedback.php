@@ -5,8 +5,8 @@
 if (isset($_POST['submit']))
  {
   	include "connect.php";
- 	$admin1=new admin($connection);
-	$admin1->add_inspector($_POST['name'],$_POST['email']);
+ 	$feedback=new fb&sugg($connection);
+	$feedback->add_feedback($_POST['feedback']);
  }
 
 mysqli_close($connection);
@@ -24,7 +24,7 @@ mysqli_close($connection);
 	<h1>feedback form</h1>
 	<form method="post">
 		feedback:<br><textarea name="feedback" rows="30" cols="150"></textarea><br><br>
-		<input type="submit" name="submit" value="Register">
+		<input type="submit" name="submit" value="add">
 		</form>
 </body>
 </html>

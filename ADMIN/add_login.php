@@ -5,8 +5,8 @@
 		{
   			$Username=$_POST['username'];
   			$Password=$_POST['password'];
-  			$type=$_POST['type'];
-			mysqli_query($connection,"INSERT INTO `login`(`username`, `password`, `type`) VALUES ('$Username','$Password','$type')");
+  			$type=$_POST['role'];
+			mysqli_query($connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
   			echo "<script>alert('details added succeessfully');</script>";
 			echo"<script>window.history.back();</script>";
 		}
@@ -50,19 +50,19 @@
         				<div class="row mb-2">
           					<div class="col-sm-6">
             				 <h1 class="m-0 text-dark">INSERT DETAILS</h1>
-          				    </div>
+          				  </div>
         				</div>
       				</div>
     			</div>
-  			</div>
+  		 
     	   <!-- Main content opening -->
     	   	<section class="content">
       			<div class="container-fluid">
         		  	<form method="post" enctype="multipart/form-data" >
-        				<div class="row"><label>USERNAME</label>
+        				<div class="row"><label>EMAIL</label>
           					<div class="col-lg-4">
             					<div class="form-group">
-            						<input type="text" name="username"placeholder="enter username"class="form-control">
+            						<input type="text" name="username"placeholder="enter email"class="form-control">
           						</div>
           					</div>
           				</div>
@@ -80,8 +80,7 @@
                 						<option value="admin">admin</option>
                							<option value="teacher">teacher</option>
               							<option value="inspector">inspector</option>
-              							<option value="student">student</option>
-             						</select>                           
+             						  </select>                           
           						</div>
           					</div>
           				</div>
@@ -90,11 +89,13 @@
       					</div><br>
       				</form>
       					<div class ="row">
-        				 <a href="admin_login_details.php"><input type="submit"value="cancel"></a>
+        				 <a href="login_details.php"><input type="submit"value="cancel"></a>
       					</div>
       			</div>
       		</section>
     	   <!-- main content closing -->
+         <!-- content wrapper closing -->
+        </div>
     		<!-- wrapping closing -->
 		</div>  
 		<!--script opening-->
