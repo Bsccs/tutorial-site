@@ -16,6 +16,7 @@ class content
         $this->connection = $connection;
       }
 
+
     public function add_video($text) {
         // TODO implement here
         $sql="";
@@ -29,7 +30,7 @@ class content
         // TODO implement here
     }
 
-    public function view content() {
+    public function view_content() {
         // TODO implement here
     }
 
