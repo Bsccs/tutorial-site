@@ -1,6 +1,6 @@
 <!-- php -->
 <?php include 'connection.php';
-$reg=mysqli_query($connection,"SELECT * FROM 'login' ORDER BY 'login_id'");
+$reg=mysqli_query($connection,"SELECT * FROM `login` ORDER BY 'login_id'");
 
 ?>
 <!-- html opening -->
@@ -75,8 +75,7 @@ $reg=mysqli_query($connection,"SELECT * FROM 'login' ORDER BY 'login_id'");
                   								<td><?php echo $row_data['password']; ?></td>
                   								<td><?php echo $row_data['role']; ?></td>
                   								<div class="btn-group">
-                  										<td><a href="delete.php?l_id= <?php echo $row_data['login_id'];?>"onclick="return confirm('do you want to delete');"><button type="button"
-                  											 class="btn btn-secondary">DELETE</button></a>
+                  										<td><a href="delete.php?l_id= <?php echo $row_data['login_id'];?>"	onclick="return confirm('do you want to delete');"><button 			type="button"class="btn btn-secondary">DELETE</button></a>
                   										</td>
                     							</div>                  
                 							</tr>
@@ -85,9 +84,8 @@ $reg=mysqli_query($connection,"SELECT * FROM 'login' ORDER BY 'login_id'");
                              	</table>
              				  </div>
             			</div>
-            		</form>
-            </div>          
-    	   <!-- main content closing -->
+            		</form>           		
+            	</div><!-- main content closing -->          
          <!-- content wrapper closing -->
         </div>
     		<!-- wrapping closing -->

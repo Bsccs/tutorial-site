@@ -5,7 +5,7 @@
 		{
   			$Username=$_POST['username'];
   			$Password=$_POST['password'];
-  			$type=$_POST['role'];
+  			$type=$_POST['type'];
 			mysqli_query($connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
   			echo "<script>alert('details added succeessfully');</script>";
 			echo"<script>window.history.back();</script>";
