@@ -10,17 +10,18 @@ class content
     public $Attribute1;
 
     public $connection;
-    
+
       function __construct($connection) 
       {
         $this->connection = $connection;
       }
 
-    public function add video() {
+    public function add_video($text) {
         // TODO implement here
+        $sql="";
     }
 
-    public function add text() {
+    public function add_text() {
         // TODO implement here
     }
 
