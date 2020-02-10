@@ -7,3 +7,4 @@ student_feedback.php  --------data to be inserted.
 approval_details.php ---------data to be inserted.
 std_reg.php ----------- data to be inserted
 stud_request.php -----------data to be inserted
+all the php files require a delete.php to be inserted.
