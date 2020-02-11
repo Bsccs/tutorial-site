@@ -112,7 +112,6 @@
 		<!-- table script -->
 		<script>
  	 		$(function () {
-    		$("#example1").DataTable();
     		$('#example2').DataTable({
     	  	"paging": true,
     	  	"lengthChange": false,
