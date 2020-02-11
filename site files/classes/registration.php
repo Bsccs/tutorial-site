@@ -21,8 +21,9 @@ class registration{
         // TODO implemet here
     }
 
-    public function add_contentdev($name,$email,$expertise,$files) {
+    public function add_contentdev($name,$email,$targetpath,$expertise) {
         // TODO implement here
+
 
           
     }

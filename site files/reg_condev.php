@@ -16,7 +16,7 @@ if (isset($_POST['submit']))
 
         $target_path="uploads/";
         $target_path=$target_path.basename($_FILES['document']['name']);
-     //   echo $target_path;
+      //  echo $target_path;
         if(move_uploaded_file($_FILES["document"]["tmp_name"],$target_path)) 
         {
              $name=$_POST['name'];
@@ -30,7 +30,7 @@ if (isset($_POST['submit']))
             }
             
         }
-        echo "<img src='$target_path' height='280' width='320>";
+      //  echo "<img src='$target_path' height='280' width='320>";  display failure
  }
 
 
