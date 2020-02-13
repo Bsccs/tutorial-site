@@ -3,9 +3,9 @@
 class content
 {
 
-    public $content name;
+    public $content_name;
 
-    public $test number;
+    public $test_number;
 
     public $Attribute1;
 
@@ -17,16 +17,22 @@ class content
       }
 
 
-    public function add_video($text) {
+    public function add_video($embedvideo,$depth,$tags) {
         // TODO implement here
-        $sql="";
+
+    $keyword_id=0;
+    $developer_id=0;
+    $sql="INSERT INTO 'content' VALUES(NULL,'$embedvideo','0','','$depth','$keyword_id','0','$developer_id','','0')";
+    $result=mysqli_query($this->connection,$sql);
+        if($result)
+        {echo "successfully inserted";}
     }
 
     public function add_text() {
         // TODO implement here
     }
 
-    public function add test() {
+    public function add_test() {
         // TODO implement here
     }
 
@@ -34,7 +40,7 @@ class content
         // TODO implement here
     }
 
-    public function remove content() {
+    public function remove_content() {
         // TODO implement here
     }
 

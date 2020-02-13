@@ -17,9 +17,7 @@ class registration{
 
     }
 
-    public function add_inspector() {
-        // TODO implemet here
-    }
+
 
     public function add_contentdev($name,$email,$expertise,$files) {
         // TODO implement here
