@@ -37,122 +37,127 @@ function token_generator()   /* to make form more secure*/
 	$token=$_SESSION['token']=md5(uniqid(mt_rand(),true));
 	return $token;
 
-}      
+}     
+
+/*function email_exists($email)  for email existing function.
+{
+	$sql="SELECT student_id FROM `student_details` WHERE email='$email'";
+	$result=query($sql); 
+	if(row_count($result)==1)
+	{
+		return true;
+	}
+	else{
+		return false;
+	}
+
+}*/
+
+function reg_user()
+{
+	if(isset($_POST['register-submit']))
+	{
+	$name=$_POST['username'];
+
+	$email=$_POST['email'];
+
+	$gender=$_POST['gender'];
+
+	$country=$_POST['country'];
+
+	$state=$_POST['state'];
+
+	$phone=$_POST['phone'];
+
+	$age=$_POST['age'];
+
+	$Password=$_POST['password'];
+
+	$Password=md5($Password);
+
+	$sql="INSERT INTO `student_details`(`name`, `gender`, `country`, `state`, `phone_number`, `age`) 
+	VALUES ('$name','$gender','$country','$state','$phone','$age')";
+	
+
+
+
+	}
 
 ?>
 
-<script type="text/javascript">
-	
-	function valid()
-	{
-		var name=document.getElementById('firstname').value;
 
+<!-- registartion page validation -->
+<!-- <script type="text/javascript">
+	
+	function reg_valid()
+	{
+		
 		var email=document.getElementById('email').value;
 
-		var add= document.getElementById('txtaddress').value;
+		var name=document.getElementById('username').value;
 
-		var Phone=document.getElementById('phone').value;
-	
-		var Gender=document.getElementsByName('gender');
+		var gender=document.getElementById('gender').value;
+
+		var country=document.getElementById('country').value;
+
+		var state=document.getElementById('state').value;
 		
-		var Qualification=document.getElementsByName('Qualification[]');
+		var phone=document.getElementById('phone').value;
 		
-		var photo=document.getElementById('photo').value;
-		
-		var district=document.getElementById('select').value;
-		
-		var Username=document.getElementById('usename').value;
+		var age=document.getElementById('age').value;	
 		
 		var Password=document.getElementById('password').value;
-		
-		
 
-		if(name=="")
-		{
-			document.getElementById('sp1').innerHTML="------>name required";
-			//alert('name required');
-			return false;
-		}
 
 		if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
 		{
-			document.getElementById('sp2').innerHTML="----->email required";
-			//alert('email required');
+			document.getElementById('sp1').innerHTML="mail@gmail.com required";
 			return false;
 		}
 
-		if(add=="")
+		if(name=="")
 		{
-			document.getElementById('sp3').innerHTML="----->address required";
+			document.getElementById('sp2').innerHTML="fullname required";
+			return false;
+		}
+
+		if(gender=="")
+		{
+			document.getElementById('sp3').innerHTML="Gender required";
+			return false;
+		}
+
+		if(country=="")
+		{
+			document.getElementById('sp4').innerHTML="country required";
+			//alert('name required');
+			return false;
+		}
+
+		if(state=="")
+		{
+			document.getElementById('sp5').innerHTML="state required";
+			//alert('name required');
+			return false;
+		}
+
+
+		if(phone=="" || isNaN(phone) || phone.length>10)
+		{
+			document.getElementById('sp6').innerHTML="mobile number required";
+			return false;
+		}
+
+		if(age=="")
+		{
+			document.getElementById('sp7').innerHTML="age required";
 			//alert('name required');
 			return false;
 		}
 		
-
-
-		if(Phone=="" || isNaN(Phone) || Phone.length>10)
-		{
-			document.getElementById('sp4').innerHTML="----->mobile number required";
-			//alert('mobile number required');
-			return false;
-		}
-		
-		
-		flag=0;
-		for(i=0;i<Gender.length;i++)
-		{
-			if(Gender[i].checked==true)
-			{
-				flag=1;
-				break;
-			}
-		}
-		if(flag==0)
-		{
-			document.getElementById('sp5').innerHTML="------>select a gender ";
-
-			return false;
-
-		}
-
-		flagb=0;
-		for(i=0;i<Qualification.length;i++)
-		{
-			if(Qualification[i].checked==true)
-			{
-				flagb=1;
-				break;
-			}
-		}
-			if(flagb==0)
-		{
-			document.getElementById('sp6').innerHTML="---->select Qualification";
-
-			return false;
-
-		}
-
-		if(photo=="")
-		{
-			document.getElementById('sp7').innerHTML="------>photo required";
-			//alert('name required');
-			return false;
-		}
-		if(district=="")
-		{
-			document.getElementById('sp8').innerHTML="------>district required";
-			//alert('name required');
-			return false;
-		}
-		if(Username=="")
-		{
-			document.getElementById('sp9').innerHTML="------>username required";
-			//alert('name required');
-			return false;
-		}
 		if(Password=="")
 		{
-			document.getElementById('sp10').innerHTML="------>password required";
+			document.getElementById('sp8').innerHTML="password required";
 			//alert('name required');
 			return false;
 		}
@@ -160,4 +165,26 @@ function token_generator()   /* to make form more secure*/
 
 	}
 
-</script>
+	/*login validation*/
+	function login_page()
+	{
+		var email=document.getElementById('email').value;
+		var Password=document.getElementById('password').value;
+
+		if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
+		{
+			document.getElementById('sp1').innerHTML="mail@gmail.com required";
+			return false;
+		}
+				if(Password=="")
+		{
+			document.getElementById('sp8').innerHTML="password required";
+			//alert('name required');
+			return false;
+		}
+
+
+
+	}
+
+</script> -->

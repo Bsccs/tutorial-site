@@ -1,13 +1,7 @@
 <?php include("includes/header.php") ?>
 <?php include("includes/nav.php") ?>
-
-	
-
 	<div class="row">
-		<div class="col-lg-6 col-lg-offset-3">
-
-	
-								
+		<div class="col-lg-6 col-lg-offset-3">						
 		</div>
 	</div>
     	<div class="row">
@@ -29,11 +23,10 @@
 							<div class="col-lg-12">
 								<form id="login-form"  method="post" role="form" style="display: block;">
 									<div class="form-group">
-										<input type="text" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" required>
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" required><span id="sp1" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="password" name="password" id="login-
-										password" tabindex="2" class="form-control" placeholder="Password" required>
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required><span id="sp8" style="color:red"></span>
 									</div>
 									<div class="form-group text-center">
 										<input type="checkbox" tabindex="3" class="" name="remember" id="remember">
@@ -42,10 +35,11 @@
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="login-submit" id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
+												<input type="submit" name="login-submit" onclick="return login_page();"  id="login-submit" tabindex="4" class="form-control btn btn-login" value="Log In">
 											</div>
 										</div>
 									</div>
+									</form>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-lg-12">
@@ -55,7 +49,7 @@
 											</div>
 										</div>
 									</div>
-								</form>
+								
 								
 							</div>
 						</div>
@@ -66,3 +60,4 @@
 		</div>
 		
 <?php include("includes/footer.php") ?>
+

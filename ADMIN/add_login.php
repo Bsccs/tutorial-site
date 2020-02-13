@@ -6,54 +6,17 @@
   			$Username=$_POST['username'];
   			$Password=$_POST['password'];
   			$type=$_POST['type'];
-			mysqli_query($connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
+		mysqli_query($connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
   			echo "<script>alert('details added succeessfully');</script>";
 			echo"<script>window.history.back();</script>";
 		}
     
 ?>
-<!-- html opening -->
-<!DOCTYPE html>
-<html lang="en">
-	<!-- head part opening------>
-	<head>
-		<!-- encoding methods --> 
-  		<meta charset="utf-8">
-  		<!-- Responsive Meta Tag -->
-  		<meta name="viewport" content="width=device-width, initial-scale=1">
-  		<meta http-equiv="x-ua-compatible" content="ie=edge">
-  		<!-- title -->
-  		<title>ADMIN</title>
-  		<!-- - plugins opening----->
-  		<!-- font awesome -->
-  		<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
-  		<!-- admin LTE plugins -->
-  		<link rel="stylesheet" href="dist/css/adminlte.min.css">
-  		<!--  bootstrap plugins -->
-  		<link rel="stylesheet" href="dist/css/css.css">
-  		<!-- table plugins -->
-  		<link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
-  		<!---plugins closing----->
-	</head>
-	<!-- head part closing------>
-	<!-- body part opening ------>
-	<body class="hold-transition layout-top-nav">
-		<!-- wrapping opening -->
-		<div class="wrapper">
-  		   <!-- Navbar -->
- 	       <?php include 'nav.php' ?>
-  			<!-- Content Wrapper- Contains page content -->
-  			<div class="content-wrapper">
-    		 <!-- Content Header (Page header) -->
-    			<div class="content-header">
-      				<div class="container">
-        				<div class="row mb-2">
-          					<div class="col-sm-6">
-            				 <h1 class="m-0 text-dark">INSERT DETAILS</h1>
-          				  </div>
-        				</div>
-      				</div>
-    			</div>
+<!-- html part -->
+<?php include 'includes/header.php'?>
+
+<h1 class="m-0 text-dark">INSERT DETAILS</h1>
+</div></div></div></div>  				    			
   		 
     	   <!-- Main content opening -->
     	   	<section class="content">
@@ -94,36 +57,5 @@
       			</div>
       		</section>
     	   <!-- main content closing -->
-         <!-- content wrapper closing -->
-        </div>
-    		<!-- wrapping closing -->
-		</div>  
-		<!--script opening-->
-		<!-- jquery -->
-	 	<script src="plugins/jquery/jquery.min.js"></script>
-		<!-- Bootstrap 4 -->
-		<script src="plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-		<!-- AdminLTE App -->
-		<script src="dist/js/adminlte.min.js"></script>
-		<!-- DataTables -->
-		<script src="plugins/datatables/jquery.dataTables.js"></script>
-		<script src="plugins/datatables-bs4/js/dataTables.bootstrap4.js"></script>
-		<!-- script closing -->
-		<!-- table script -->
-		<script>
- 	 		$(function () {
-    		$('#example2').DataTable({
-    	  	"paging": true,
-    	  	"lengthChange": false,
-    	  	"searching": false,
-    	  	"ordering": true,
-    	  	"info": true,
-    	  	"autoWidth": false,
-    			});
-  			});
-		</script>
-		<!-- table script -->
-	</body>
-	<!-- body part closing ---->
-</html>
-<!-- html closing -->
+
+    <?php include'includes/footer.php' ?>

@@ -24,37 +24,33 @@
 							<div class="col-lg-12">
 								<form id="register-form" method="post" role="form" >
 									<div class="form-group">
-										<input type="email" name="email" id="register_email" tabindex="1" class="form-control" placeholder="Email" value="" required >
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required ><span id="sp1" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="fullname" value="" required >
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="fullname" value="" required ><span id="sp2" style="color:red"></span>
 									</div>
 								 	<div class="form-group">
-										<input type="text" name="gender" id="gender" tabindex="2" class="form-control" placeholder="gender(male,female or other)" required>
+										<input type="text" name="gender" id="gender" tabindex="2" class="form-control" placeholder="gender(male,female or other)" required><span id="sp3" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="country" id="country" tabindex="1" class="form-control" placeholder="country" value="" required >
+										<input type="text" name="country" id="country" tabindex="1" class="form-control" placeholder="country" value="" required ><span id="sp4" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="state" id="state" tabindex="1" class="form-control" placeholder="state" value="" required >
+										<input type="text" name="state" id="state" tabindex="1" class="form-control" placeholder="state" value="" required ><span id="sp5" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="phonenumber" id="phonenumber" tabindex="1" class="form-control" placeholder="phone number" value="" required >
+										<input type="text" name="phone" id="phone" tabindex="1" class="form-control" placeholder="phone number" value="" required ><span id="sp6" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="age" id="age" tabindex="1" class="form-control" placeholder="age" value="" required >
-									</div>
-
-									<div class="form-group">
-										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
+										<input type="text" name="age" id="age" tabindex="1" class="form-control" placeholder="age" value="" required ><span id="sp7" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm_password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required><span id="sp8" style="color:red"></span>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" onclick="return valid();" value="Register Now">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" onclick="return reg_valid();" value="Register Now">
 											</div>
 										</div>
 									</div>
