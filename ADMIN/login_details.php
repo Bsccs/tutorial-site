@@ -5,7 +5,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `login` ORDER BY 'login_id'");
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
-            				  <h1 class="m-0 text-dark">LOGIN-TABLE</h1>
+            				  <h1 class="m-0 text-light">LOGIN-TABLE</h1>
       						</div>
         				</div>
       				</div>

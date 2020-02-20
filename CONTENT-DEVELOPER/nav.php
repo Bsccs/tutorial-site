@@ -1,5 +1,5 @@
 <!-- navbar color:navbar-dark,responsive:lg -->
-<nav class="main-header navbar navbar-expand-sm navbar-dark navbar-light">
+<nav class="main-header navbar navbar-expand-lg navbar-dark navbar-light">
     <div class="container">
     	<!-- responsive menu icon opening --> 
         <a href="dashboard.php" class="navbar-brand"></a>      
@@ -12,7 +12,7 @@
         	<!-- Left side content -->
         	<ul class="navbar-nav">
         		<!-- admin -->
-          		<li class="nav-item"><a href="dashboard.php" class="nav-link">ADMIN</a></li>
+          		<li class="nav-item"><a href="dashboard.php" class="nav-link">CONTENT DEVELOPER</a></li>
           		<!-- login details -->   		 
           		<li class="nav-item"><a href="login_details.php" class="nav-link">LOGINS</a></li>
           		<!-- feedback details -->
@@ -62,14 +62,4 @@
     	</div>
   	</div>
 </nav>
-<style type="text/css">
-.navbar-dark{
-  background-color: black;
 
-}
-
-.navbar {
-  flex-wrap: wrap;
-  }
-
-</style>

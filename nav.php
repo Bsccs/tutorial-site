@@ -1,5 +1,5 @@
 <!-- navbar color:navbar-dark,responsive:lg -->
-<nav class="main-header navbar navbar-expand-sm navbar-dark navbar-light">
+<nav class="main-header navbar navbar-expand-lg navbar-dark navbar-light">
     <div class="container">
     	<!-- responsive menu icon opening --> 
         <a href="dashboard.php" class="navbar-brand"></a>      
@@ -62,14 +62,4 @@
     	</div>
   	</div>
 </nav>
-<style type="text/css">
-.navbar-dark{
-  background-color: black;
 
-}
-
-.navbar {
-  flex-wrap: wrap;
-  }
-
-</style>

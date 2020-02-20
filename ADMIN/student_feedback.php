@@ -5,7 +5,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `stud_feedback` ORDER BY content_id
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
-                      <h1 class="m-0 text-dark">STUDENT-FEEDBACK</h1>
+                      <h1 class="m-0 text-light">STUDENT-FEEDBACK</h1>
                     </div>
                 </div>
               </div>

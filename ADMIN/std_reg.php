@@ -1,11 +1,10 @@
 <!-- php -->
 <?php include 'connection.php';
 $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_id");
-
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
-                      <h1 class="m-0 text-dark"> STUDENT-DETAILS</h1>
+                      <h1 class="m-0 text-light"> STUDENT-DETAILS</h1>
                     </div>
                 </div>
               </div>
@@ -20,7 +19,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_
                             <thead>
                               <tr>
                                 <th>SL.No</th>
-                                <th>EMAIL</th>
+                                <!-- <th>EMAIL</th> -->
                                 <th>NAME</th>
                                 <th>GENDER</th>
                                 <th>COUNTRY</th>
@@ -36,7 +35,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `student_details` order by student_
                                 { $count++; ?>
                               <tr>
                                   <td><?php echo $count; ?></td>
-                                  <td><?php echo $row_data['email']; ?></td>
+                                  
                                   <td><?php echo $row_data['name']; ?></td>
                                   <td><?php echo $row_data['gender']; ?></td>
                                   <td><?php echo $row_data['country']; ?></td>  

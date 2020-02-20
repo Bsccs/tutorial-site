@@ -6,7 +6,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `approvals` order by 'content id'")
 <!-- html opening -->
 <?php include 'includes/header.php'?>
 
-            				  <h1 class="m-0 text-dark">APPROVED-CONTENTS</h1>
+            				  <h1 class="m-0 text-light">APPROVED-CONTENTS</h1>
       						</div>
         				</div>
       				</div>

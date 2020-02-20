@@ -1,12 +1,12 @@
 <?php include 'includes/header.php'?>
-                      <h1 class="m-0 text-dark"> ADMIN</h1>
+                      <h1 class="m-0 text-light"> ADMIN</h1>
                     </div>
                 </div>
               </div>
           </div>
     	    <!-- Main content opening -->
           <section class="content">
-            <div class="container-fluid">
+            <div class="container">
               <div class="layout">
               <!-- Small boxes-->
               <div class="row">
@@ -15,25 +15,12 @@
                   <div class="small-box bg-info">
                     <div class="inner">
                       <h3>150</h3>
-                      <p>New Orders</p>
+                      <p>number contents</p>
                     </div>
                     <div class="icon">
                       <i class="ion ion-bag"></i>
                     </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
-                  </div>
-                </div>
-                  <!-- small box closing -->
-                <div class="col-lg-3 col-6">
-                  <div class="small-box bg-success">
-                    <div class="inner">
-                      <h3>53<sup style="font-size: 20px">%</sup></h3>
-                      <p>Bounce Rate</p>
-                    </div>
-                    <div class="icon">
-                      <i class="ion ion-stats-bars"></i>
-                    </div>
-                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a href="login_details.php" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
                   </div>
                 </div>
                  <!-- ./col -->
@@ -56,6 +43,19 @@
                   <div class="small-box bg-danger">
                     <div class="inner">
                       <h3>65</h3>
+                      <p>number of teachers</p>
+                    </div>
+                    <div class="icon">
+                     <i class="ion ion-pie-graph"></i>
+                    </div>
+                    <a href="#" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
+                  </div>
+                </div>
+                          <div class="col-lg-3 col-6">
+                  <!-- small box -->
+                  <div class="small-box bg-success">
+                    <div class="inner">
+                      <h3>65</h3>
                       <p>Unique Visitors</p>
                     </div>
                     <div class="icon">
@@ -75,6 +75,8 @@
 
 <style>
           .layout{
-            margin-top: 100px;
+            margin-top: 80px;
+
         }
+
 </style>

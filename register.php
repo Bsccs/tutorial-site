@@ -1,0 +1,232 @@
+<?php
+
+include 'connection.php';
+
+require 'PHPMailer/PHPMailerAutoload.php';
+
+$otp = rand();
+
+if(isset($_POST['Register']))
+{
+    $name=$_POST['name'];
+
+    $email=$_POST['email'];
+
+    $Password=$_POST['password'];
+
+    mysqli_query($connection,"INSERT INTO `reg`(`email`, `name`, `password`) VALUES ('$email','$name','$Password')");
+
+    $mail = new PHPMailer;
+ 
+$mail->isSMTP();                                      // Set mailer to use SMTP
+$mail->Host = 'smtp.gmail.com';                       // Specify main and backup server
+$mail->SMTPAuth = true;                               // Enable SMTP authentication
+$mail->Username = 'hackerzdom@gmail.com';                   // SMTP username
+$mail->Password = 'hackerzdom123#';               // SMTP password
+$mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
+$mail->Port = 465;       
+/*$mail->SMTPDebug = 2;*/                             //Set the SMTP port number - 587 for authenticated TLS
+$mail->setFrom('hackerzdom@gmail.com', 'otp - hackerzdom');     //Set who the message is to be sent from
+
+$mail->addAddress($email); 
+           
+//$mail->addCC('example@xyz.com', 'name');
+//$mail->addBCC('example@xyz.com', 'name');
+$mail->WordWrap = 50;                                  
+        
+$mail->isHTML(true);                                   
+ 
+$mail->Subject = 'otp - hackerzdom';
+$mail->Body    = "<html>
+<head>
+<meta charset='utf-8'>
+<title>Safe Land</title>
+</head>
+
+<body>
+
+<table width='200' border='1'>
+  <tr>
+    <th scope='row'>Mail From</th>
+    <td>HACKERZDOM</td>
+  </tr>
+  <tr>
+    <th scope='row'>OTP</th>
+    <td>$otp</td>
+  </tr>
+</table>
+
+</body>
+</html>
+";
+  $mail->AltBody = 'msg';
+ 
+  //Read an HTML message body from an external file, convert referenced images to embedded,
+  //convert HTML into a basic plain-text alternative body
+  //$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
+ 
+  if(!$mail->send()) 
+  {
+     echo 'Message could not be sent.';
+     echo 'Mailer Error: ' . $mail->ErrorInfo;
+     exit;
+  }
+
+  else
+  {
+    echo "<script>alert('Message has been sent');</script>";
+
+    
+  }
+ 
+ }
+        
+?>
+
+
+
+<?php include("includes/header.php") ?>
+<?php include("includes/nav.php") ?>
+
+	<div class="row">
+		<div class="col-lg-6 col-lg-offset-3">					
+		</div>
+	</div>
+    	<div class="row">
+			<div class="col-md-6 col-md-offset-3">
+				<div class="panel panel-login">
+					<div class="panel-heading">
+						<div class="row">
+							<div class="col-xs-6">
+								<a href="login.php">Login</a>
+							</div>
+							<div class="col-xs-6">
+								<a href="register.php" class="active" id="">Register</a>
+							</div>
+						</div>
+						<hr>
+					</div>
+					<div class="panel-body">
+						<div class="row">
+							<div class="col-lg-12">
+								<form id="register-form" method="post" role="form" >
+									<div class="form-group">
+										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required ><span id="sp1" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="fullname" value="" required ><span id="sp2" style="color:red"></span>
+									</div>
+								 	<div class="form-group">
+										<input type="text" name="gender" id="gender" tabindex="2" class="form-control" placeholder="gender(male,female or other)" required><span id="sp3" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="country" id="country" tabindex="1" class="form-control" placeholder="country" value="" required ><span id="sp4" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="state" id="state" tabindex="1" class="form-control" placeholder="state" value="" required ><span id="sp5" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="phone" id="phone" tabindex="1" class="form-control" placeholder="phone number" value="" required ><span id="sp6" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="text" name="age" id="age" tabindex="1" class="form-control" placeholder="age" value="" required ><span id="sp7" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required><span id="sp8" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-sm-6 col-sm-offset-3">
+												<input type="submit" name="register-submit" id="register-submit" tabindex="4" class="form-control btn btn-register" onclick="return reg_valid();" value="Register Now">
+											</div>
+										</div>
+									</div>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+<?php include("includes/footer.php") ?>
+<script type="text/javascript">
+
+function reg_valid()
+	{
+		
+		var email=document.getElementById('email').value;
+
+		var name=document.getElementById('username').value;
+
+		var gender=document.getElementById('gender').value;
+
+		var country=document.getElementById('country').value;
+
+		var state=document.getElementById('state').value;
+		
+		var phone=document.getElementById('phone').value;
+		
+		var age=document.getElementById('age').value;	
+		
+		var Password=document.getElementById('password').value;
+
+
+		if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
+		{
+			document.getElementById('sp1').innerHTML="mail@gmail.com required";
+			return false;
+		}
+
+		if(name=="")
+		{
+			document.getElementById('sp2').innerHTML="fullname required";
+			return false;
+		}
+
+		if(gender=="")
+		{
+			document.getElementById('sp3').innerHTML="Gender required";
+			return false;
+		}
+
+		if(country=="")
+		{
+			document.getElementById('sp4').innerHTML="country required";
+			//alert('name required');
+			return false;
+		}
+
+		if(state=="")
+		{
+			document.getElementById('sp5').innerHTML="state required";
+			//alert('name required');
+			return false;
+		}
+
+
+		if(phone=="" || isNaN(phone) || phone.length>10)
+		{
+			document.getElementById('sp6').innerHTML="mobile number required";
+			return false;
+		}
+
+		if(age=="")
+		{
+			document.getElementById('sp7').innerHTML="age required";
+			//alert('name required');
+			return false;
+		}
+		
+		if(Password=="")
+		{
+			document.getElementById('sp8').innerHTML="password required";
+			//alert('name required');
+			return false;
+		}
+
+
+	}
+
+
+</script>

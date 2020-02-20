@@ -1,2 +1,0 @@
-validation:
-email alredy exist javascript code to find

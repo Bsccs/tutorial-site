@@ -4,7 +4,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `request` order by 'student_id'");
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
-            				  <h1 class="m-0 text-dark">REQUESTS</h1>
+            				  <h1 class="m-0 text-light">REQUESTS</h1>
       						</div>
         				</div>
       				</div>

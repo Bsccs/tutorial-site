@@ -19,6 +19,8 @@
   		<link rel="stylesheet" href="../dist/css/css.css">
   		<!-- table plugins -->
   		<link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+        <!-- summernote -->
+      <link rel="stylesheet" href="../plugins/summernote/summernote-bs4.css">
   		<!---plugins closing----->
 	</head>
 	<!-- head part closing------>
