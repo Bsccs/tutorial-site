@@ -60,7 +60,7 @@ class content
     $sql="INSERT INTO `content_keyword` VALUES ('$conid', '$tags[3]');";
     $result=mysqli_query($this->connection,$sql);
     }
-    header('Location: sitefiles/addvideo.html');
+ //   header('Location: ../addvideo.html');
 
     }
 
