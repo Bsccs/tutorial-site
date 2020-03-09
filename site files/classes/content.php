@@ -17,12 +17,12 @@ class content
       }
 
 
-    public function add_video($embedvideo,$depth,$tags) 
+    public function add_video($embedvideo,$depth,$tags,$topics) 
     {
         // TODO implement here
       //  $conid;
     $developer_id=1;
-    $sql="INSERT INTO `content` VALUES (NULL, '$embedvideo', '0', '$depth', '0', '0', '$developer_id', '0', '0');";
+    $sql="INSERT INTO `content` VALUES (NULL, '$embedvideo', '0', '$depth', '0', '$developer_id', '0', '0');";
     $result=mysqli_query($this->connection,$sql);
     if($result)
     {//echo "successfully inserted"; 
@@ -42,22 +42,22 @@ class content
     if($tags['0']!=NULL) 
     {
       //  echo " t1"; echo $tags[0];
-    $sql="INSERT INTO `content_keyword` VALUES ('$conid', '$tags[0]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[0]');";
     $result=mysqli_query($this->connection,$sql);
     }
     if($tags['1']!=NULL) 
     {//echo " t2";
-    $sql="INSERT INTO `content_keyword` VALUES ('$conid', '$tags[1]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[1]');";
     $result=mysqli_query($this->connection,$sql);
     }
    if($tags['2']!=NULL)  
     {//echo "t3";
-    $sql="INSERT INTO `content_keyword` VALUES ('$conid', '$tags[2]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[2]');";
     $result=mysqli_query($this->connection,$sql);
     }
     if($tags['3']!=NULL)  
     {
-    $sql="INSERT INTO `content_keyword` VALUES ('$conid', '$tags[3]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[3]');";
     $result=mysqli_query($this->connection,$sql);
     }
  //   header('Location: ../addvideo.html');

@@ -21,12 +21,5 @@ class student implements payment {
         // TODO implement here
     }
 
-    public function pay() {
-        // TODO implement here
-    }
-
-    public function Operation1() {
-        // TODO implement here
-    }
 
 }
