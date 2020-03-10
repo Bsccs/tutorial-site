@@ -1,0 +1,15 @@
+Use the following login credentials to login an admin account.
+
+Username: mike@example.com
+Password: ninja12qw!@QW
+
+
+
+
+
+
+
+The login form and logout should work at this point. When you try to login a customer account. Use the following login credentials.
+
+Username: darwin@example.com
+Password: darwin12qw!@QW
