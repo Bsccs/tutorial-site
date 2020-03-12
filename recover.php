@@ -1,4 +1,5 @@
-<?php include("includes/header.php") ?>
+<?php include'include/header.php'?>
+
     <div class="row">
 				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">
 					<div class="alert-placeholder">
@@ -35,4 +36,8 @@
 					</div>
 				</div>
 			</div>
-<?php include("includes/footer.php") ?>
+			
+<!-- container closing -->
+</div>
+</body>
+</html>

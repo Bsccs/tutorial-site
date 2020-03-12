@@ -12,14 +12,39 @@
   		<title>ADMIN</title>
   		<!-- - plugins opening----->
   		<!-- font awesome -->
-  		<link rel="stylesheet" href="../plugins/fontawesome-free/css/all.min.css">
+  		<link rel="stylesheet" href="plugins/fontawesome-free/css/all.min.css">
   		<!-- admin LTE plugins -->
-  		<link rel="stylesheet" href="../dist/css/adminlte.min.css">
+  		<link rel="stylesheet" href="dist/css/adminlte.min.css">
   		<!--  bootstrap plugins -->
-  		<link rel="stylesheet" href="../dist/css/css.css">
+  		<link rel="stylesheet" href="dist/css/css.css">
   		<!-- table plugins -->
-  		<link rel="stylesheet" href="../plugins/datatables-bs4/css/dataTables.bootstrap4.css">
+  		<link rel="stylesheet" href="plugins/datatables-bs4/css/dataTables.bootstrap4.css">
   		<!---plugins closing----->
+      <style>
+.bg-primary {
+    background-color: black;
+}
+
+.content-wrapper{
+  background-image: url('img/hacker.jpg');
+  
+  position: absolute;
+  height: 200%;
+  width:100%;
+  background-size:cover;
+  background-position: 100%;
+  margin:0 auto;
+
+}
+
+  .card{
+    opacity: 0.7;
+  
+
+  }
+
+
+</style>
 	</head>
 	<!-- head part closing------>
     <!-- body part opening ------>

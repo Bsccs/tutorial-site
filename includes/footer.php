@@ -1,4 +1,5 @@
-<!-- container closing -->
-</div>
+  			</div>
+	</div>
+
 </body>
 </html>

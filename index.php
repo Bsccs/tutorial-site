@@ -1,20 +1,11 @@
-<?php include 'includes/header.php'?>
-<?php include 'nav.php'?>
-                      <h1 class="m-0 text-light"> HACKERZDOM</h1>
-                    </div>
-                </div>
-              </div>
-          </div>
-    	    <!-- Main content opening -->
+<?php include'includes/header.php'?>
 
-         <!-- main content closing -->
+	<!-- main content -->
 
-    <?php include'includes/footer.php' ?>
+		<?php include'FLIPBOX.php'?>
 
-<style>
-          .layout{
-            margin-top: 150px;
+	<!-- main content closing -->
 
-        }
+<?php include'includes/footer.php'?>
 
-</style>
+

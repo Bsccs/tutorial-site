@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2020 at 06:30 PM
+-- Generation Time: Mar 10, 2020 at 05:51 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -53,15 +53,34 @@ CREATE TABLE `blacklist` (
 
 CREATE TABLE `content` (
   `content_id` int(11) NOT NULL,
-  `content_name` varchar(18) NOT NULL,
+  `content_name` varchar(255) NOT NULL,
   `inspector_approved` tinyint(1) NOT NULL,
   `content_depth` int(11) NOT NULL,
-  `keyword_id` int(11) NOT NULL,
   `people_viewed` int(11) NOT NULL,
   `developer_id` int(11) NOT NULL,
   `content_length` int(11) NOT NULL,
   `paid` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `content`
+--
+
+INSERT INTO `content` (`content_id`, `content_name`, `inspector_approved`, `content_depth`, `people_viewed`, `developer_id`, `content_length`, `paid`) VALUES
+(113, '', 0, 2, 0, 1, 0, 0),
+(114, '', 0, 2, 0, 1, 0, 0),
+(115, '', 0, 2, 0, 1, 0, 0),
+(117, '', 0, 2, 0, 1, 0, 0),
+(118, 'videolink123`', 0, 2, 0, 1, 0, 0),
+(119, 'videolink123`', 0, 2, 0, 1, 0, 0),
+(120, 'videolink234', 0, 2, 0, 1, 0, 0),
+(122, 'hhhhhhh', 0, 2, 0, 1, 0, 0),
+(123, 'hhhhhhh', 0, 2, 0, 1, 0, 0),
+(124, '<iframe width=\"907', 0, 2, 0, 1, 0, 0),
+(125, '<iframe width=\"892', 0, 2, 0, 1, 0, 0),
+(126, '<iframe width=\"400', 0, 2, 0, 1, 0, 0),
+(128, '<iframe width=\"545\" height=\"409\" src=\"https://www.youtube.com/embed/W4AwgFenpok\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 2, 0, 1, 0, 0),
+(129, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/QvKWXs24p8o\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 1, 2, 0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -71,11 +90,39 @@ CREATE TABLE `content` (
 
 CREATE TABLE `content_developer` (
   `developer_id` int(11) NOT NULL,
+  `login_id` int(11) NOT NULL,
+  `name` varchar(24) NOT NULL,
   `email` varchar(18) NOT NULL,
   `quali_doc` varchar(18) NOT NULL,
   `expertise` varchar(18) NOT NULL,
   `admin_aproved` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `content_developer`
+--
+
+INSERT INTO `content_developer` (`developer_id`, `login_id`, `name`, `email`, `quali_doc`, `expertise`, `admin_aproved`) VALUES
+(1, 0, 'jdkjhsf', 'sdfsdfsd', '', 'sdfsdfsd', 0),
+(3, 0, 'Joby George', 'john@gmail', '', 'expertise', 0),
+(5, 0, 'jfgoie', 'hkuhki', 'kjug', 'kjbk', 0),
+(6, 0, 'jaini', 'sas', 'zdxs', 'sdsd', 0),
+(7, 0, 'gfhj', 'jhyj', 'jyf', 'jyhfjuyf', 0),
+(14, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'android', 0),
+(15, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(16, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(17, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(18, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(19, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(20, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(21, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(22, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(23, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(24, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(25, 0, 'Joby George', 'john@gmail', 'uploads/Tell-Me-Ab', 'java,php,android', 0),
+(26, 0, 'Joby George', 'john@gmail', 'uploads/Tell-Me-Ab', 'java,php,android', 0),
+(27, 0, 'john', 'john@gmail', 'uploads/ERDDiagram', 'java,php,android', 0),
+(28, 0, 'john', 'john@gmail', 'uploads/ERDDiagram', 'java,php,android', 0);
 
 -- --------------------------------------------------------
 
@@ -84,9 +131,38 @@ CREATE TABLE `content_developer` (
 --
 
 CREATE TABLE `content_keyword` (
-  `content_id` int(11) NOT NULL,
+  `ck_id` int(5) NOT NULL,
+  `content_id` int(5) NOT NULL,
   `keyword` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `content_keyword`
+--
+
+INSERT INTO `content_keyword` (`ck_id`, `content_id`, `keyword`) VALUES
+(26, 0, ''),
+(27, 0, ''),
+(28, 120, 'tag12'),
+(29, 120, 'tag13'),
+(30, 121, 'tag12'),
+(31, 121, 'tag13'),
+(32, 122, 'yyyy'),
+(33, 122, 'yttrrrr'),
+(34, 123, 'yyyy'),
+(35, 123, 'yttrrrr'),
+(36, 124, 'yoyo'),
+(37, 124, 'yipiee'),
+(38, 125, 'jhv'),
+(39, 125, 'hgc'),
+(40, 126, 'sdvsdfv'),
+(41, 126, 'sdvsdv'),
+(42, 127, 'kjg'),
+(43, 127, 'kjkjb'),
+(44, 128, 'cid'),
+(45, 128, 'moosa'),
+(46, 129, 'nas'),
+(47, 129, 'daily');
 
 -- --------------------------------------------------------
 
@@ -96,9 +172,26 @@ CREATE TABLE `content_keyword` (
 
 CREATE TABLE `inspector` (
   `inspector_id` int(11) NOT NULL,
+  `login_id` int(11) NOT NULL,
   `email` varchar(18) NOT NULL,
   `name` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `inspector`
+--
+
+INSERT INTO `inspector` (`inspector_id`, `login_id`, `email`, `name`) VALUES
+(1, 0, 'dedew', 'wedwe'),
+(2, 0, 'dedew', 'wedwe'),
+(11, 0, 'jaimyyy', 'james'),
+(12, 0, 'jackyyy', 'jacky'),
+(13, 0, 'jackyyy', 'jacky'),
+(14, 0, 'nbkjbkjbkjb', 'jai jawan'),
+(15, 0, 'isuyht', 'jawan'),
+(16, 0, 'wefwef', 'sf'),
+(17, 0, 'nbkjbkjbkjb', 'john'),
+(18, 0, 'john@gmail', 'Joby George');
 
 -- --------------------------------------------------------
 
@@ -111,6 +204,16 @@ CREATE TABLE `insp_expertise` (
   `inspector_id` int(11) NOT NULL,
   `expertise` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `insp_expertise`
+--
+
+INSERT INTO `insp_expertise` (`expertise_id`, `inspector_id`, `expertise`) VALUES
+(1, 1, 'java'),
+(2, 2, 'php'),
+(4, 2, 'android'),
+(5, 2, 'cid');
 
 -- --------------------------------------------------------
 
@@ -183,7 +286,6 @@ CREATE TABLE `search` (
 CREATE TABLE `student_details` (
   `student_id` int(11) NOT NULL,
   `login_id` int(11) NOT NULL,
-  `email` varchar(18) NOT NULL,
   `name` varchar(15) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `country` varchar(15) NOT NULL,
@@ -192,6 +294,15 @@ CREATE TABLE `student_details` (
   `age` int(11) NOT NULL,
   `last_login` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_details`
+--
+
+INSERT INTO `student_details` (`student_id`, `login_id`, `name`, `gender`, `country`, `state`, `phone_number`, `age`, `last_login`) VALUES
+(1, 0, 'john', 'm', 'india', 'ker', 0, 23, 0),
+(2, 1, 'john', 'm', 'india', 'ker', 675859659, 23, 8),
+(3, 2, 'edx', 'm', 'infrv', 'ker', 456, 23, 1239);
 
 -- --------------------------------------------------------
 
@@ -207,6 +318,13 @@ CREATE TABLE `student_log` (
   `date` date NOT NULL,
   `watch_time` time NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `student_log`
+--
+
+INSERT INTO `student_log` (`student_id`, `content_id`, `paused_time`, `rating`, `date`, `watch_time`) VALUES
+(2, 129, '00:00:00', 0, '0000-00-00', '00:00:00');
 
 -- --------------------------------------------------------
 
@@ -274,6 +392,15 @@ CREATE TABLE `topics` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
+-- Dumping data for table `topics`
+--
+
+INSERT INTO `topics` (`topic_name`) VALUES
+('bit coins'),
+('java'),
+('php connection');
+
+--
 -- Indexes for dumped tables
 --
 
@@ -305,7 +432,7 @@ ALTER TABLE `content_developer`
 -- Indexes for table `content_keyword`
 --
 ALTER TABLE `content_keyword`
-  ADD PRIMARY KEY (`content_id`);
+  ADD PRIMARY KEY (`ck_id`);
 
 --
 -- Indexes for table `inspector`
@@ -329,8 +456,7 @@ ALTER TABLE `insp_feedback`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`login_id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`login_id`);
 
 --
 -- Indexes for table `payment`
@@ -403,16 +529,34 @@ ALTER TABLE `approvals`
   MODIFY `content id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `content`
+--
+ALTER TABLE `content`
+  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=130;
+
+--
+-- AUTO_INCREMENT for table `content_developer`
+--
+ALTER TABLE `content_developer`
+  MODIFY `developer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=29;
+
+--
+-- AUTO_INCREMENT for table `content_keyword`
+--
+ALTER TABLE `content_keyword`
+  MODIFY `ck_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
+
+--
 -- AUTO_INCREMENT for table `inspector`
 --
 ALTER TABLE `inspector`
-  MODIFY `inspector_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `inspector_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT for table `insp_expertise`
 --
 ALTER TABLE `insp_expertise`
-  MODIFY `expertise_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `expertise_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT for table `login`
@@ -424,7 +568,7 @@ ALTER TABLE `login`
 -- AUTO_INCREMENT for table `student_details`
 --
 ALTER TABLE `student_details`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

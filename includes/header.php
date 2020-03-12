@@ -3,13 +3,17 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
+
 	<title>Document</title>
-	<link rel="stylesheet" href="css/bootstrap.css">
-	<link rel="stylesheet" href="css/styles.css">
-	<script src="js/jquery.js"></script>
-	<script src="js/bootstrap.js"></script>
-	<script src="js/scripts.js"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<link rel="stylesheet" href="css/bootstrap.min.css">	
+	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+	<script src="js/jquery-3.4.1.slim.min.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+
 </head>
 <body>
-	<!-- container opening -->
-	<div class="container">
+	<div class="body-wrap">
+   		<?php include'NAVBAR.php'?>  
+  	 		<div class="container">

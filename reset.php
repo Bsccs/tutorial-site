@@ -1,4 +1,5 @@
-<?php include("includes/header.php") ?>
+<?php include'include/header.php'?>
+
 	<div class="row">
 
 	</div>
@@ -23,12 +24,12 @@
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required>
 									</div>
 									<div class="form-group">
-										<input type="password" name="confirm_password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required>
+										<input type="password" name="confirm_password" id="confirm-password" tabindex="2" class="form-control" placeholder="Confirm Password" required><span id="sp1" style="color:red"></span>
 									</div>
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="reset-password-submit" id="reset-password-submit" tabindex="4" class="form-control btn btn-register" value="Reset Password">
+												<input type="submit" name="reset-password-submit" id="reset-password-submit" tabindex="4" class="form-control btn btn-register" onclick="return Validate();" value="Reset Password">
 											</div>
 										</div>
 									</div>
@@ -39,4 +40,19 @@
 				</div>
 			</div>
 		</div>
-<?php include("includes/footer.php") ?>
+		
+<!-- container closing -->
+</div>
+</body>
+ <script type="text/javascript">
+    function Validate() {
+        var password = document.getElementById("password").value;
+        var confirmPassword = document.getElementById("confirm-password").value;
+        if (password != confirmPassword) {
+            document.getElementById('sp1').innerHTML="password do not match";
+            return false;
+        }
+        return true;
+    }
+</script>
+</html>

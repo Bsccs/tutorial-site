@@ -1,3 +1,15 @@
+<style type="text/css">
+.navbar-dark{
+  background-color: black;
+
+}
+
+.navbar {
+  flex-wrap: wrap;
+  }
+
+</style>
+
 <!-- navbar color:navbar-dark,responsive:lg -->
 <nav class="main-header navbar navbar-expand-sm navbar-dark navbar-light">
     <div class="container">
@@ -12,7 +24,7 @@
         	<!-- Left side content -->
         	<ul class="navbar-nav">
         		<!-- admin -->
-          		<li class="nav-item"><a href="dashboard.php" class="nav-link">ADMIN</a></li>
+          		<li class="nav-item"><a href="index.php" class="nav-link">ADMIN</a></li>
           		<!-- login details -->   		 
           		<li class="nav-item"><a href="login_details.php" class="nav-link">LOGINS</a></li>
           		<!-- feedback details -->
@@ -49,7 +61,7 @@
           		</li>
           		<!-- visit site -->
           		<li class="nav-item">
-            		<a href="../index.php" class="nav-link">VISIT SITE</a>
+            		<a href="http://hackerzdom.com/" class="nav-link">VISIT SITE</a>
           		</li>
             </ul>
       		<!-- Right navbar links -->
@@ -62,14 +74,3 @@
     	</div>
   	</div>
 </nav>
-<style type="text/css">
-.navbar-dark{
-  background-color: black;
-
-}
-
-.navbar {
-  flex-wrap: wrap;
-  }
-
-</style>

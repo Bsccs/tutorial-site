@@ -1,27 +1,22 @@
 <?php
-  
-
-include 'connection.php';
 session_start();
-if(isset($_SESSION['user_id']))
-{
-	header('location:index.php');
-}
-
+// include Function  file
+include_once('function.php');
+// Object creation
+$usercredentials=new DB_con();
 if(isset($_POST['button']))
 {
-	$email=$_POST['email'];
-	$Password=$_POST['password'];
+// Posted Values
+$uemail=$_POST['email'];
+$pasword=$_POST['password'];
+//Function Calling
+$ret=$usercredentials->signin($uemail,$pasword);
 
-	$result=mysqli_query($connection,"SELECT * 
-	FROM `login` WHERE  email ='".$email."'AND password ='".$Password."'");
+if(mysqli_num_rows($ret) > 0)
+{
+	$row=mysqli_fetch_assoc($ret);
 
-	$count = mysqli_num_rows($result);
- 	
-		if($count == 1) {
-          $row = mysqli_fetch_assoc($result);
-
-          if($row['role'] == "admin"){
+	if($row['role'] == "admin"){
 
          $_SESSION['user_id'] = $row['login_id'];
          $_SESSION['user_type'] = $row['role'];
@@ -51,54 +46,26 @@ if(isset($_POST['button']))
              $_SESSION['user_id'] = $row['login_id'];
              $_SESSION['user_type'] = $row['role'];
          
-         header("location: student.php");
+         header("location: index.php");
 
  
       }
-  }
-        else 
-      {/*
-        $_SESSION['login_error'] = "invalid username and password";
-        header("location: login.php");*/
-          echo "<script>alert('username and password are incorrect')</script>";
-        echo "<script>window.location='login.php'</script>";
 
-       
-
-       /* echo "<script>alert('username and password are incorrect')</script>";
-        echo "<script>window.location='login.php'</script>";*/
-      }
-   }
-
-
-
-
-
-/*
-
-
-
-	if(mysqli_num_rows($result)==1)
-	{
-		$row_data=mysqli_fetch_assoc($result);
-
-		$_SESSION['user_id']=$row_data['login_id'];
-
-
-        header('location:dashboard.php');
-    }
-    else
-	{
-        echo" <script> alert('You Have Entered Incorrect Password!');</script>";
-        exit();
-    }
-
-}*/
+}
+else
+{
+echo "<script>alert('Invalid details. Please try again');</script>";
+echo "<script>window.location.href='login.php'</script>";
+}
+}
 ?>
 
 
-<?php include("includes/header.php") ?>
-<?php include("includes/nav.php") ?>
+
+
+<?php include'include/header.php'?>
+
+
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">						
 		</div>
@@ -158,7 +125,10 @@ if(isset($_POST['button']))
 
 		</div>
 		
-<?php include("includes/footer.php") ?>
+<!-- container closing -->
+</div>
+</body>
+</html>
 
 <script type="text/javascript">
 	function login_page()

@@ -1,34 +1,45 @@
 <?php
-
-include 'connection.php';
+session_start();
+// include Function  file
+include_once('function.php');
 
 require 'PHPMailer/PHPMailerAutoload.php';
 
 $otp = rand();
 
-if(isset($_POST['Register']))
+// Object creation
+
+if(isset($_POST['register-submit']))
 {
-    $name=$_POST['name'];
+// Posted Values
+$uemail=$_POST['email'];
+$uname=$_POST['username'];
+$gender=$_POST['gender'];
+$country=$_POST['country'];
+$state=$_POST['state'];
+$phone=$_POST['phone'];
+$age=$_POST['age'];
+$password=$_POST['password'];
 
-    $email=$_POST['email'];
+$_SESSION['user_info'] = array('email' =>$uemail , 'username'=>$uname ,'gender'=>$gender ,'country'=>$country, 'state'=>$state,'phone'=>$phone,'age'=>$age,'password'=>$password );
 
-    $Password=$_POST['password'];
+	$_SESSION['u_id']=$otp;
 
-    mysqli_query($connection,"INSERT INTO `reg`(`email`, `name`, `password`) VALUES ('$email','$name','$Password')");
-
-    $mail = new PHPMailer;
+// Message for successfull insertion
+echo "<script>alert('Registration successfull.');</script>";
+   $mail = new PHPMailer;
  
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'smtp.gmail.com';                       // Specify main and backup server
+$mail->Host = 'sg3plcpnl0228.prod.sin3.secureserver.net';                       // Specify main and backup server
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'hackerzdom@gmail.com';                   // SMTP username
-$mail->Password = 'hackerzdom123#';               // SMTP password
+$mail->Username = 'hemant@hackerzdom.com';                   // SMTP username
+$mail->Password = 'R+y,0,Ic,T4M';               // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 $mail->Port = 465;       
-/*$mail->SMTPDebug = 2;*/                             //Set the SMTP port number - 587 for authenticated TLS
-$mail->setFrom('hackerzdom@gmail.com', 'otp - hackerzdom');     //Set who the message is to be sent from
+$mail->SMTPDebug = 2;                             //Set the SMTP port number - 587 for authenticated TLS
+$mail->setFrom('hemant@hackerzdom.com', 'SafeLand');     //Set who the message is to be sent from
 
-$mail->addAddress($email); 
+$mail->addAddress($uemail); 
            
 //$mail->addCC('example@xyz.com', 'name');
 //$mail->addBCC('example@xyz.com', 'name');
@@ -36,11 +47,11 @@ $mail->WordWrap = 50;
         
 $mail->isHTML(true);                                   
  
-$mail->Subject = 'otp - hackerzdom';
+$mail->Subject = "otp from hackerzdom";
 $mail->Body    = "<html>
 <head>
 <meta charset='utf-8'>
-<title>Safe Land</title>
+<title>HACKERZDOM</title>
 </head>
 
 <body>
@@ -48,10 +59,11 @@ $mail->Body    = "<html>
 <table width='200' border='1'>
   <tr>
     <th scope='row'>Mail From</th>
-    <td>HACKERZDOM</td>
+    <td>TUTORIAL SITE</td>
   </tr>
+ 
   <tr>
-    <th scope='row'>OTP</th>
+    <th scope='row'>YOUR OTP IS</th>
     <td>$otp</td>
   </tr>
 </table>
@@ -71,22 +83,16 @@ $mail->Body    = "<html>
      echo 'Mailer Error: ' . $mail->ErrorInfo;
      exit;
   }
+echo "<script>window.location.href='otp.php'</script>";
 
-  else
-  {
-    echo "<script>alert('Message has been sent');</script>";
+}
 
-    
-  }
- 
- }
-        
+
 ?>
 
 
 
-<?php include("includes/header.php") ?>
-<?php include("includes/nav.php") ?>
+<?php include'includes/login-header.php'?>
 
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">					
@@ -109,15 +115,20 @@ $mail->Body    = "<html>
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="register-form" method="post" role="form" >
+								<form id="register-form" method="post" role="form" autocomplete="off" >
 									<div class="form-group">
 										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required ><span id="sp1" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" placeholder="fullname" value="" required ><span id="sp2" style="color:red"></span>
+										<input type="text" name="username" id="username" tabindex="1" class="form-control" onblur="checkusername(this.value)" placeholder="fullname" value="" required ><span id="sp2" style="color:red"></span>
 									</div>
 								 	<div class="form-group">
-										<input type="text" name="gender" id="gender" tabindex="2" class="form-control" placeholder="gender(male,female or other)" required><span id="sp3" style="color:red"></span>
+								 		<select class="form-control"name="gender" id="gender" tabindex="2">
+								 		 <option value="">select-gender</option>
+ 										 <option value="male">male</option>
+ 										 <option value="female">female</option>
+  										 <option value="other">other</option>
+										</select><span id="sp3" style="color:red"></span>
 									</div>
 									<div class="form-group">
 										<input type="text" name="country" id="country" tabindex="1" class="form-control" placeholder="country" value="" required ><span id="sp4" style="color:red"></span>
@@ -149,7 +160,10 @@ $mail->Body    = "<html>
 			</div>
 		</div>
 
-<?php include("includes/footer.php") ?>
+<!-- container closing -->
+</div>
+</body>
+</html>
 <script type="text/javascript">
 
 function reg_valid()
@@ -229,4 +243,17 @@ function reg_valid()
 	}
 
 
+</script>
+ <script>
+function checkusername(va) {
+  $.ajax({
+  type: "POST",
+  url: "check_availability.php",
+  data:'username='+va,
+  success: function(data){
+  $("#usernameavailblty").html(data);
+  }
+  });
+
+}
 </script>
