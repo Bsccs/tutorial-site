@@ -1,10 +1,17 @@
 <?php include'includes/header.php'?>
 
-	<!-- main content -->
+<body>
+	<div class="body-wrap">
+   		<?php include'NAVBAR.php'?>  
+  	 		<div class="container">
 
-		<?php include'FLIPBOX.php'?>
+				<!-- main content -->
 
-	<!-- main content closing -->
+					<?php include'STUDENT/FLIPBOX.php'?>
+
+				<!-- main content closing -->
+			</div>
+	</div>
 
 <?php include'includes/footer.php'?>
 

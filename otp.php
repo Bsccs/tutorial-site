@@ -1,6 +1,6 @@
 <?php session_start();
- include'include/header.php';
- include_once('function.php');
+ include'includes/login-header.php';
+ include_once('CLASS/function.php');
  $userdata=new DB_con();
 
 $otp = $_SESSION['u_id'];
@@ -25,8 +25,6 @@ if(isset($_POST['submit']))
 
 
  ?>
-
-
 
 <div class="row">
 				<div class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3">

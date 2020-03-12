@@ -1,7 +1,7 @@
 <?php
 define('DB_SERVER','localhost');
-define('DB_USER','hemant');
-define('DB_PASS' ,'tg^K?t%Or5$s');
+define('DB_USER','root');
+define('DB_PASS' ,'');
 define('DB_NAME', 'hackerzdom');
 
 

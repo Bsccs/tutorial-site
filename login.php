@@ -1,7 +1,7 @@
 <?php
 session_start();
 // include Function  file
-include_once('function.php');
+include_once('CLASS/function.php');
 // Object creation
 $usercredentials=new DB_con();
 if(isset($_POST['button']))
@@ -21,14 +21,14 @@ if(mysqli_num_rows($ret) > 0)
          $_SESSION['user_id'] = $row['login_id'];
          $_SESSION['user_type'] = $row['role'];
          
-         header("location:ADMIN/dashboard.php");
+         header("location:ADMIN/index.php");
 
       } else if($row['role'] == "teacher")
       {
              $_SESSION['user_id'] = $row['login_id'];
              $_SESSION['user_type'] = $row['role'];
          
-         header("location:CONTENT-DEVELOPER/dashboard.php");
+         header("location:CONTENT-PROVIDER/INDEX.php");
  
       }
 
@@ -37,7 +37,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['user_id'] = $row['login_id'];
              $_SESSION['user_type'] = $row['role'];
          
-         header("location: inspector.php");
+         header("location:INSPECTOR/INDEX.php");
 
  
       }
@@ -46,7 +46,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['user_id'] = $row['login_id'];
              $_SESSION['user_type'] = $row['role'];
          
-         header("location: index.php");
+         header("location: index.php");					/*to be done*/
 
  
       }
@@ -63,7 +63,7 @@ echo "<script>window.location.href='login.php'</script>";
 
 
 
-<?php include'include/header.php'?>
+<?php include'includes/login-header.php'?>
 
 
 	<div class="row">

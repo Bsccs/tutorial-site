@@ -1,9 +1,9 @@
 <?php
 session_start();
 // include Function  file
-include_once('function.php');
+include_once('CLASS/function.php');
 
-require 'PHPMailer/PHPMailerAutoload.php';
+require 'PLUGINS/PHPMailer/PHPMailerAutoload.php';
 
 $otp = rand();
 
