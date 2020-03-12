@@ -5,8 +5,6 @@
 
 $otp = $_SESSION['u_id'];
 
-
-
 if(isset($_POST['submit']))
 {
 	$verify_otp = $_POST['otp'];
@@ -19,6 +17,8 @@ if(isset($_POST['submit']))
 	}
 	else
 	{
+		echo "<script>alert('Invalid otp. Please try again');</script>";
+echo "<script>window.location.href='login.php'</script>";
 
 	}
 }
