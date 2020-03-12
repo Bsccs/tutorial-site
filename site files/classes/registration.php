@@ -19,7 +19,7 @@ class registration{
 
 
 
-    public function add_contentdev($name,$email,$expertise,$files) {
+    public function add_contentdev($name,$email,$expertise,$files,$password) {
         // TODO implement here
 
         $target_path="uploads/";
@@ -30,8 +30,22 @@ class registration{
             /* $name=$_POST['name'];
              $email=$_POST["email"];
              $expertise=$_POST['expertise'];*/
-             $sql="INSERT INTO `content_developer` VALUES (NULL, '$name', '$email', '$target_path', '$expertise', '0')";
-            $result=mysqli_query($connection,$sql);
+            // $login_id;
+             $sql="INSERT INTO `login` VALUES (NULL,'$email', '$password', 'con_developer')";
+             $result=mysqli_query($this->connection,$sql);
+             if($result > 0) 
+             {
+                $sql="SELECT MAX(login_id) from login;";
+                $result=mysqli_query($this->connection,$sql);
+                if($row=mysqli_fetch_assoc($result)) 
+                {
+                    $login_id=$row["MAX(login_id)"];
+                    echo $login_id;
+                } 
+             }
+             
+             $sql="INSERT INTO `content_developer` VALUES (NULL,'$login_id', '$name', '$email', '$target_path', '$expertise', '0')";
+            $result=mysqli_query($this->connection,$sql);
             if($result)
             { 
                 echo " successfully registered";

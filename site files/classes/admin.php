@@ -32,11 +32,24 @@ class admin /*implements payment*/ {
     }
 
 
-    public function add_inspector($name,$email) {
+    public function add_inspector($name,$email,$password) {
         // TODO implement here
         $insp_name=$name;
         echo $insp_name;
-        $sql="INSERT INTO `inspector` VALUES (NULL,'$email','$name');";
+        $sql="INSERT INTO `login` VALUES (NULL,'$email','$password','inspector');";
+        $result=mysqli_query($this->connection,$sql);
+        if($result)
+        {
+            $sql="SELECT MAX(login_id) FROM login";
+            $result=mysqli_query($this->connection,$sql);
+            
+            while($row = mysqli_fetch_assoc($result)) 
+            {
+                $login_id=$row["MAX(login_id)"];
+                echo $login_id;
+            }
+        }
+        $sql="INSERT INTO `inspector` VALUES (NULL,'$login_id','$email','$name');";
         $result=mysqli_query($this->connection,$sql);
         if($result)
         {echo "successfully inserted";}/*INSERT INTO inspector VALUES(NULL,$email,$name)*/
