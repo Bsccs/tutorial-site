@@ -9,7 +9,7 @@ $otp = $_SESSION['u_id'];
 
 if(isset($_POST['submit']))
 {
-	$verify_otp = $_POST[''];
+	$verify_otp = $_POST['otp'];
 
 	if($otp == $verify_otp)
 	{
@@ -39,7 +39,7 @@ if(isset($_POST['submit']))
 									<form id="register-form"  method="post" role="form" autocomplete="off">
 										<div class="form-group">
 											<label for="email">ENTER OTP</label>
-											<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="enter OTP" value="" autocomplete="off" />
+											<input type="email" name="otp" id="otp" tabindex="1" class="form-control" placeholder="enter OTP" value="" autocomplete="off" />
 										</div>
 										<div class="form-group">
 											<div class="row">
