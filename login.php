@@ -18,15 +18,16 @@ if(mysqli_num_rows($ret) > 0)
 
 	if($row['role'] == "admin"){
 
-         $_SESSION['user_id'] = $row['login_id'];
-         $_SESSION['user_type'] = $row['role'];
+         $_SESSION['login_id'] = $row['login_id'];
+         $_SESSION['role'] = $row['role'];
+         
          
          header("location:ADMIN/index.php");
 
       } else if($row['role'] == "teacher")
       {
-             $_SESSION['user_id'] = $row['login_id'];
-             $_SESSION['user_type'] = $row['role'];
+             $_SESSION['login_id'] = $row['login_id'];
+             $_SESSION['role'] = $row['role'];
          
          header("location:CONTENT-PROVIDER/INDEX.php");
  
@@ -34,8 +35,8 @@ if(mysqli_num_rows($ret) > 0)
 
       else if($row['role'] == "inspector")
       {
-             $_SESSION['user_id'] = $row['login_id'];
-             $_SESSION['user_type'] = $row['role'];
+             $_SESSION['login_id'] = $row['login_id'];
+             $_SESSION['role'] = $row['role'];
          
          header("location:INSPECTOR/INDEX.php");
 
@@ -43,8 +44,8 @@ if(mysqli_num_rows($ret) > 0)
       }
          else if($row['role'] == "student")
       {
-             $_SESSION['user_id'] = $row['login_id'];
-             $_SESSION['user_type'] = $row['role'];
+             $_SESSION['login_id'] = $row['login_id'];
+             $_SESSION['role'] = $row['role'];
          
          header("location: index.php");					/*to be done*/
 
