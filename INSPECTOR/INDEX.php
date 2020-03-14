@@ -1,2 +1,12 @@
+<?php include'includes/header.php'?>
 
-inspector
+	<!-- main content opening -->
+
+
+
+
+
+
+	<!-- main content closing -->
+
+<?php include'includes/footer.php'?>

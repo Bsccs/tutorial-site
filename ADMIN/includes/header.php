@@ -27,14 +27,10 @@
 
 .content-wrapper{
   background-image: url('img/hacker.jpg');
-  
-  position: absolute;
-  height: 200%;
-  width:100%;
-  background-size:cover;
-  background-position: 100%;
-  margin:0 auto;
-
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }
 
   .card{
@@ -42,6 +38,12 @@
   
 
   }
+  @media only screen and (max-width: 767px) {
+  .content-wrapper {
+
+    background-image: url('img/hacker2.jpg');
+  }
+}
 
 
 </style>
@@ -63,5 +65,5 @@
             
               <div class="container">
                   
-                <div class="row mb-2">
+                <div class="row mb-5">
                     <div class="col-sm-6">
