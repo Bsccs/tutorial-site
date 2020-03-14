@@ -23,4 +23,4 @@
 		<?php include'NAVBAR.php' ?>
 		<!-- nabar-closing-->
 		<!-- container class opening -->
-			<div class="container">
+			<div class="container-fluid">
