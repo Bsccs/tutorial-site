@@ -26,18 +26,18 @@ $_SESSION['user_info'] = array('email' =>$uemail , 'username'=>$uname ,'gender'=
 	$_SESSION['u_id']=$otp;
 
 // Message for successfull insertion
-echo "<script>alert('Registration successfull.');</script>";
+echo "<script>alert('ENTER THE OTP.');</script>";
    $mail = new PHPMailer;
  
 $mail->isSMTP();                                      // Set mailer to use SMTP
-$mail->Host = 'sg3plcpnl0228.prod.sin3.secureserver.net';                       // Specify main and backup server
+$mail->Host = 'smtp.gmail.com';                       // Specify main and backup server
 $mail->SMTPAuth = true;                               // Enable SMTP authentication
-$mail->Username = 'hemant@hackerzdom.com';                   // SMTP username
-$mail->Password = 'R+y,0,Ic,T4M';               // SMTP password
+$mail->Username = 'hackerzdom@gmail.com';                   // SMTP username
+$mail->Password = 'hackerzdom@123#';               // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 $mail->Port = 465;       
 $mail->SMTPDebug = 2;                             //Set the SMTP port number - 587 for authenticated TLS
-$mail->setFrom('hemant@hackerzdom.com', 'SafeLand');     //Set who the message is to be sent from
+$mail->setFrom('hackerzdom@gmail.com', 'HACKERZDOM');     //Set who the message is to be sent from
 
 $mail->addAddress($uemail); 
            

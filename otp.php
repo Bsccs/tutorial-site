@@ -12,6 +12,7 @@ if(isset($_POST['submit']))
 	if($otp == $verify_otp)
 	{
 		$sql=$userdata->registration($_SESSION['user_info']['email'],$_SESSION['user_info']['username'],$_SESSION['user_info']['gender'],$_SESSION['user_info']['country'],$_SESSION['user_info']['state'],$_SESSION['user_info']['phone'],$_SESSION['user_info']['age'],$_SESSION['user_info']['password']);
+			session_destroy();
 
 
 	}
