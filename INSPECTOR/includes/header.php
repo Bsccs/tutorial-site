@@ -1,4 +1,4 @@
-<!-- html opening -->
+<!-- html opening --> 
 <!DOCTYPE html>
 <html lang="en">
 	<!-- head part opening------>
@@ -17,6 +17,10 @@
 	<!-- head part closing------>
     <!-- body part opening ------>
     <body>
+    	<!-- body-wrap-opening -->
+    	<div class="body-wrap">
     	<!-- Navbar -->
 		<?php include'NAVBAR.php' ?>
-		<!-- nabar-closing -->
+		<!-- nabar-closing-->
+		<!-- container class opening -->
+			<div class="container">
