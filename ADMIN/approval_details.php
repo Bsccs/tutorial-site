@@ -1,7 +1,7 @@
 <!-- php -->
-<?php include 'connection.php';
-$reg=mysqli_query($connection,"SELECT * FROM `approvals` order by 'content id'");
-
+<?php include_once('CLASS/function.php');
+$approval_details=new ADMIN();
+$reg=$approval_details->approval_details();
 ?>
 <!-- html opening -->
 <?php include 'includes/header.php'?>
