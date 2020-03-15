@@ -188,14 +188,14 @@ h1 {
   <div class="cardBox">
     <div class="card">
       <div class="front">
-        <h3>Card Two</h3>
-        <p>Hover to flip</p>
+        <h3>LEVEL TWO</h3>
+        <p>tutorials </p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>Back Side Two</h3>
-        <p>Content in card two</p>
-        <a href="#">Button 2</a>
+        <h3>DETAILS:</h3>
+        <p>for computer science students-programming languages</p>
+        <a href="#">OPEN</a>
       </div>
     </div>
   </div>
@@ -203,14 +203,14 @@ h1 {
   <div class="cardBox">
     <div class="card">
       <div class="front">
-        <h3>Card Three</h3>
-        <p>Hover to flip</p>
+        <h3>LEVEL THREE</h3>
+        <p>advanced level </p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>Back Side Three</h3>
-        <p>Content in card three</p>
-        <a href="#">Button 3</a>
+        <h3>DETAILS</h3>
+        <p>after level 2 advanced pratical section for computer science students.</p>
+        <a href="#">OPEN</a>
       </div>
     </div>
   </div>
@@ -218,14 +218,14 @@ h1 {
   <div class="cardBox">
     <div class="card">
       <div class="front">
-        <h3>Card Four</h3>
-        <p>Hover to flip</p>
+        <h3>LEVEL FOUR</h3>
+        <p>cyber security</p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>Back Side Four</h3>
-        <p>Content in card four</p>
-        <a href="#">Button 4</a>
+        <h3>DETAILS:</h3>
+        <p>complete guide to become cyber security experts</p>
+        <a href="#">OPEN</a>
       </div>
     </div>
   </div>

@@ -68,8 +68,26 @@ class content
         // TODO implement here
     }
 
-    public function add_test() {
-        // TODO implement here
+    public function add_test($var,$conid) {
+        foreach($var as $key=>$value) 
+        {
+         $q=$value;
+         $opa=
+         $opb=
+         $opc=
+         $opd=
+         $crct=
+
+           $sql="INSERT INTO test VALUES ($conid,NULL,, '0', '$depth', '0', '$developer_id', '0', '0');";
+           $result=mysqli_query($this->connection,$sql);
+           if($result)
+           {//echo "successfully inserted"; 
+            echo "<script>alert('added video successfully');</script>";
+          }
+
+        }
+
+
     }
 
     public function view_content() {

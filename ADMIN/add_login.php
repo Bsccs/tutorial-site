@@ -1,16 +1,16 @@
 <!-- php -->
 <?php
-	include 'connection.php';
+	include_once('CLASS/function.php');
+  $add_login=new ADMIN();
 	if(isset($_POST['button']))
 		{
   			$Username=$_POST['email'];
   			$Password=$_POST['password'];
   			$type=$_POST['type'];
-		mysqli_query($connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
-  			echo "<script>alert('details added succeessfully');</script>";
+        $ret=$add_login->add_login($Username,$Password,$type);
+  			echo "<script>alert('details added successfully');</script>";
 			echo"<script>window.history.back();</script>";
 		}
-    
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>

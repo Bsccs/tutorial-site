@@ -20,7 +20,8 @@ if (isset($_POST['submit']))
 	<title>tutorial site</title>
 </head>
 <body>
-	<h1>Upload your video</h1>
+	<h1>Upload your video (upload to youtube, set privacy to unlisted then copy the embed video link of your video)</h1>
+	<h2>You can also upload test for this video after submitting the video</h2>
 <form action="" method="post">
 Upload video:<input type="text" name="embedvideo" />
 <br>

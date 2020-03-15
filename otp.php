@@ -9,16 +9,20 @@ if(isset($_POST['submit']))
 {
 	$verify_otp = $_POST['otp'];
 
+
 	if($otp == $verify_otp)
 	{
 		$sql=$userdata->registration($_SESSION['user_info']['email'],$_SESSION['user_info']['username'],$_SESSION['user_info']['gender'],$_SESSION['user_info']['country'],$_SESSION['user_info']['state'],$_SESSION['user_info']['phone'],$_SESSION['user_info']['age'],$_SESSION['user_info']['password']);
+
+			echo "<script>alert('Verification success');</script>";
+			echo "<script>window.location.href='login.php'</script>";
+			session_destroy();
 
 
 	}
 	else
 	{
 		echo "<script>alert('Invalid otp. Please try again');</script>";
-echo "<script>window.location.href='login.php'</script>";
 
 	}
 }
@@ -39,16 +43,16 @@ echo "<script>window.location.href='login.php'</script>";
 									<form id="register-form"  method="post" role="form" autocomplete="off">
 										<div class="form-group">
 											<label for="email">ENTER OTP</label>
-											<input type="email" name="otp" id="otp" tabindex="1" class="form-control" placeholder="enter OTP" value="" autocomplete="off" />
+											<input type="text" name="otp" id="otp" tabindex="1" class="form-control" placeholder="enter OTP" value="" autocomplete="off" />
 										</div>
 										<div class="form-group">
 											<div class="row">
 
 												<div class="col-lg-6 col-sm-6 col-xs-6">
-													<input type="submit" name="cancel-submit" id="cencel-submit" tabindex="2" class="form-control btn btn-danger" value="Cancel" />
+													<a href="register.php"><input type="submit"  name="varifyt" id="recover-submit" tabindex="2" class="form-control btn btn-danger" value="Cancel" /></a>
 												</div>
 												<div class="col-lg-6 col-sm-6 col-xs-6">
-													<a href="login.php"><input type="cancel" name="varifyt" id="recover-submit" tabindex="2" class="form-control btn btn-success" value="VERIFY" /></a>
+													<a href="login.php"><input type="submit" name="submit" id="submit" tabindex="2" class="form-control btn btn-success" value="VERIFY" /></a>
 												</div>
 
 												
