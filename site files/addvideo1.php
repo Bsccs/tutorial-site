@@ -1,3 +1,7 @@
+<?php include'../content-provider/includes/header.php'?>
+
+	<!-- main content opening -->
+
 <?php
 include 'connect.php';
 if (isset($_POST['submit'])) 
@@ -66,3 +70,7 @@ Enter the topic on which you are submitting video:
 </body>
 </html>
 
+
+	<!-- main content closing -->
+
+<?php include'includes/footer.php'?>
