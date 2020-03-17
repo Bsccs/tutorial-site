@@ -68,23 +68,41 @@ class content
         // TODO implement here
     }
 
-    public function add_test($var,$conid) {
-        foreach($var as $key=>$value) 
-        {
-         $q=$value;
-         $opa=
-         $opb=
-         $opc=
-         $opd=
-         $crct=
+    public function add_test($var,$conid,$number) {
+      
+   // echo "hii";
+    //   echo $number;
+        for($i=1;$i<$number;$i++) 
+        { 
+         $q=$var['q'."$i"];
+         $opa=$var['opa'."$i"];
+         $opb=$var['opb'."$i"];
+         $opc=$var['opc'."$i"];
+         $opd=$var['opd'."$i"];
+         $crct=$var['crct'."$i"];
+         $difficulty=$var['difficulty'."$i"];
+//echo $q;
+         // find test number
+         $sql="SELECT MAX(test_number) from tests where content_id=$conid;";
+         echo $sql;
+           $result=mysqli_query($this->connection,$sql);
+            if(mysqli_num_rows($result) > 0) 
+            {
+           $row = mysqli_fetch_assoc($result);
+           $testnum=$row["MAX(test_number)"];
+            }
 
-           $sql="INSERT INTO test VALUES ($conid,NULL,, '0', '$depth', '0', '$developer_id', '0', '0');";
+           $sql="INSERT INTO tests VALUES ($testnum,$conid,$i,'$q','$opa','$opb','$opc','$opd', '$crct',$difficulty);";
            $result=mysqli_query($this->connection,$sql);
            if($result)
-           {//echo "successfully inserted"; 
-            echo "<script>alert('added video successfully');</script>";
-          }
+           { $count=$count+1; 
+           }
 
+        }
+
+        if($count=$number)
+        {
+          echo "<script>alert('added video successfully');</script>";
         }
 
 

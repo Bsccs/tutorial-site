@@ -1,4 +1,8 @@
 <?php
+
+include "connect.php";
+	include "classes/content.php";
+	$obj1=new content($connection);
 // include "session.php";
 session_start();
 
@@ -23,10 +27,9 @@ if(isset($_POST['submit']))
         echo '$var["'.$key.'"] = '.$value.'<br />';
     }*/
  
-    include "connect.php";
-	include "classes/content.php";
-	$con1=new content($connection);
-	$con1->add_test($var,$conid,$number);
+    
+	
+	$obj1->add_test($var,$conid,$number);
 
 }
 ?>
