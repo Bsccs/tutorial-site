@@ -16,6 +16,8 @@ div {
 <form action="callingtest.php" method="post">
 	<div>
 <?php 
+$_SESSION['number']=$_POST['number'];
+
 for($i=1;$i<=$_POST['number'];$i++)
 { ?>
 	Question Number<?php echo $i; ?>:<input type="text" name="<?php echo "q".$i; ?>"/>
@@ -24,7 +26,7 @@ for($i=1;$i<=$_POST['number'];$i++)
 	Option C:<input type="text" name="<?php echo "opc".$i; ?>"/>
 	Option D:<input type="text" name="<?php echo "opd".$i; ?>"/>
 	Correct Option:<input type="text" name="<?php echo "crct".$i; ?>"/>
-	Difficulty level:<select id="cars" name="difficulty">
+	Difficulty level:<select id="cars" name="<?php echo "difficulty".$i; ?>">
   					 <option value="0">Easy</option>
   					 <option value="1">Medium</option>
   					 <option value="2">Hard</option>
@@ -40,3 +42,4 @@ for($i=1;$i<=$_POST['number'];$i++)
 </body>
 </html>
 	
+
