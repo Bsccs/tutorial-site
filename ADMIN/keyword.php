@@ -1,12 +1,12 @@
 <!-- php -->
 <?php include_once('../site files/classes/admin.php');
-   include "connect.php";
-  $stud_details=new admin($connection);
-  $reg=$stud_details->stud_details();
+include "connect.php";
+  $view_keywords=new admin($connection);
+  $reg=$view_keywords->view_keywords();
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
-                      <h1 class="m-0 text-light"> STUDENT-DETAILS</h1>
+                      <h1 class="m-0 text-light"> KEYWORD DETAILS</h1>
                     </div>
                 </div>
               </div>
@@ -21,14 +21,9 @@
                             <thead>
                               <tr>
                                 <th>SL.No</th>
-                                <!-- <th>EMAIL</th> -->
-                                <th>NAME</th>
-                                <th>GENDER</th>
-                                <th>COUNTRY</th>
-                                <th>STATE</th>
-                                <th>PHONE NUMBER</th>
-                                <th>AGE</th>
-                                <th>LAST-LOGIN</th>
+                                <th>KEYWORD</th>
+                                <th>VALUE</th>
+                                
                               </tr>
                             </thead>
                             <tbody>
@@ -38,13 +33,8 @@
                               <tr>
                                   <td><?php echo $count; ?></td>
                                   
-                                  <td><?php echo $row_data['name']; ?></td>
-                                  <td><?php echo $row_data['gender']; ?></td>
-                                  <td><?php echo $row_data['country']; ?></td>  
-                                  <td><?php echo $row_data['state']; ?></td>
-                                  <td><?php echo $row_data['phone_number']; ?></td>
-                                  <td><?php echo $row_data['age']; ?></td>
-                                  <td><?php echo $row_data['last_login']; ?></td>              
+                                  <td><?php echo $row_data['keyword']; ?></td> 
+                                  <td><?php echo $row_data['value']; ?></td> 
                               </tr>
                               <?php } ?>
                             </tbody>

@@ -1,13 +1,14 @@
 <!-- php -->
 <?php
-	include_once('CLASS/ADMIN.php');
-  $add_login=new ADMIN();
+	include_once('../site files/classes/admin.php');
+include "connect.php";
+  $add_login=new admin($connection);
 	if(isset($_POST['button']))
 		{
   			$Username=$_POST['email'];
   			$Password=$_POST['password'];
   			$type=$_POST['type'];
-        $ret=$add_login->add_login($Username,$Password,$type);
+        $ret=$add_login->add_inspector($Username,$Password,$type);
   			echo "<script>alert('details added successfully');</script>";
 			echo"<script>window.history.back();</script>";
 		}

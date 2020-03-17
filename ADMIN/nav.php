@@ -39,6 +39,7 @@
           		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
           			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">INSPECTOR</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
+                   <li><a href="insp_details.php" class="dropdown-item">details</a></li>
               			<li><a href="add_login.php" class="dropdown-item">add-inspector</a></li>
               			<li><a href="approval_details.php" class="dropdown-item">approval</a></li>
             		</ul>
@@ -58,6 +59,7 @@
               			<li><a href="#" class="dropdown-item">from teachers</a></li>
               			<li><a href="#" class="dropdown-item">to inspector</a></li>
                     <li><a href="develop_details.php" class="dropdown-item">developer</a></li>
+                    <li><a href="keyword.php" class="dropdown-item">keyword</a></li>
             		</ul>
           		</li>
           		<!-- visit site -->

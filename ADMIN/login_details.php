@@ -1,5 +1,5 @@
 <!-- php -->
-<?php include 'connection.php';
+<?php include 'connect.php';
 $reg=mysqli_query($connection,"SELECT * FROM `login` ORDER BY 'login_id'");
 
 ?>
