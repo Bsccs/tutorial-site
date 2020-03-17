@@ -180,7 +180,7 @@ h1 {
       <div class="back">
         <h3>DETAILS:</h3>
         <p>General informations related to computers and security threats</p>        
-        <a href="#">OPEN</a>
+        <a href="STUDENT/level1.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -195,7 +195,7 @@ h1 {
       <div class="back">
         <h3>DETAILS:</h3>
         <p>for computer science students-programming languages</p>
-        <a href="#">OPEN</a>
+        <a href="STUDENT/level2.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -209,8 +209,8 @@ h1 {
       </div>
       <div class="back">
         <h3>DETAILS</h3>
-        <p>after level 2 advanced pratical section for computer science students.</p>
-        <a href="#">OPEN</a>
+        <p>advanced pratical section for computer science students.</p>
+        <a href="STUDENT/level3.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -225,7 +225,7 @@ h1 {
       <div class="back">
         <h3>DETAILS:</h3>
         <p>complete guide to become cyber security experts</p>
-        <a href="#">OPEN</a>
+        <a href="STUDENT/level4.php">OPEN</a>
       </div>
     </div>
   </div>
