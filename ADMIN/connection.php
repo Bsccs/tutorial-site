@@ -1,6 +1,6 @@
 <?php
 
-$connection=mysqli_connect("localhost","root","","hackerzdom2");
+$connection=mysqli_connect("localhost","root","","hackerzdom");
 
 
 ?>

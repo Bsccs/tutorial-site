@@ -57,11 +57,12 @@
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               			<li><a href="#" class="dropdown-item">from teachers</a></li>
               			<li><a href="#" class="dropdown-item">to inspector</a></li>
+                    <li><a href="develop_details.php" class="dropdown-item">developer</a></li>
             		</ul>
           		</li>
           		<!-- visit site -->
           		<li class="nav-item">
-            		<a href="http://hackerzdom.com/" class="nav-link">VISIT SITE</a>
+            		<a href="../index.php" class="nav-link">VISIT SITE</a>
           		</li>
             </ul>
       		<!-- Right navbar links -->

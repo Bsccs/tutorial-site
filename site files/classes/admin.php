@@ -61,7 +61,10 @@ class admin /*implements payment*/ {
     }
 
     public function stud_details() {
+
         // TODO implement here
+        //done
+        
     }
 
     public function view_inspctr_details()
@@ -98,6 +101,7 @@ class admin /*implements payment*/ {
 
     public function condev_details() {
         // TODO implement here
+        //done
     }
 
     public function website_activity() {

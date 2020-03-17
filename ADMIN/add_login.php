@@ -1,6 +1,6 @@
 <!-- php -->
 <?php
-	include_once('CLASS/function.php');
+	include_once('CLASS/ADMIN.php');
   $add_login=new ADMIN();
 	if(isset($_POST['button']))
 		{

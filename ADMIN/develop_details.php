@@ -1,11 +1,11 @@
 <!-- php -->
 <?php include_once('CLASS/ADMIN.php');
-  $student_details=new ADMIN();
-  $reg=$student_details->student_details();
+  $condev_details=new ADMIN();
+  $reg=$condev_details->condev_details();
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
-                      <h1 class="m-0 text-light"> STUDENT-DETAILS</h1>
+                      <h1 class="m-0 text-light"> CONTENT DEVELOPER DETAILS</h1>
                     </div>
                 </div>
               </div>
@@ -21,13 +21,11 @@
                               <tr>
                                 <th>SL.No</th>
                                 <!-- <th>EMAIL</th> -->
-                                <th>NAME</th>
-                                <th>GENDER</th>
-                                <th>COUNTRY</th>
-                                <th>STATE</th>
-                                <th>PHONE NUMBER</th>
-                                <th>AGE</th>
-                                <th>LAST-LOGIN</th>
+                                <th>EMAIL</th>
+                                <th>QUALIFICATION-DOCS</th>
+                                <th>EXPERTISE</th>
+                                <th>ADMIN APROVED</th>
+                                <th>ACTION</th>
                               </tr>
                             </thead>
                             <tbody>
@@ -37,13 +35,15 @@
                               <tr>
                                   <td><?php echo $count; ?></td>
                                   
-                                  <td><?php echo $row_data['name']; ?></td>
-                                  <td><?php echo $row_data['gender']; ?></td>
-                                  <td><?php echo $row_data['country']; ?></td>  
-                                  <td><?php echo $row_data['state']; ?></td>
-                                  <td><?php echo $row_data['phone_number']; ?></td>
-                                  <td><?php echo $row_data['age']; ?></td>
-                                  <td><?php echo $row_data['last_login']; ?></td>              
+                                  <td><?php echo $row_data['email']; ?></td>
+                                  <td><?php echo $row_data['quali_doc']; ?></td>
+                                  <td><?php echo $row_data['expertise']; ?></td>  
+                                  <td><?php echo $row_data['admin_aproved']; ?></td>
+                                  <div class="btn-group">
+                                      <td><a href="delete2.php?l_id= <?php echo $row_data['developer_id'];?>"  onclick="return confirm('do you want to delete');"><button      type="button"class="btn btn-secondary">DELETE</button></a>
+                                      	<a href="edit.php?p_id= <?php echo $row_data['developer_id'];?>"><button      type="button"class="btn btn-secondary">UPDATE</button></a>
+                                      </td>
+
                               </tr>
                               <?php } ?>
                             </tbody>

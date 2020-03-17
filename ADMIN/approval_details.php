@@ -1,5 +1,5 @@
 <!-- php -->
-<?php include_once('CLASS/function.php');
+<?php include_once('CLASS/ADMIN.php');
 $approval_details=new ADMIN();
 $reg=$approval_details->approval_details();
 ?>
