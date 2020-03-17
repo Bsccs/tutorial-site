@@ -23,6 +23,8 @@ class admin /*implements payment*/ {
 
     public function approve_dev() {
         // TODO implement here
+
+
               
     }
 
@@ -32,27 +34,13 @@ class admin /*implements payment*/ {
     }
 
 
-    public function add_inspector($name,$email,$password) {
-        // TODO implement here
-        $insp_name=$name;
-        echo $insp_name;
-        $sql="INSERT INTO `login` VALUES (NULL,'$email','$password','inspector');";
-        $result=mysqli_query($this->connection,$sql);
-        if($result)
-        {
-            $sql="SELECT MAX(login_id) FROM login";
-            $result=mysqli_query($this->connection,$sql);
-            
-            while($row = mysqli_fetch_assoc($result)) 
-            {
-                $login_id=$row["MAX(login_id)"];
-                echo $login_id;
-            }
-        }
-        $sql="INSERT INTO `inspector` VALUES (NULL,'$login_id','$email','$name');";
-        $result=mysqli_query($this->connection,$sql);
-        if($result)
-        {echo "successfully inserted";}/*INSERT INTO inspector VALUES(NULL,$email,$name)*/
+    public function add_inspector($Username,$Password,$type) {
+    					
+
+    	     $result=mysqli_query($this->connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
+		     return $result;
+        
+
 
     }
 
@@ -61,48 +49,27 @@ class admin /*implements payment*/ {
     }
 
     public function stud_details() {
-
-        // TODO implement here
-        //done
+			$result=mysqli_query($this->connection,"SELECT * FROM `student_details` order by student_id");
+			return $result;
         
     }
 
     public function view_inspctr_details()
     {
-        // TODO implement here
-        echo "hii";
-        $sql = "SELECT inspector_id,email,name FROM inspector";
-        $result1 = mysqli_query($this->connection, $sql);
+    	$result=mysqli_query($this->connection,"SELECT * FROM `inspector` order by inspector_id");
+			return $result;
+        
 
-        if (mysqli_num_rows($result1) > 0)
-        {
-            echo "<ol>";
-            while($row = mysqli_fetch_assoc($result1)) 
-            {
-                echo "<li> Name: " . $row["name"]. " ... Email " . $row["email"]. "</li><br>";
-                $sql2 = "SELECT expertise FROM insp_expertise WHERE inspector_id='".$row["inspector_id"]."'";
-                $result2 = mysqli_query($this->connection, $sql2);
-                if (mysqli_num_rows($result1) > 0) {
-                echo "<ol type='i'>";
-                while($row = mysqli_fetch_assoc($result2)) {
-                echo "<li> ".$row["expertise"]."</li>";
-                }
-                echo "</ol>";
-                } else {
-                echo "0 results";
-                }
-
-
-            }
-            echo "<ol>";
-        }
        
     }
 
-    public function condev_details() {
-        // TODO implement here
-        //done
-    }
+    public function condev_details() 
+		{
+			$result=mysqli_query($this->connection,"SELECT * FROM `content_developer` order by developer_id");
+			return $result;
+
+		}
+    
 
     public function website_activity() {
         // TODO implement here
@@ -110,7 +77,10 @@ class admin /*implements payment*/ {
     }
 
     public function view_keywords() {
-        // TODO implement here
+        	{
+			$result=mysqli_query($this->connection,"SELECT * FROM `search`");
+			return $result;
+		    }
     }
 
     public function payment_details() {

@@ -1,6 +1,7 @@
 <!-- php -->
-<?php include_once('CLASS/ADMIN.php');
-  $condev_details=new ADMIN();
+<?php include_once('../site files/classes/admin.php');
+include "connect.php";
+  $condev_details=new admin($connection);
   $reg=$condev_details->condev_details();
 ?>
 <!-- html part -->
@@ -20,11 +21,10 @@
                             <thead>
                               <tr>
                                 <th>SL.No</th>
-                                <!-- <th>EMAIL</th> -->
                                 <th>EMAIL</th>
                                 <th>QUALIFICATION-DOCS</th>
                                 <th>EXPERTISE</th>
-                                <th>ADMIN APROVED</th>
+                                <th>ADMIN APPROVAL</th>
                                 <th>ACTION</th>
                               </tr>
                             </thead>

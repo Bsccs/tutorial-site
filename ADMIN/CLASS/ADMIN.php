@@ -27,25 +27,12 @@ class ADMIN
 				return $result;
 
 			}
-		public function student_details()
-		{
-			$result=mysqli_query($this->dbh,"SELECT * FROM `student_details` order by student_id");
-			return $result;
-
-		}
 		public function condev_details()
 		{
 			$result=mysqli_query($this->dbh,"SELECT * FROM `content_developer` order by developer_id");
 			return $result;
 
 		}
-		public function add_expertise()
-		{
-			$add_query=mysqli_query($this->dbh,"SELECT * FROM `content_developer` WHERE developer_id='$developer_id'");
-			$add_data=mysqli_fetch_assoc($add_query);
-			$add_data=mysqli_query($connection,"UPDATE `content_developer` SET expertise='$expertise' WHERE developer_id='$expertise'");
-			return $add_data;
 
-		}
 	}
 ?>
