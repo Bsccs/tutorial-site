@@ -2,13 +2,14 @@
 include_once('../site files/classes/admin.php');
 include "connect.php";
 $developer_id=$_GET['d_id'];
+$add_expertise=new admin($connection);
 $d_query=mysqli_query($connection,"SELECT * FROM `content_developer` WHERE developer_id='$developer_id'");
 $d_data=mysqli_fetch_assoc($d_query);
 if (isset($_POST['button'])) {
   $expertise=$_POST['exp'];
-  $ret=$d_data->add_expertise($expertise);
+  $ret=$add_expertise->add_expertise($expertise, $developer_id);
   echo "<script>alert('updation succesfully');</script>";
-echo"<script>window.history.back();</script>";
+echo"<script>window.location='develop_details.php';</script>";
 }
 ?>
 
@@ -31,7 +32,7 @@ echo"<script>window.history.back();</script>";
                   <div class="form-group row">
                     <label for="text" class="col-sm-2 col-form-label">EXPERTISE</label>
                     <div class="col-sm-10">
-                      <input type="text" name="exp" class="form-control" id="exp" placeholder="update expertise"><span id="sp1" style="color:red"></span>
+                      <input type="text" name="exp" class="form-control" id="exp" placeholder="update expertise" value="<?php echo $d_data['expertise']; ?>"><span id="sp1" style="color:red"></span>
                     </div>
                   </div>
                 </div>

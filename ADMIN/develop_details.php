@@ -6,6 +6,11 @@ include "connect.php";
 ?>
 <!-- html part -->
 <?php include 'includes/header.php'?>
+
+<style type="text/css">
+
+
+</style>
                       <h1 class="m-0 text-light"> CONTENT DEVELOPER DETAILS</h1>
                     </div>
                 </div>
@@ -37,11 +42,13 @@ include "connect.php";
                                   
                                   <td><?php echo $row_data['email']; ?></td>
                                   <td><?php echo $row_data['quali_doc']; ?></td>
-                                  <td><?php echo $row_data['expertise']; ?></td>  
-                                  <td><?php echo $row_data['admin_aproved']; ?></td>
+                                  <td><?php echo $row_data['expertise']; ?></td>
+
+                                  <td align="center"><?php if($row_data['admin_aproved']==0) { ?><a class="btn btn-block btn-danger btn-sm" href="admin_approve.php?pst_id=<?php echo $row_data['developer_id']; ?>">APPROVE</a><?php } else { ?><a class="btn btn-block btn-success">APPROVED</button> <?php } ?></td> 
+                                  
                                   <div class="btn-group">
-                                      <td><a href="delete2.php?l_id= <?php echo $row_data['developer_id'];?>"  onclick="return confirm('do you want to delete');"><button      type="button"class="btn btn-secondary">DELETE</button></a>
-                                      	<a href="edit.php?d_id= <?php echo $row_data['developer_id'];?>"><button      type="button"class="btn btn-secondary">UPDATE</button></a>
+                                      <td><a href="delete2.php?l_id=<?php echo $row_data['developer_id'];?>"  onclick="return confirm('do you want to delete');"><button      type="button"class="btn btn-primary">DELETE</button></a>
+                                      	<a href="edit.php?d_id=<?php echo $row_data['developer_id'];?>"><button      type="button"class="btn btn-secondary">UPDATE</button></a>
                                       </td>
 
                               </tr>

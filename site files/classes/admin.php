@@ -21,8 +21,9 @@ class admin /*implements payment*/ {
         // TODO implement here
     }
 
-    public function approve_dev() {
-        // TODO implement here
+    public function approve_dev($approve_id) {
+        $result=mysqli_query($this->connection,"UPDATE `content_developer` SET admin_aproved='1' WHERE developer_id='$approve_id'");
+             return $result;
 
 
               
@@ -44,7 +45,7 @@ class admin /*implements payment*/ {
 
     }
 
-    public function add_expertise($expertise) {
+    public function add_expertise($expertise,$developer_id) {
     	$result=mysqli_query($this->connection,"UPDATE `content_developer` SET expertise='$expertise'WHERE developer_id='$developer_id'");
 			return $result;
 
