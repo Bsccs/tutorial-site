@@ -44,8 +44,11 @@ class admin /*implements payment*/ {
 
     }
 
-    public function add_expertise() {
-        // TODO implement here
+    public function add_expertise($expertise) {
+    	$result=mysqli_query($this->connection,"UPDATE `content_developer` SET expertise='$expertise'WHERE developer_id='$developer_id'");
+			return $result;
+
+
     }
 
     public function stud_details() {

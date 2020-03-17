@@ -41,7 +41,7 @@ include "connect.php";
                                   <td><?php echo $row_data['admin_aproved']; ?></td>
                                   <div class="btn-group">
                                       <td><a href="delete2.php?l_id= <?php echo $row_data['developer_id'];?>"  onclick="return confirm('do you want to delete');"><button      type="button"class="btn btn-secondary">DELETE</button></a>
-                                      	<a href="edit.php?p_id= <?php echo $row_data['developer_id'];?>"><button      type="button"class="btn btn-secondary">UPDATE</button></a>
+                                      	<a href="edit.php?d_id= <?php echo $row_data['developer_id'];?>"><button      type="button"class="btn btn-secondary">UPDATE</button></a>
                                       </td>
 
                               </tr>

@@ -1,7 +1,8 @@
 <!-- php -->
 <?php
-	include_once('CLASS/ADMIN.php');
-  $add_expertise=new ADMIN();
+	include_once('../site files/classes/admin.php');
+include "connect.php";
+  $add_expertise=new admin($connection);
 	if(isset($_POST['button']))
 		{
   			$Username=$_POST['expertise'];
