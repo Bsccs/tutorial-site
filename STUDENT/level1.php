@@ -11,14 +11,14 @@
 </head>
 <body>
 <center><h1>student</h1></center>
-<h2>Welcome <?php echo $name; ?></h2>
+<h2></h2>
 <br>
 
 
 </body>
 </html>
 
-?>
+
 
 
 
