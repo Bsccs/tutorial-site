@@ -37,7 +37,11 @@ public function signin($uemail,$pasword)
 	FROM `login` WHERE  email ='".$uemail."'AND password ='".$pasword."'");
 	return $result;
 	}
-
+/*public function findname($temp)
+	{
+		$result=mysqli_query($this->dbh,"select name from student_details where login_id='.$temp.'");
+		return $result;
+	}*/
 
 }
 ?>
