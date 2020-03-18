@@ -183,7 +183,7 @@ h1 {
         <h3>DETAILS:</h3>
         <p>General informations related to computers and security threats</p> 
      <?php   $_SESSION['templevel']=1; ?>
-        <a href="login.php">OPEN</a>
+        <a href="STUDENT/level1.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -199,7 +199,7 @@ h1 {
         <h3>DETAILS:</h3>
         <p>for computer science students-programming languages</p>
        <?php  $_SESSION['templevel']=2; ?>
-        <a href="login.php">OPEN</a>
+        <a href="STUDENT/level2.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -215,7 +215,7 @@ h1 {
         <h3>DETAILS</h3>
         <p>advanced pratical section for computer science students.</p>
        <?php $_SESSION['templevel']=3; ?>
-        <a href="login.php">OPEN</a>
+        <a href="STUDENT/level3.php">OPEN</a>
       </div>
     </div>
   </div>

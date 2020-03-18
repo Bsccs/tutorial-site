@@ -7,7 +7,7 @@
 
 				<!-- main content -->
 
-					<?php include'STUDENT/FLIPBOX.php'?>
+					<?php include'STUDENT/FLIPBOX2.php'?>
 
 				<!-- main content closing -->
 			</div>

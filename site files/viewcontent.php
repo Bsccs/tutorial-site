@@ -1,3 +1,8 @@
+<?php include'../content-provider/includes/header.php'?>
+
+	<!-- main content opening -->
+
+
 <?php
 	// include "session.php";	
 session_start();
@@ -56,3 +61,8 @@ session_start();
             
 		</body>
 		</html>
+
+
+	<!-- main content closing -->
+
+<?php include'includes/footer.php'?>
