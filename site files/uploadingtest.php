@@ -26,14 +26,14 @@ $_SESSION['number']=$_POST['number'];
 <br><br>
 	<table border="1">
 		<tr>
-	<td>Question No.</td>
-	<td>Question</td>
-	<td>Option a</td>
-	<td>Option b</td>
-	<td>Option c</td>
-	<td>Option d</td>
-	<td>Correct option</td>
-	<td>Difficulty</td>
+	<th>Question No.</th>
+	<th>Question</th>
+	<th>Option a</th>
+	<th>Option b</th>
+	<th>Option c</th>
+	<th>Option d</th>
+	<th>Correct option</th>
+	<th>Difficulty</th>
 
 </tr>
 <?php

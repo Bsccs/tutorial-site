@@ -129,7 +129,7 @@ class content
                 if($_SESSION['role']=='student')
             {
               if($_SESSION['templevel'])
-                
+                  
                 $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_id IN (SELECT content_id FROM student_log WHERE content_id IN(SELECT content_id FROM student_log WHERE student_id=".$_SESSION['id']."))";
             }
             elseif ($_SESSION['role']=='admin') {
@@ -150,9 +150,9 @@ class content
                   }
                 }*/
             }
-            elseif ($_SESSION['role']=='con_developer') {
+/*            elseif ($_SESSION['role']=='con_developer') {
               # code...
-            }
+            }*/
         return $sql;
     }
 

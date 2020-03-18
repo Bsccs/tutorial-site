@@ -30,17 +30,29 @@ session_start();
 		<body>
             The videos available are:<br>
             <?php 
-            $_SESSION['role']='inspector';
-            $_SESSION['id']='2';
+            $_SESSION['role']='student'; // check1
+            $_SESSION['id']='2';			// check 1
              $sql=$content2->view_content();
                 $result=mysqli_query($connection,$sql);
+
+                if($_SESSION['role']='student')
+                {
+                	?> <h1>Videos you have</h1><br><br>
+           	    <table border="1" > <?php
                 while($row = mysqli_fetch_assoc($result)) 
                 {
                 $embed=$row['content_name'];
-                /*$embed="https://www.youtube.com/embed/Az26Fcdaz5E";*/
-                echo $embed;
-        echo "<br><br>";
+               ?><tr>
+               	<td><?php echo $embed; ?></td>
+               	<td> </td>
+               	<td><a href="feedback.php">Feedback</a><td>
+               	</tr>
+               	<br><br>
+               	<?php
+            	}
             }
             ?>
+            </table>
+            
 		</body>
 		</html>
