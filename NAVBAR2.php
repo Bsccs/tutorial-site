@@ -7,8 +7,10 @@
   
 }
 </style>
-
-
+<?php  include_once('site files/classes/admin.php');
+include "connect.php";
+  $add_login=new admin($connection);
+?>
 <div class="container">
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="index.php">HACKERZDOM</a>
@@ -28,7 +30,7 @@
     <ul class="nav navbar-nav float-md-right">
     	      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          USER
+          echo $name;
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="logout.php">LOGOUT</a>

@@ -1,4 +1,6 @@
-
+<?php
+session_start();
+?>
 <style>
   body {
   color: #333;
@@ -179,8 +181,9 @@ h1 {
       </div>
       <div class="back">
         <h3>DETAILS:</h3>
-        <p>General informations related to computers and security threats</p>        
-        <a href="STUDENT/level1.php">OPEN</a>
+        <p>General informations related to computers and security threats</p> 
+     <?php   $_SESSION['templevel']=1; ?>
+        <a href="site files/viewcontent.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -195,7 +198,8 @@ h1 {
       <div class="back">
         <h3>DETAILS:</h3>
         <p>for computer science students-programming languages</p>
-        <a href="STUDENT/level2.php">OPEN</a>
+       <?php  $_SESSION['templevel']=2; ?>
+        <a href="site files/viewcontent.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -210,7 +214,8 @@ h1 {
       <div class="back">
         <h3>DETAILS</h3>
         <p>advanced pratical section for computer science students.</p>
-        <a href="STUDENT/level3.php">OPEN</a>
+       <?php $_SESSION['templevel']=3; ?>
+        <a href="site files/viewcontent.php">OPEN</a>
       </div>
     </div>
   </div>
@@ -225,7 +230,7 @@ h1 {
       <div class="back">
         <h3>DETAILS:</h3>
         <p>complete guide to become cyber security experts</p>
-        <a href="STUDENT/level4.php">OPEN</a>
+        <a href="STUDENT/commingsoon.php">OPEN</a>
       </div>
     </div>
   </div>

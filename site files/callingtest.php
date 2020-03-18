@@ -1,9 +1,3 @@
-<?php include'includes/header.php'?>
-
-	<!-- main content opening -->
-
-
-
 <?php
 
 include "connect.php";

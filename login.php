@@ -24,7 +24,7 @@ if(mysqli_num_rows($ret) > 0)
          
          header("location:ADMIN/index.php");
 
-      } else if($row['role'] == "teacher")
+      } else if($row['role'] == "con_developer")
       {
              $_SESSION['login_id'] = $row['login_id'];
              $_SESSION['role'] = $row['role'];
