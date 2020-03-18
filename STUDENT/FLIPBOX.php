@@ -183,7 +183,7 @@ h1 {
         <h3>DETAILS:</h3>
         <p>General informations related to computers and security threats</p> 
      <?php   $_SESSION['templevel']=1; ?>
-        <a href="site files/viewcontent.php">OPEN</a>
+        <a href="STUDENT/level1.php">OPEN</a>
       </div>
     </div>
   </div>

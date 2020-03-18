@@ -1,4 +1,4 @@
-<?php include'../content-provider/includes/header.php'?>
+<?php include'includes/header.php'?>
 
 	<!-- main content opening -->
 
