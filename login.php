@@ -47,7 +47,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['login_id'] = $row['login_id'];
              $_SESSION['role'] = $row['role'];
          
-         header("location: index.php");					/*to be done*/
+         header("location: index2.php");					/*to be done*/
 
  
       }

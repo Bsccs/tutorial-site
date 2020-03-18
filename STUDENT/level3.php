@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
-    <title>Collapsible sidebar using Bootstrap 4</title>
+    <title>LEVEL 3</title>
 
     <!-- Bootstrap CSS CDN -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css">
@@ -25,28 +25,28 @@
         <!-- Sidebar Holder -->
         <nav id="sidebar">
             <div class="sidebar-header">
-                <h3>Bootstrap Sidebar</h3>
+                <h3>LEVEL 3</h3>
             </div>
 
             <ul class="list-unstyled components">
-                <p>Dummy Heading</p>
+                <p>TOPICS</p>
                 <li class="active">
-                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Home</a>
+                    <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">LESSON 1</a>
                     <ul class="collapse list-unstyled" id="homeSubmenu">
                         <li>
-                            <a href="#">Home 1</a>
+                            <a href="#"> 1</a>
                         </li>
                         <li>
-                            <a href="#">Home 2</a>
+                            <a href="#"> 2</a>
                         </li>
                         <li>
-                            <a href="#">Home 3</a>
+                            <a href="#"> 3</a>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <a href="#">About</a>
-                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Pages</a>
+                    <a href="#">LESSON 2</a>
+                    <a href="#pageSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">LESSON 3</a>
                     <ul class="collapse list-unstyled" id="pageSubmenu">
                         <li>
                             <a href="#">Page 1</a>
@@ -60,19 +60,19 @@
                     </ul>
                 </li>
                 <li>
-                    <a href="#">Portfolio</a>
+                    <a href="#">LESSON 4</a>
                 </li>
                 <li>
-                    <a href="#">Contact</a>
+                    <a href="#">LESSON 5</a>
                 </li>
             </ul>
 
             <ul class="list-unstyled CTAs">
-                <li>
+<!--                 <li>
                     <a href="https://bootstrapious.com/tutorial/files/sidebar.zip" class="download">Download source</a>
-                </li>
+                </li> -->
                 <li>
-                    <a href="https://bootstrapious.com/p/bootstrap-sidebar" class="article">Back to article</a>
+                    <a href="../index2.php" class="article">Back </a>
                 </li>
             </ul>
         </nav>
@@ -95,23 +95,14 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                         <ul class="nav navbar-nav ml-auto">
                             <li class="nav-item active">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#">Page</a>
+                                <a class="nav-link" href="../logout.php">LOGOUT</a>
                             </li>
                         </ul>
                     </div>
                 </div>
             </nav>
             
-           </p>
+            
         </div>
     </div>
 

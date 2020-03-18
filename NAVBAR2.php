@@ -28,13 +28,11 @@
     <ul class="nav navbar-nav float-md-right">
     	      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          LOGIN
+          USER
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="login.php">LOGIN</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="register.php">REGISTER</a>
-          </div>
+          <a class="dropdown-item" href="logout.php">LOGOUT</a>
+
 
       </li>
 	</ul>

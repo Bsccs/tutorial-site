@@ -11,7 +11,7 @@
         <a class="nav-link" href="#">ADD-DETAILS<span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">APROVAL</a>
+        <a class="nav-link" href="approval.php">APROVAL</a>
       </li>
     </ul>
     <ul class="nav navbar-nav float-md-right">
