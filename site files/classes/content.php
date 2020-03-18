@@ -35,29 +35,29 @@ class content
     $row = mysqli_fetch_assoc($result);
     $conid=$row["MAX(content_id)"];
     }
- //echo " yes $conid";
-   // print_r($tags);
+    //echo " yes $conid";
+    // print_r($tags);
     // echo sizeof($tags);
 
     if($tags['0']!=NULL) 
     {
       //  echo " t1"; echo $tags[0];
-    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[0]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid','$tags[0]');";
     $result=mysqli_query($this->connection,$sql);
     }
     if($tags['1']!=NULL) 
     {//echo " t2";
-    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[1]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid','$tags[1]');";
     $result=mysqli_query($this->connection,$sql);
     }
    if($tags['2']!=NULL)  
     {//echo "t3";
-    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[2]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid','$tags[2]');";
     $result=mysqli_query($this->connection,$sql);
     }
     if($tags['3']!=NULL)  
     {
-    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid', '$tags[3]');";
+    $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid','$tags[3]');";
     $result=mysqli_query($this->connection,$sql);
     }
  //   header('Location: ../addvideo.html');
@@ -69,10 +69,23 @@ class content
     }
 
     public function add_test($var,$conid,$number) {
-      
+    $count=0;
    // echo "hii";
     //   echo $number;
-        for($i=1;$i<$number;$i++) 
+
+                       // find test number
+         $sql="SELECT MAX(test_number) from tests where content_id=$conid;";
+        // echo $sql;
+           $result=mysqli_query($this->connection,$sql);
+            if(mysqli_num_rows($result) > 0) 
+            {
+           $row = mysqli_fetch_row($result);
+           $testnum=$row[0];
+           $testnum++;
+          // echo $testnum;
+            }
+
+        for($i=1;$i<=$number;$i++) 
         { 
          $q=$var['q'."$i"];
          $opa=$var['opa'."$i"];
@@ -81,18 +94,11 @@ class content
          $opd=$var['opd'."$i"];
          $crct=$var['crct'."$i"];
          $difficulty=$var['difficulty'."$i"];
-//echo $q;
-         // find test number
-         $sql="SELECT MAX(test_number) from tests where content_id=$conid;";
-         echo $sql;
-           $result=mysqli_query($this->connection,$sql);
-            if(mysqli_num_rows($result) > 0) 
-            {
-           $row = mysqli_fetch_assoc($result);
-           $testnum=$row["MAX(test_number)"];
-            }
+         // echo "$q";
 
-           $sql="INSERT INTO tests VALUES ($testnum,$conid,$i,'$q','$opa','$opb','$opc','$opd', '$crct',$difficulty);";
+
+
+           $sql="INSERT INTO tests VALUES($testnum,$conid,$i,'$q','$opa','$opb','$opc','$opd','$crct',$difficulty)";
            $result=mysqli_query($this->connection,$sql);
            if($result)
            { $count=$count+1; 
@@ -102,9 +108,19 @@ class content
 
         if($count=$number)
         {
-          echo "<script>alert('added video successfully');</script>";
+         // echo "<script>alert('added video successfully');</script>";
+
+          //window.location.href = "test.php";
+
+          echo '<script type="text/javascript">
+              alert("Added video successfully");
+              location="test.php";
+              </script>';
         }
 
+
+  //header("Location:test.php");
+         
 
     }
 

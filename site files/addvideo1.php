@@ -24,10 +24,10 @@ if (isset($_POST['submit']))
 	<title>tutorial site</title>
 </head>
 <body>
-	<h1>Upload your video (upload to youtube, set privacy to unlisted then copy the embed video link of your video)</h1>
-	<h2>You can also upload test for this video after submitting the video</h2>
+	<h1><u>Upload your video</u></h1> <br><h3>(Upload your video to youtube, set privacy to unlisted then copy paste the embed video link below)</h3><br>
+	
 <form action="" method="post">
-Upload video:<input type="text" name="embedvideo" />
+Video link:<input type="text" name="embedvideo" />
 <br>
 Enter min 2 tags to specify the area of your video:
 tag1 <input type="text" name="tag1"/>
@@ -65,8 +65,10 @@ Enter the topic on which you are submitting video:
     
 </select>
 <br>
-<input type="submit" name="submit" value="add video"/>
+<input type="submit" name="submit" value="Add video"/>
 </form>
+<br>
+<h2>You can also upload test for this video after submitting the video</h2>
 </body>
 </html>
 

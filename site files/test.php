@@ -1,3 +1,9 @@
+
+<?php include'includes/header.php'?>
+
+	<!-- main content opening -->
+
+
 <?php
 include "connect.php";
 include "classes/content.php";
@@ -38,3 +44,8 @@ $con1=new content($connection);
 
 </body>
 </html>
+
+
+	<!-- main content closing -->
+
+<?php include'includes/footer.php'?>

@@ -28,6 +28,7 @@ $id=$_SESSION['id'];
 <body>
 <center><h1>Content Developer</h1></center>
 <h2>Welcome <?php echo $name; ?></h2>
+<br>
 <?php if($approved==0)
 {
         echo "Dear Developer You have not yet been aproved by the admin";
