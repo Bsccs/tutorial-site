@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 12, 2020 at 07:43 AM
+-- Generation Time: Mar 18, 2020 at 06:23 PM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.4.1
 
@@ -53,10 +53,9 @@ CREATE TABLE `blacklist` (
 
 CREATE TABLE `content` (
   `content_id` int(11) NOT NULL,
-  `content_name` varchar(18) NOT NULL,
+  `content_name` varchar(255) NOT NULL,
   `inspector_approved` tinyint(1) NOT NULL,
   `content_depth` int(11) NOT NULL,
-  `keyword_id` int(11) NOT NULL,
   `people_viewed` int(11) NOT NULL,
   `developer_id` int(11) NOT NULL,
   `content_length` int(11) NOT NULL,
@@ -67,21 +66,20 @@ CREATE TABLE `content` (
 -- Dumping data for table `content`
 --
 
-INSERT INTO `content` (`content_id`, `content_name`, `inspector_approved`, `content_depth`, `keyword_id`, `people_viewed`, `developer_id`, `content_length`, `paid`) VALUES
-(113, '', 0, 2, 0, 0, 1, 0, 0),
-(114, '', 0, 2, 0, 0, 1, 0, 0),
-(115, '', 0, 2, 0, 0, 1, 0, 0),
-(117, '', 0, 2, 0, 0, 1, 0, 0),
-(118, 'videolink123`', 0, 2, 0, 0, 1, 0, 0),
-(119, 'videolink123`', 0, 2, 0, 0, 1, 0, 0),
-(120, 'videolink234', 0, 2, 0, 0, 1, 0, 0),
-(122, 'hhhhhhh', 0, 2, 0, 0, 1, 0, 0),
-(123, 'hhhhhhh', 0, 2, 0, 0, 1, 0, 0),
-(124, '<iframe width=\"907', 0, 2, 0, 0, 1, 0, 0),
-(125, '<iframe width=\"892', 0, 2, 0, 0, 1, 0, 0),
-(126, '<iframe width=\"400', 0, 2, 0, 0, 1, 0, 0),
-(128, '<iframe width=\"545', 0, 2, 0, 0, 1, 0, 0),
-(129, '<iframe width=\"727', 1, 2, 0, 0, 1, 0, 0);
+INSERT INTO `content` (`content_id`, `content_name`, `inspector_approved`, `content_depth`, `people_viewed`, `developer_id`, `content_length`, `paid`) VALUES
+(113, '', 0, 2, 0, 1, 0, 0),
+(114, '', 0, 2, 0, 1, 0, 0),
+(115, '', 0, 2, 0, 1, 0, 0),
+(117, '', 0, 2, 0, 1, 0, 0),
+(118, 'videolink123`', 0, 2, 0, 1, 0, 0),
+(119, 'videolink123`', 0, 2, 0, 1, 0, 0),
+(120, 'videolink234', 0, 2, 0, 1, 0, 0),
+(122, 'hhhhhhh', 0, 2, 0, 1, 0, 0),
+(123, 'hhhhhhh', 0, 2, 0, 1, 0, 0),
+(128, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/3sJN7ACIOoQ\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 2, 0, 1, 0, 0),
+(129, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/QvKWXs24p8o\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 1, 2, 0, 1, 0, 0),
+(130, '<iframe width=\"727\" height=\"409\" src=\"https://www.youtube.com/embed/a4Fv98jttYA\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>', 0, 2, 0, 1, 0, 0),
+(131, 'dwdwd', 0, 2, 0, 1, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -91,11 +89,41 @@ INSERT INTO `content` (`content_id`, `content_name`, `inspector_approved`, `cont
 
 CREATE TABLE `content_developer` (
   `developer_id` int(11) NOT NULL,
+  `login_id` int(11) NOT NULL,
+  `name` varchar(24) NOT NULL,
   `email` varchar(18) NOT NULL,
   `quali_doc` varchar(18) NOT NULL,
   `expertise` varchar(18) NOT NULL,
   `admin_aproved` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `content_developer`
+--
+
+INSERT INTO `content_developer` (`developer_id`, `login_id`, `name`, `email`, `quali_doc`, `expertise`, `admin_aproved`) VALUES
+(1, 0, 'jdkjhsf', 'sdfsdfsd', '', 'sdfsdfsd', 0),
+(3, 0, 'Joby George', 'john@gmail', '', 'expertise', 0),
+(5, 0, 'jfgoie', 'hkuhki', 'kjug', 'kjbk', 0),
+(6, 0, 'jaini', 'sas', 'zdxs', 'sdsd', 0),
+(7, 0, 'gfhj', 'jhyj', 'jyf', 'jyhfjuyf', 0),
+(14, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'android', 0),
+(15, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(16, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(17, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(18, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(19, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(20, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(21, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(22, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(23, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(24, 0, 'john', 'john@gmail', 'uploads/UseCaseDia', 'java', 0),
+(25, 0, 'Joby George', 'john@gmail', 'uploads/Tell-Me-Ab', 'java,php,android', 0),
+(26, 0, 'Joby George', 'john@gmail', 'uploads/Tell-Me-Ab', 'java,php,android', 0),
+(27, 0, 'john', 'john@gmail', 'uploads/ERDDiagram', 'java,php,android', 0),
+(28, 0, 'john', 'john@gmail', 'uploads/ERDDiagram', 'java,php,android', 0),
+(29, 46, 'john', 'john@gmail', 'uploads/onam.jpg', 'java,php,android', 0),
+(30, 47, 'america', 'john@gmail', 'uploads/programmer', 'java,php,android', 0);
 
 -- --------------------------------------------------------
 
@@ -104,9 +132,44 @@ CREATE TABLE `content_developer` (
 --
 
 CREATE TABLE `content_keyword` (
-  `content_id` int(11) NOT NULL,
+  `ck_id` int(5) NOT NULL,
+  `content_id` int(5) NOT NULL,
   `keyword` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `content_keyword`
+--
+
+INSERT INTO `content_keyword` (`ck_id`, `content_id`, `keyword`) VALUES
+(26, 0, ''),
+(27, 0, ''),
+(28, 120, 'tag12'),
+(29, 120, 'tag13'),
+(30, 121, 'tag12'),
+(31, 121, 'tag13'),
+(32, 122, 'yyyy'),
+(33, 122, 'yttrrrr'),
+(34, 123, 'yyyy'),
+(35, 123, 'yttrrrr'),
+(36, 124, 'yoyo'),
+(37, 124, 'yipiee'),
+(38, 125, 'jhv'),
+(39, 125, 'hgc'),
+(40, 126, 'sdvsdfv'),
+(41, 126, 'sdvsdv'),
+(42, 127, 'kjg'),
+(43, 127, 'kjkjb'),
+(44, 128, 'cid'),
+(45, 128, 'moosa'),
+(46, 129, 'nas'),
+(47, 129, 'daily'),
+(48, 130, 'tag1'),
+(49, 130, 'tag222'),
+(50, 131, 'dwd'),
+(51, 131, 'd'),
+(52, 131, 'd'),
+(53, 131, 'd');
 
 -- --------------------------------------------------------
 
@@ -116,9 +179,19 @@ CREATE TABLE `content_keyword` (
 
 CREATE TABLE `inspector` (
   `inspector_id` int(11) NOT NULL,
+  `login_id` int(11) NOT NULL,
   `email` varchar(18) NOT NULL,
   `name` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `inspector`
+--
+
+INSERT INTO `inspector` (`inspector_id`, `login_id`, `email`, `name`) VALUES
+(42, 0, 'john@gmail', 'john'),
+(43, 30, 'john@gmail', 'john'),
+(44, 40, 'john@gmail', 'john');
 
 -- --------------------------------------------------------
 
@@ -162,9 +235,9 @@ CREATE TABLE `insp_feedback` (
 
 CREATE TABLE `login` (
   `login_id` int(11) NOT NULL,
-  `email` varchar(50) NOT NULL,
+  `email` varchar(18) NOT NULL,
   `password` varchar(20) NOT NULL,
-  `role` varchar(10) NOT NULL
+  `role` varchar(18) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
@@ -172,11 +245,41 @@ CREATE TABLE `login` (
 --
 
 INSERT INTO `login` (`login_id`, `email`, `password`, `role`) VALUES
-(1, 'hem@gmai.com', 'zdgkdgu', 'student'),
-(7, 'hello@gmail.com', 'sdgauosrghush', 'student'),
-(8, 'unni.hemantp@gmail', 'srhateh', 'student'),
-(12, 'admin@admin.com', '123456789', 'admin'),
-(15, 'teacher@teacher.com', '123456789', 'teacher');
+(13, 'john@gmail', '123', 'inspector'),
+(14, 'john@gmail', '1234', 'inspector'),
+(15, 'john@gmail', '2344', 'inspector'),
+(16, 'john@gmail', '2344', 'inspector'),
+(17, 'john@gmail', '2344', 'inspector'),
+(18, 'john@gmail', '2344', 'inspector'),
+(19, 'john@gmail', '2344', 'inspector'),
+(20, 'john@gmail', '2344', 'inspector'),
+(21, 'john@gmail', '2344', 'inspector'),
+(22, 'john@gmail', '123', 'inspector'),
+(23, 'john@gmail', '33', 'inspector'),
+(24, 'john@gmail', '33', 'inspector'),
+(25, 'john@gmail', '33', 'inspector'),
+(26, 'john@gmail', '22', 'inspector'),
+(27, 'john@gmail', '22', 'inspector'),
+(28, 'john@gmail', '22', 'inspector'),
+(29, 'john@gmail', '33', 'inspector'),
+(30, 'john@gmail', '22', 'inspector'),
+(31, 'john@gmail', '22222', 'con_developer'),
+(32, 'john@gmail', '22222', 'con_developer'),
+(33, 'john@gmail', '22222', 'con_developer'),
+(34, 'john@gmail', '1111', 'con_developer'),
+(35, 'john@gmail', '1111', 'con_developer'),
+(36, 'john@gmail', '1111', 'con_developer'),
+(37, 'john@gmail', '1111', 'con_developer'),
+(38, 'john@gmail', '1111', 'con_developer'),
+(39, 'john@gmail', '1111', 'con_developer'),
+(40, 'john@gmail', '3333333', 'inspector'),
+(41, 'john@gmail', '2222222', 'con_developer'),
+(42, 'john@gmail', '2222222', 'con_developer'),
+(43, 'john@gmail', '2222222', 'con_developer'),
+(44, 'john@gmail', '2222222', 'con_developer'),
+(45, 'john@gmail', '2222222', 'con_developer'),
+(46, 'john@gmail', '2222222', 'con_developer'),
+(47, 'john@gmail.com', '1234', 'con_developer');
 
 -- --------------------------------------------------------
 
@@ -224,7 +327,6 @@ CREATE TABLE `search` (
 CREATE TABLE `student_details` (
   `student_id` int(11) NOT NULL,
   `login_id` int(11) NOT NULL,
-  `email` varchar(18) NOT NULL,
   `name` varchar(15) NOT NULL,
   `gender` varchar(10) NOT NULL,
   `country` varchar(15) NOT NULL,
@@ -238,18 +340,10 @@ CREATE TABLE `student_details` (
 -- Dumping data for table `student_details`
 --
 
-INSERT INTO `student_details` (`student_id`, `login_id`, `email`, `name`, `gender`, `country`, `state`, `phone_number`, `age`, `last_login`) VALUES
-(1, 1, 'hem@gmai.com', '', 'male', 'ZSHFXv', 'djzhxOZ', 2147483647, 0, 0),
-(2, 0, 'hem@gmai.com', '', 'male', 'ZSHFXv', 'djzhxOZ', 2147483647, 0, 0),
-(3, 0, 'hem@gmai.com', '', 'male', 'ZSHFXv', 'djzhxOZ', 2147483647, 0, 0),
-(4, 0, 'hem@gmai.com', '', 'male', 'ZSHFXv', 'djzhxOZ', 2147483647, 0, 0),
-(5, 0, 'hem@gmai.com', '', 'male', 'ZSHFXv', 'djzhxOZ', 2147483647, 0, 0),
-(6, 0, 'hem@gmai.com', 'unni.hemantp@gm', 'male', 'ZSHFXv', 'djzhxOZ', 2147483647, 0, 0),
-(7, 7, 'hello@gmail.com', 'ahsuh', 'male', 'dhg', 'sidhgsi', 123455677, 24, 0),
-(8, 8, 'unni.hemantp@gmail', 'hemantp', 'male', 'india', 'kerala', 24324, 12, 0),
-(9, 0, 'unni.hemantp@gmail', 'hemantp', 'male', 'india', 'kerala', 24324, 12, 0),
-(10, 0, 'unni.hemantp@gmail', 'hemantp', 'male', 'india', 'kerala', 24324, 12, 0),
-(11, 0, 'unni.hemantp@gmail', 'hemantp', 'male', 'india', 'kerala', 24324, 12, 0);
+INSERT INTO `student_details` (`student_id`, `login_id`, `name`, `gender`, `country`, `state`, `phone_number`, `age`, `last_login`) VALUES
+(1, 0, 'john', 'm', 'india', 'ker', 0, 23, 0),
+(2, 1, 'john', 'm', 'india', 'ker', 675859659, 23, 8),
+(3, 2, 'edx', 'm', 'infrv', 'ker', 456, 23, 1239);
 
 -- --------------------------------------------------------
 
@@ -292,10 +386,20 @@ CREATE TABLE `stud_feedback` (
 --
 
 CREATE TABLE `suggestion` (
+  `suggestion_id` int(11) NOT NULL,
   `developer_id` int(11) NOT NULL,
-  `suggestion` varchar(100) NOT NULL,
+  `suggestion` varchar(160) NOT NULL,
   `date` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `suggestion`
+--
+
+INSERT INTO `suggestion` (`suggestion_id`, `developer_id`, `suggestion`, `date`) VALUES
+(1, 1, 'sdwededed', 2020),
+(2, 1, 'qqqwww', 2020),
+(3, 1, 'qweee', 2020);
 
 -- --------------------------------------------------------
 
@@ -306,14 +410,48 @@ CREATE TABLE `suggestion` (
 CREATE TABLE `tests` (
   `test_number` int(11) NOT NULL,
   `content_id` int(11) NOT NULL,
-  `questions` int(11) NOT NULL,
-  `option_a` int(11) NOT NULL,
-  `option_b` int(11) NOT NULL,
-  `option_c` int(11) NOT NULL,
-  `option_d` int(11) NOT NULL,
-  `answer_option` int(11) NOT NULL,
+  `question_num` int(11) NOT NULL,
+  `question` varchar(100) NOT NULL,
+  `option_a` varchar(50) NOT NULL,
+  `option_b` varchar(50) NOT NULL,
+  `option_c` varchar(50) NOT NULL,
+  `option_d` varchar(50) NOT NULL,
+  `answer_option` char(1) NOT NULL,
   `dificulty_level` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `tests`
+--
+
+INSERT INTO `tests` (`test_number`, `content_id`, `question_num`, `question`, `option_a`, `option_b`, `option_c`, `option_d`, `answer_option`, `dificulty_level`) VALUES
+(1, 122, 131, 'q', 'opa', 'opb', 'opc', 'opd', 'c', 0),
+(1, 131, 1, 'how are you', '', '', '', '', '', 0),
+(1, 131, 2, '', '', '', '', '', '', 0),
+(2, 131, 1, 'how are you', '', 'well', '', '', '', 0),
+(3, 131, 2, 'qwww', '', '', '', '', '', 0),
+(4, 131, 1, 'how are you', 'good', 'well', 'fine', 'good', 'k', 0),
+(5, 131, 2, 'qwww', 'today', 'whenday', '', '', '', 0),
+(6, 131, 1, 'how are you', 'good', 'well', 'fine', 'good', 'k', 0),
+(6, 131, 2, 'qwww', 'today', 'whenday', 'dadaj', 'ddddd', '', 0),
+(6, 131, 3, '', '', '', '', '', '', 0),
+(7, 131, 1, 'how are you', '', '', '', '', '', 0),
+(7, 131, 2, '', '', '', '', '', '', 0),
+(7, 131, 3, '', '', '', '', '', '', 0),
+(8, 131, 1, 'how are you', '', '', '', '', '', 0),
+(8, 131, 2, '', '', '', '', '', '', 0),
+(8, 131, 3, '', '', '', '', '', '', 0),
+(9, 131, 1, 'how are you', 'good', 'well', 'fine', 'good', 'k', 0),
+(9, 131, 2, 'qwww', 'today', 'whenday', 'dadaj', 'ddddd', '', 0),
+(10, 131, 1, 'how are you', 'good', 'well', 'fine', 'good', 'k', 0),
+(10, 131, 2, 'qwww', 'today', 'whenday', '', '', '', 0),
+(10, 131, 3, '', '', '', '', '', '', 0),
+(11, 131, 1, 'how are you', 'good', 'well', 'fine', '', '', 0),
+(11, 131, 2, '', '', '', '', '', '', 0),
+(11, 131, 3, '', '', '', '', '', '', 0),
+(12, 131, 1, 'how are you', 'good', 'well', 'fine', '', '', 0),
+(12, 131, 2, '', '', '', '', '', '', 0),
+(12, 131, 3, '', '', '', '', '', '', 0);
 
 -- --------------------------------------------------------
 
@@ -379,7 +517,7 @@ ALTER TABLE `content_developer`
 -- Indexes for table `content_keyword`
 --
 ALTER TABLE `content_keyword`
-  ADD PRIMARY KEY (`content_id`);
+  ADD PRIMARY KEY (`ck_id`);
 
 --
 -- Indexes for table `inspector`
@@ -403,8 +541,7 @@ ALTER TABLE `insp_feedback`
 -- Indexes for table `login`
 --
 ALTER TABLE `login`
-  ADD PRIMARY KEY (`login_id`),
-  ADD UNIQUE KEY `email` (`email`);
+  ADD PRIMARY KEY (`login_id`);
 
 --
 -- Indexes for table `payment`
@@ -446,13 +583,13 @@ ALTER TABLE `stud_feedback`
 -- Indexes for table `suggestion`
 --
 ALTER TABLE `suggestion`
-  ADD PRIMARY KEY (`developer_id`);
+  ADD PRIMARY KEY (`suggestion_id`);
 
 --
 -- Indexes for table `tests`
 --
 ALTER TABLE `tests`
-  ADD PRIMARY KEY (`test_number`,`content_id`,`questions`);
+  ADD PRIMARY KEY (`test_number`,`content_id`,`question_num`);
 
 --
 -- Indexes for table `test_attended`
@@ -477,10 +614,28 @@ ALTER TABLE `approvals`
   MODIFY `content id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT for table `content`
+--
+ALTER TABLE `content`
+  MODIFY `content_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=132;
+
+--
+-- AUTO_INCREMENT for table `content_developer`
+--
+ALTER TABLE `content_developer`
+  MODIFY `developer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
+
+--
+-- AUTO_INCREMENT for table `content_keyword`
+--
+ALTER TABLE `content_keyword`
+  MODIFY `ck_id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+
+--
 -- AUTO_INCREMENT for table `inspector`
 --
 ALTER TABLE `inspector`
-  MODIFY `inspector_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `inspector_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=45;
 
 --
 -- AUTO_INCREMENT for table `insp_expertise`
@@ -492,13 +647,19 @@ ALTER TABLE `insp_expertise`
 -- AUTO_INCREMENT for table `login`
 --
 ALTER TABLE `login`
-  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `login_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 
 --
 -- AUTO_INCREMENT for table `student_details`
 --
 ALTER TABLE `student_details`
-  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `student_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `suggestion`
+--
+ALTER TABLE `suggestion`
+  MODIFY `suggestion_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
