@@ -13,6 +13,12 @@ include "connect.php";
 			echo"<script>window.history.back();</script>";
 		}
 ?>
+<style>
+          .card-info{
+            margin-top: 100px;
+
+        }
+</style>
 <!-- html part -->
 <?php include 'includes/header.php'?>
 
@@ -86,9 +92,3 @@ include "connect.php";
   }
 </script>
 
-<style>
-          .card-info{
-            margin-top: 100px;
-
-        }
-</style>
