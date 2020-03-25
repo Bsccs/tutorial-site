@@ -25,16 +25,16 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 		$login_id=mysqli_insert_id($this->dbh);
 
 
-	$r1=mysqli_query($this->dbh,"INSERT INTO `student_details`(`login_id`, `email`, `name`, `gender`, `country`, `state`, `phone_number`, `age`) 
-		VALUES ('$login_id','$uemail','$uname','$gender','$country','$state','$phone','$age')");
+	$r1=mysqli_query($this->dbh,"INSERT INTO `student_details`(`login_id`, `name`, `gender`, `country`, `state`, `phone_number`, `age`) 
+		VALUES ('$login_id','$uname','$gender','$country','$state','$phone','$age')");
 	return $r1;
 	}
 
 // Function for signin
 public function signin($uemail,$pasword)
 	{
-	$result=mysqli_query($this->dbh,"SELECT * 
-	FROM `login` WHERE  email ='".$uemail."'AND password ='".$pasword."'");
+	$result=mysqli_query($this->dbh,"SELECT login.login_id,role,name,email,password 
+	FROM `login` JOIN student_details ON login.login_id = student_details.login_id WHERE email ='".$uemail."'AND password ='".$pasword."'");
 	return $result;
 	}
 /*public function findname($temp)

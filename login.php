@@ -1,5 +1,6 @@
 <?php
 session_start();
+require_once'connect.php';
 // include Function  file
 include_once('CLASS/function.php');
 // Object creation
@@ -7,7 +8,7 @@ $usercredentials=new DB_con();
 if(isset($_POST['button']))
 {
 // Posted Values
-$uemail=$_POST['email'];
+$uemail=mysqli_real_escape_string($connection,$_POST['email']);
 $pasword=$_POST['password'];
 //Function Calling
 $ret=$usercredentials->signin($uemail,$pasword);
@@ -47,7 +48,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['login_id'] = $row['login_id'];
              $_SESSION['role'] = $row['role'];
 
-	/*	 $_SESSION['name']=$usercredentials->findname($row['login_id']);*/
+		 $_SESSION['name']= $row['name'];
          header("location: index2.php");					/*to be done*/
 
  

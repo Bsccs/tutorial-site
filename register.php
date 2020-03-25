@@ -36,7 +36,7 @@ $mail->Username = 'hackerzdom@gmail.com';                   // SMTP username
 $mail->Password = 'hackerzdom@123#';               // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable encryption, 'ssl' also accepted
 $mail->Port = 465;       
-$mail->SMTPDebug = 2;                             //Set the SMTP port number - 587 for authenticated TLS
+/*$mail->SMTPDebug = 2;*/                             //Set the SMTP port number - 587 for authenticated TLS
 $mail->setFrom('hackerzdom@gmail.com', 'HACKERZDOM');     //Set who the message is to be sent from
 
 $mail->addAddress($uemail); 
