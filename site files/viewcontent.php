@@ -5,7 +5,7 @@
 
 <?php
 	// include "session.php";	
-session_start();
+//	 session_start();
   include "classes/content.php";
   include 'connect.php';
   $content2=new content($connection);
@@ -33,11 +33,14 @@ session_start();
 			</style>
 		</head>
 		<body>
-            The videos available are:<br>
+          <!--   The videos available are:<br> -->
             <?php 
             $_SESSION['role']='student'; // check1
             $_SESSION['id']='2';			// check 1
+            $_SESSION['templevel']='2';   //check 3
              $sql=$content2->view_content();
+            // echo $sql;
+
                 $result=mysqli_query($connection,$sql);
 
                 if($_SESSION['role']='student')

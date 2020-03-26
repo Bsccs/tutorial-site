@@ -125,19 +125,24 @@ class content
     }
 
     public function view_content() {
-
+    //  echo "hello";
                 if($_SESSION['role']=='student')
             {
-              if($_SESSION['templevel'])
+              if(isset($_SESSION['templevel']))
+              {
                   
-                $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_id IN (SELECT content_id FROM student_log WHERE content_id IN(SELECT content_id FROM student_log WHERE student_id=".$_SESSION['id']."))";
+                $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel']." AND content_id IN (SELECT content_id FROM student_log WHERE content_id IN(SELECT content_id FROM student_log WHERE student_id=".$_SESSION['id']."))";
+              //  echo $sql;
+                return $sql;
+              }
+
             }
-            elseif ($_SESSION['role']=='admin') {
+            /*elseif ($_SESSION['role']=='admin') {
                 $sql="SELECT content_name FROM content";
             }
             elseif ($_SESSION['role']=='inspector') {
 
-              $sql="SELECT content_name FROM content WHERE inspector_approved=0 AND content_id=(SELECT content_id FROM content_keyword WHERE keyword IN (SELECT expertise FROM insp_expertise WHERE inspector_id=2))";
+              $sql="SELECT content_name FROM content WHERE inspector_approved=0 AND content_id=(SELECT content_id FROM content_keyword WHERE keyword IN (SELECT expertise FROM insp_expertise WHERE inspector_id=2))";*/
 
 /*                $sql="SELECT content_id FROM content WHERE inspector_approved=0";
                 $result=mysqli_query($connection,$sql);
@@ -148,12 +153,13 @@ class content
                   { 
                     if($row['keyword']==)
                   }
-                }*/
-            }
+                }
+            }*/
 /*            elseif ($_SESSION['role']=='con_developer') {
               # code...
             }*/
-        return $sql;
+        
+      
     }
 
     public function remove_content() {
