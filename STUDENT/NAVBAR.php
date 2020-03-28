@@ -15,7 +15,7 @@ include "../connect.php";
         <a class="nav-link" href="../index2.php">Home <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Buy</a>
+        <a class="nav-link" href="buy.php">Buy</a>
       </li>
 
     </ul>

@@ -1,19 +1,20 @@
 <?php
 
-class student implements payment {
+class student /*implements payment*/ {
 
     public $test_num;
 
 
 
-    private function __construct() {
+    public function __construct($connection) {
+     $this->connection = $connection;
     }
 
     public function pay() {
         // TODO implement here
     }
 
-    public function attend test() {
+    public function attend_test() {
         // TODO implement here
     }
 
@@ -21,5 +22,9 @@ class student implements payment {
         // TODO implement here
     }
 
+ public function buy() {
+    
+
+    }
 
 }
