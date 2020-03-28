@@ -27,7 +27,7 @@ include "../connect.php";
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="profile.php">PROFILE</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="logout.php">LOGOUT</a>
+          <a class="dropdown-item" href="../logout.php">LOGOUT</a>
           
         </div>
       </li>
