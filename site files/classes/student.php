@@ -22,8 +22,10 @@ class student /*implements payment*/ {
         // TODO implement here
     }
 
- public function buy() {
-    
+ public function buy($conid) {
+
+
+    echo "<script>alert('You have bought this video');</script>";
 
     }
 
