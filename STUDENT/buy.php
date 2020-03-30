@@ -8,26 +8,31 @@ session_start();
 // include "session.php";
   include '../site files/connect.php';
   include '../site files/classes/student.php';
-  $content2=new student($connection);
-$_SESSION['id']=2;
-   $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel']." AND content_id NOT IN (SELECT content_id FROM student_log WHERE student_id='".$_SESSION['id']."'";
+  $stud2=new student($connection);
+$_SESSION['id']=2;  // check
+  /* $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel']." AND content_id NOT IN (SELECT content_id FROM student_log WHERE student_id='".$_SESSION['id']."'";*/
+
+$sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel'];
+
    $result=mysqli_query($connection,$sql);
    
      
 ?>
 <h1>Videos you can buy</h1><br><br>
+<form method="post" action="$admin1->view_inspctr_details();">
 	<table border="1">
 <?php
 
   while($row = mysqli_fetch_row($result)) 
      {
     
-    $video=$row[0];
+    $video=$row[1];
 ?>
     
     <tr>
     <td><?php echo "$video"; ?></td>
-    <td><button></button></td>
+    <td><button onclick="">Buy</button>></td>
+</td>
     </tr>
 <?php  }  ?>
 
