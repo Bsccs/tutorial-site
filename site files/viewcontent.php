@@ -11,6 +11,7 @@
   $content2=new content($connection);
  
 ?>
+<div class="container">
 		<!DOCTYPE html>
 		<html>
 		<head>
