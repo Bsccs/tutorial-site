@@ -3,7 +3,7 @@
 class student /*implements payment*/ {
 
     public $test_num;
-
+    public $connection;
 
 
     public function __construct($connection) {
@@ -22,10 +22,14 @@ class student /*implements payment*/ {
         // TODO implement here
     }
 
- public function buy($conid) {
-
-
+ public function buy($conid){
+    $id=$_SESSION['id'];
+    $sql="INSERT INTO student_log VALUES($id,$conid,'','','','')";
+    $result=mysqli_query($this->connection,$sql);
+    if($result)
+    {
     echo "<script>alert('You have bought this video');</script>";
+    }
 
     }
 
