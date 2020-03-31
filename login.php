@@ -30,6 +30,7 @@ if(mysqli_num_rows($ret) > 0)
       {
              $_SESSION['login_id'] = $row['login_id'];
              $_SESSION['role'] = $row['role'];
+             $_SESSION['id']=$row['developer_id'];
          
          header("location:CONTENT-PROVIDER/INDEX.php");
  
