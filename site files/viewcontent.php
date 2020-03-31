@@ -35,15 +35,18 @@
 		<body>
           <!--   The videos available are:<br> -->
             <?php 
-            $_SESSION['role']='student'; // check1
-            $_SESSION['id']='2';			// check 1
-            $_SESSION['templevel']='2';   //check 3
+            echo '<pre>';
+var_dump($_SESSION);
+echo '</pre>';
+          //  $_SESSION['role']='student'; // check1
+          //  $_SESSION['id']='2';			// check 1
+          //  $_SESSION['templevel']='2';   //check 3
              $sql=$content2->view_content();
             // echo $sql;
 
                 $result=mysqli_query($connection,$sql);
 
-                if($_SESSION['role']='student')
+                if($_SESSION['role']=='student')
                 {
                 	?> <h1>Videos you have</h1><br><br>
            	    <table border="1" > <?php

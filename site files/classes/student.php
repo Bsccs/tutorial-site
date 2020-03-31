@@ -29,6 +29,7 @@ class student /*implements payment*/ {
     $result=mysqli_query($this->connection,$sql);
     if($result)
     {
+    unset($_SESSION['temp6']);
     echo "<script>alert('You have bought this video');</script>";
     }
 

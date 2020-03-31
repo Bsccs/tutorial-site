@@ -32,22 +32,23 @@ $sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND
 <h1>Videos you can buy</h1><br><br>
 	<table border="1">
 	<?php
-
+	 $i=1;
  	 while($row = mysqli_fetch_row($result)) 
      	{
-    
+    	 
  	     $video=$row[1];
+ 	     $contentid=$row[0];
 	?>
     
     <tr>
     <td><?php echo "$video"; ?></td>
     <td><form method="post" action="">
-		<input type="hidden" name="conid" value=$row[0]>
+		<input type="hidden" name="conid" value=$contentid>
     	<input type="submit" name="submit" value="Buy"></td>
     </form>
 </td>
     </tr>
-<?php  }  ?>
+<?php $i++; }  ?>
 
     </table>
 </form>

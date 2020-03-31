@@ -28,13 +28,18 @@ class content
     {//echo "successfully inserted"; 
         echo "<script>alert('added video successfully');</script>";
         }
-    $sql="SELECT MAX(content_id) from content;";
+ /*   $sql="SELECT MAX(content_id) from content;";
     $result=mysqli_query($this->connection,$sql);
     if(mysqli_num_rows($result) > 0) 
     {
     $row = mysqli_fetch_assoc($result);
     $conid=$row["MAX(content_id)"];
-    }
+    }*/
+
+$conid=mysqli_insert_id($this->connection);
+
+
+
     //echo " yes $conid";
     // print_r($tags);
     // echo sizeof($tags);
