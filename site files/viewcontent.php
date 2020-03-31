@@ -36,9 +36,13 @@
 		<body>
           <!--   The videos available are:<br> -->
             <?php 
-            echo '<pre>';
+
+            
+           /* echo '<pre>';
 var_dump($_SESSION);
-echo '</pre>';
+echo '</pre>';*/
+
+
           //  $_SESSION['role']='student'; // check1
           //  $_SESSION['id']='2';			// check 1
           //  $_SESSION['templevel']='2';   //check 3

@@ -17,7 +17,7 @@ include'../content-provider/includes/header.php'
   /* $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel']." AND content_id NOT IN (SELECT content_id FROM student_log WHERE student_id='".$_SESSION['id']."'";*/
 
 $sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel'];
-
+// echo $sql;
    $result=mysqli_query($connection,$sql);
    
      
@@ -32,7 +32,7 @@ $sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND
 <h1>Videos you can buy</h1><br><br>
 	<table border="1">
 	<?php
-	 $i=1;
+	
  	 while($row = mysqli_fetch_row($result)) 
      	{
     	 
@@ -43,15 +43,16 @@ $sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND
     <tr>
     <td><?php echo "$video"; ?></td>
     <td><form method="post" action="">
-		<input type="hidden" name="conid" value=$contentid>
+		<input type="hidden" name="conid" value="<?php echo $contentid; ?>">
     	<input type="submit" name="submit" value="Buy"></td>
-    </form>
+    	</form>
 </td>
     </tr>
-<?php $i++; }  ?>
+<?php  }  ?>
 
+	
     </table>
-</form>
+
 
 
 </body>
@@ -61,6 +62,8 @@ $sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND
 
 if(isset($_POST['submit']))
 {
+//	echo $_POST['conid'];
+//	var_dump($_POST);
     $stud2->buy($_POST['conid']);
    
 }
