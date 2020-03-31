@@ -25,7 +25,7 @@ class student /*implements payment*/ {
  public function buy($conid){
     $id=$_SESSION['id'];
     
-    $sql="INSERT INTO student_log VALUES($id,$conid,'','','','')";
+    $sql="INSERT INTO student_log VALUES('$id','$conid','','','','')";
     $result=mysqli_query($this->connection,$sql);
     if($result)
     {
