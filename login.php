@@ -50,6 +50,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['role'] = $row['role'];
 			 $_SESSION['name']= $row['name'];
 			 $_SESSION['student_id']= $row['student_id'];
+			 $_SESSION['developer_id']=$row['developer_id'];
          header("location: index2.php");					
 
  
