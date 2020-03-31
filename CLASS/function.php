@@ -34,14 +34,10 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 public function signin($uemail,$pasword)
 	{
 	$result=mysqli_query($this->dbh,"SELECT login.login_id,role,name,email,password 
-	FROM `login` JOIN student_details ON login.login_id = student_details.login_id WHERE email ='".$uemail."'AND password ='".$pasword."'");
+	FROM `login` LEFT JOIN student_details ON login.login_id = student_details.login_id WHERE email ='".$uemail."'AND password ='".$pasword."'");
 	return $result;
 	}
-/*public function findname($temp)
-	{
-		$result=mysqli_query($this->dbh,"select name from student_details where login_id='.$temp.'");
-		return $result;
-	}*/
+
 
 }
 ?>

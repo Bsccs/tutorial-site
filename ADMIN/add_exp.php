@@ -22,7 +22,7 @@ include "connect.php";
       			<div class="container">
             <div class="card card-info">
               <div class="card-header">
-                <a href="develop_details.php"><button type="submit" class="btn btn-default float-right">CANCEL</button></a>              
+                <a href="develop_details.php"><button type="cancel" class="btn btn-default float-right">CANCEL</button></a>              
               </div>
               <form class="form-horizontal-sm" method="post" enctype="multipart/form-data">
                 <div class="card-body">
