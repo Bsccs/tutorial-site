@@ -16,3 +16,5 @@ registation student registration ennu eyutanam
 qef
 
 login problem for admin.
+
+https://www.w3schools.com/pHP/php_mysql_insert_lastid.asp
