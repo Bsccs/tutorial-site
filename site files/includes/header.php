@@ -20,7 +20,7 @@
     	<!-- body-wrap-opening -->
     	<div class="body-wrap">
     	<!-- Navbar -->
-		<?php include'NAVBAR.php' ?>
-		<!-- nabar-closing-->
-		<!-- container class opening -->
-			<div class="container-fluid">
+        <?php include'../site files/NAVBAR.php' ?>
+                <!-- nabar-closing-->
+                <!-- container class opening -->
+                        <div class="container-fluid">

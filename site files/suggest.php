@@ -33,4 +33,4 @@ Please tell us about it briefly(30 words)
 
 	<!-- main content closing -->
 
-<?php include'includes/footer.php'?>
+<?php include'../content-provider/includes/footer.php'?>

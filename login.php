@@ -33,7 +33,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['name'] = $row['name'];
              $_SESSION['id']=$row['developer_id'];
          
-         header("location:CONTENT-PROVIDER/INDEX.php");
+         header("location:site files/INDEX.php");
  
       }
 

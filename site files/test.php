@@ -1,5 +1,5 @@
 
-<?php include'includes/header.php'?>
+<?php include'../content-provider/includes/header.php'?>
 
 	<!-- main content opening -->
 
@@ -49,4 +49,4 @@ $con1=new content($connection);
 
 	<!-- main content closing -->
 
-<?php include'includes/footer.php'?>
+<?php include'../content-provider/includes/footer.php'?>

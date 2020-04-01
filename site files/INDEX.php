@@ -1,5 +1,5 @@
 <?php session_start();
- include'includes/header.php'?>
+        include'includes/header.php'?>
 
 	<!-- main content opening -->
 
@@ -45,7 +45,7 @@ else
 </button>
 
 
-<button onclick="window.location.href = '../site files/suggest.php'";>View Feedback
+<button onclick="window.location.href = ''";>View Feedback
 </button>
 
 
