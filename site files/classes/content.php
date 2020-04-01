@@ -23,6 +23,7 @@ class content
       //  $conid;
    // $developer_id=1;  //check
       $developer_id=$_SESSION['id'];
+      echo developer_id;
     $sql="INSERT INTO `content` VALUES (NULL, '$embedvideo', '0', '$depth', '0', '$developer_id', '0', '0');";
     $result=mysqli_query($this->connection,$sql);
     if($result)
