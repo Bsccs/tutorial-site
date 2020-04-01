@@ -1,26 +1,26 @@
 <?php session_start();
         include'includes/header.php'?>
-
+        <?php include'../site files/NAVBAR.php' ?>
+                <!-- nabar-closing-->
+                <!-- container class opening -->
+                        <div class="container-fluid">
 	<!-- main content opening -->
 
 
 <?php
-//var_dump($_SESSION);
 
-include "connect.php";
-// include "session.php";
+include "../site files/connect.php";
+// include "../site files/session.php";
 // $_SESSION['id']=1;  // check
 $id=$_SESSION['id'];
-        $sql="SELECT name1,admin_aproved FROM content_developer WHERE developer_id='$id'";
-       // echo $sql;
+                $sql="SELECT name,admin_aproved FROM content_developer WHERE developer_id='$id'";
         $result=mysqli_query($connection,$sql);
         if($result)
         {       while($row=mysqli_fetch_assoc($result))
                 {
-                      //   echo "hii";
-                        $name=$row['name1'];
-                        /*$approved=1;*/ // check
-                        $approved=$row['admin_aproved'];
+                        // echo "hii";
+                        $name=$row['name'];
+                        $approved=1;/*$row['admin_aproved'];*/
                 }
         }
 ?>
@@ -31,7 +31,7 @@ $id=$_SESSION['id'];
 </head>
 <body>
 <center><h1>Content Developer</h1></center>
-<h2>Welcome <?php echo $_SESSION['name1']; ?></h2>
+<h2>Welcome <?php echo $name; ?></h2>
 <br>
 <?php if($approved==0)
 {
