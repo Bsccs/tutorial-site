@@ -10,13 +10,13 @@ include "../site files/connect.php";
 // include "../site files/session.php";
 // $_SESSION['id']=1;  // check
 $id=$_SESSION['id'];
-                $sql="SELECT name,admin_aproved FROM content_developer WHERE developer_id='$id'";
+                $sql="SELECT name1,admin_aproved FROM content_developer WHERE developer_id='$id'";
         $result=mysqli_query($connection,$sql);
         if($result)
         {       while($row=mysqli_fetch_assoc($result))
                 {
                         // echo "hii";
-                        $name=$row['name'];
+                        $name=$row['name1'];
                         $approved=1;/*$row['admin_aproved'];*/
                 }
         }
