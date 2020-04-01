@@ -1,11 +1,13 @@
-<?php include'../content-provider/includes/header.php'?>
+<?php 
+// session_start();
+// include "session.php";
+include'../STUDENT/includes/header.php'?>
 
 	<!-- main content opening -->
 
 
 <?php
-	// include "session.php";	
-//	 session_start();
+		
   include "classes/content.php";
   include 'connect.php';
   $content2=new content($connection);
@@ -76,4 +78,4 @@ echo '</pre>';*/
 
 	<!-- main content closing -->
 
-<?php include'includes/footer.php'?>
+<?php include'../STUDENT/includes/footer.php'?>

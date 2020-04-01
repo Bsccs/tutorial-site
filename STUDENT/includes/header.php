@@ -9,7 +9,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   		<meta http-equiv="x-ua-compatible" content="ie=edge">
   		<!-- title -->
-  		<title>CONTENT-PROVIDER</title>
+  		<title>student</title>
   		<!-- - plugins opening----->
 		<link rel="stylesheet" href="PLUGINS/bootstrap.min.css">
 		<!---plugins closing----->

@@ -18,4 +18,7 @@ qef
 forgot password
 email id should be checked if already existing
 
+
+content developer registration.
+
 https://www.w3schools.com/pHP/php_mysql_insert_lastid.asp
