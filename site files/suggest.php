@@ -1,9 +1,11 @@
-<?php include'includes/header.php'?>
+<?php
+ include "session.php";
+ include'includes/header.php'?>
 
 	<!-- main content opening -->
 
 <?php
-// include "../site files/session.php";
+
 include "connect.php";
 include "classes/contentdev.php";
 $_SESSION['id']=1;
