@@ -40,6 +40,8 @@
   
 
   }
+
+
   @media only screen and (max-width: 767px) {
   .content-wrapper {
 
@@ -53,7 +55,6 @@
   margin: 0 0 5% 0;
   padding: 0.5em;
   margin: 0 0 5% 0;
-
 
 }
 }
@@ -78,5 +79,5 @@
             
               <div class="container">
                   
-                <div class="row mb-3">
+                <div class="row mb-6">
                     <div class="col-sm-6">

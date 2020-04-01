@@ -3,11 +3,21 @@
             margin-top: 80px;
 
         }
+                
+h1 {
+  color: white;
+  text-align:center;
+  margin: 0 0 5% 0;
+  padding: 0.7em;
+  margin: 0 0 5% 0;
+  padding-left: 500px;
+}
+  
 
 </style>
 
 <?php include 'includes/header.php'?>
-                      <h1 class="m-0 text-light"> ADMIN</h1>
+                      <h1 class="m-0 text-light" > ADMIN</h1>
                     </div>
                 </div>
               </div>

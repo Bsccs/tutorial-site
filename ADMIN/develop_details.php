@@ -26,7 +26,7 @@ include "connect.php";
                             <thead>
                               <tr>
                                 <th>SL.No</th>
-                                <th>EMAIL</th>
+                                <th>NAME</th>
                                 <th>QUALIFICATION-DOCS</th>
                                 <th>EXPERTISE</th>
                                 <th>ADMIN APPROVAL</th>
@@ -40,7 +40,7 @@ include "connect.php";
                               <tr>
                                   <td><?php echo $count; ?></td>
                                   
-                                  <td><?php echo $row_data['email']; ?></td>
+                                  <td><?php echo $row_data['name1']; ?></td>
                                   <td><?php echo $row_data['quali_doc']; ?></td>
                                   <td><?php echo $row_data['expertise']; ?></td>
 
