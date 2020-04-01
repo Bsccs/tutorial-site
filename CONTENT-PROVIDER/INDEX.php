@@ -1,10 +1,11 @@
-<?php include'includes/header.php'?>
+<?php session_start();
+ include'includes/header.php'?>
 
 	<!-- main content opening -->
 
 
 <?php
-session_start();
+
 include "../site files/connect.php";
 // include "../site files/session.php";
 // $_SESSION['id']=1;  // check
