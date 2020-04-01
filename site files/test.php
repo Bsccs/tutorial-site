@@ -1,12 +1,15 @@
 
-<?php include'../content-provider/includes/header.php'?>
+<?php
+// sesion_start();
+  include "session.php";
+include'includes/header.php'?>
 
 	<!-- main content opening -->
 
 
 <?php
-// include "session.php";
-session_start();
+ 
+
 include "connect.php";
 include "classes/content.php";
 

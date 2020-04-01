@@ -1,7 +1,7 @@
 <?php
 session_start();
-if(!isset($_SESSION['username']))
+if(!isset($_SESSION['login_id']))
 {
-	header("location: login.html");
+	header("location: ../login.php");
 }
 ?>

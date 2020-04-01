@@ -1,4 +1,4 @@
-<?php include'../content-provider/includes/header.php'?>
+<?php include'includes/header.php'?>
 
 	<!-- main content opening -->
 
@@ -33,4 +33,4 @@ Please tell us about it briefly(30 words)
 
 	<!-- main content closing -->
 
-<?php include'../content-provider/includes/footer.php'?>
+<?php include'includes/footer.php'?>

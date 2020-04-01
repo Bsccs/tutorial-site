@@ -1,4 +1,6 @@
-<?php include'../content-provider/includes/header.php'?>
+<?php 
+session_start();
+include'includes/header.php'?>
 
 	<!-- main content opening -->
 

@@ -15,6 +15,7 @@ approve&reject
 registation student registration ennu eyutanam
 qef
 
-login problem for admin.
+forgot password
+email id should be checked if already existing
 
 https://www.w3schools.com/pHP/php_mysql_insert_lastid.asp
