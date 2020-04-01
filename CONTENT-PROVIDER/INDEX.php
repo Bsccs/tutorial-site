@@ -1,13 +1,13 @@
-
 <?php include'includes/header.php'?>
 
 	<!-- main content opening -->
 
 
 <?php
+session_start();
 include "../site files/connect.php";
 // include "../site files/session.php";
-$_SESSION['id']=1;
+// $_SESSION['id']=1;  // check
 $id=$_SESSION['id'];
                 $sql="SELECT name,admin_aproved FROM content_developer WHERE developer_id='$id'";
         $result=mysqli_query($connection,$sql);

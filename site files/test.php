@@ -5,10 +5,11 @@
 
 
 <?php
-include "connect.php";
-include "classes/content.php";
 // include "session.php";
 session_start();
+include "connect.php";
+include "classes/content.php";
+
 $con1=new content($connection);
 ?>
 <!DOCTYPE html>
