@@ -15,7 +15,7 @@ include "connect.php";
 ?>
 <style>
           .card-info{
-            margin-top: 100px;
+            margin-top: 50px;
 
         }
 </style>
