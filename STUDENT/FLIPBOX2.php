@@ -174,14 +174,14 @@ h1 {
     <div class="card">
       <div class="front">
         <h3>LEVEL ONE</h3>
-        <p>For All Users</p>
+        <p><i class="fas fa-book-open"></i> For All Users</p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>DETAILS:</h3>
+        <h3><i class="fas fa-info-circle"></i> <u>DETAILS</u>:</h3>
         <p>General informations related to computers and security threats</p> 
      <?php   $_SESSION['templevel']=1; ?>
-        <a href="STUDENT/level1.php">OPEN</a>
+        <a href="STUDENT/level1.php"><i class="fas fa-lock-open"></i> OPEN</a>
       </div>
     </div>
   </div>
@@ -190,14 +190,14 @@ h1 {
     <div class="card">
       <div class="front">
         <h3>LEVEL TWO</h3>
-        <p>tutorials </p>
+        <p><i class="fas fa-laptop-code"></i> Tutorials </p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>DETAILS:</h3>
+        <h3><i class="fas fa-info-circle"></i> <u>DETAILS</u>:</h3>
         <p>for computer science students-programming languages</p>
        <?php  $_SESSION['templevel']=2; ?>
-        <a href="STUDENT/level2.php">OPEN</a>
+        <a href="STUDENT/level2.php"><i class="fas fa-lock-open"></i> OPEN</a>
       </div>
     </div>
   </div>
@@ -206,14 +206,14 @@ h1 {
     <div class="card">
       <div class="front">
         <h3>LEVEL THREE</h3>
-        <p>advanced level </p>
+        <p><i class="fas fa-book-reader"></i> Advanced level </p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>DETAILS</h3>
+        <h3><i class="fas fa-info-circle"></i> <u>DETAILS</u>:</h3>
         <p>advanced pratical section for computer science students.</p>
        <?php $_SESSION['templevel']=3; ?>
-        <a href="STUDENT/level3.php">OPEN</a>
+        <a href="STUDENT/level3.php"><i class="fas fa-lock-open"></i> OPEN</a>
       </div>
     </div>
   </div>
@@ -222,13 +222,13 @@ h1 {
     <div class="card">
       <div class="front">
         <h3>LEVEL FOUR</h3>
-        <p>cyber security</p>
+        <p><i class="fas fa-shield-alt"></i> Cyber security</p>
         <strong>&#x21bb;</strong>
       </div>
       <div class="back">
-        <h3>DETAILS:</h3>
+        <h3><i class="fas fa-info-circle"></i> <u>DETAILS</u>:</h3>
         <p>complete guide to become cyber security experts</p>
-        <a href="STUDENT/commingsoon.php">OPEN</a>
+        <a href="STUDENT/commingsoon.php"><i class="fas fa-lock-open"></i> OPEN</a>
       </div>
     </div>
   </div>

@@ -21,23 +21,26 @@
 <!--       <li class="nav-item active">
         <a class="nav-link" href="#">REGISTER AS CONTENT-DEVELOPER<span class="sr-only">(current)</span></a>
       </li> -->
+       <li class="nav-item">
+        <a class="nav-link" href="feedback.php"><i class="fas fa-envelope"></i> FEEDBACK</a>
+      </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">ABOUT US</a>
+        <a class="nav-link" href="aboutus.php"><i class="fas fa-address-card"></i> ABOUT US</a>
       </li> 
      </ul>
     <ul class="nav navbar-nav float-md-right">
       <li class="nav-item">
-        <a class="nav-link" href="login.php">LOGIN</a>
+        <a class="nav-link" href="login.php"> LOGIN <i class="fas fa-sign-in-alt"></i></a>
       </li> 
     	      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          REGISTER
+           REGISTER <i class="far fa-registered"></i>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
 
-          <a class="dropdown-item" href="register.php">STUDENT</a>
+          <a class="dropdown-item" href="register.php"><i class="fas fa-user-graduate"></i> STUDENT</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="register.php">CONTENT DEVELOPER</a>
+          <a class="dropdown-item" href="register.php"><i class="fas fa-graduation-cap"></i> CONTENT DEVELOPER </a>
           </div>
 
       </li>

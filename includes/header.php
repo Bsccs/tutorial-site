@@ -6,6 +6,8 @@
 
 	<title>Document</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	
+</style>
 	<link rel="stylesheet" href="PLUGINS/css/bootstrap.min.css">	
 	<link href="PLUGINS/fontawesome-free-5.12.1-web/css/all.css" rel="stylesheet">
 	<link href="PLUGINS/fontawesome-free-5.12.1-web/css/fontawesome.css" rel="stylesheet">

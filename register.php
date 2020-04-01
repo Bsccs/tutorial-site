@@ -1,3 +1,15 @@
+ <style>
+
+h1 {
+  color: black;
+  text-align: center;
+  margin: 0 0 5% 0;
+  padding: 0.2em;
+  margin: 0 0 2% 0;
+
+}
+
+</style>
 <?php
 session_start();
 // include Function  file
@@ -93,7 +105,7 @@ echo "<script>window.location.href='otp.php'</script>";
 
 
 <?php include'includes/login-header.php'?>
-
+<h1><i class="fas fa-user-graduate"></i> <U>STUDENT REGISTRATION</U></h1>
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">					
 		</div>
@@ -104,10 +116,10 @@ echo "<script>window.location.href='otp.php'</script>";
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="login.php">Login</a>
+								<a href="login.php"><i class="fas fa-key"></i> Login</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="register.php" class="active" id="">Register</a>
+								<a href="register.php" class="active" id=""><i class="fas fa-registered"></i> Register</a>
 							</div>
 						</div>
 						<hr>
@@ -153,6 +165,15 @@ echo "<script>window.location.href='otp.php'</script>";
 										</div>
 									</div>
 								</form>
+									<div class="form-group">
+										<div class="row">
+											<div class="col-lg-12">
+												<div class="text-center">
+													<a href="INDEX.php" tabindex="5" class="BACK"><i class="fas fa-backward"></i> GO BACK</a>
+												</div>
+											</div>
+										</div>
+									</div>
 							</div>
 						</div>
 					</div>

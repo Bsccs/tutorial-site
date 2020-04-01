@@ -11,12 +11,11 @@
 
 				<!-- main content -->
 
-					<?php include'STUDENT/FLIPBOX.php'?>
+					
 
 				<!-- main content closing -->
 			</div>
 	</div>
 
+
 <?php include'includes/footer.php'?>
-
-

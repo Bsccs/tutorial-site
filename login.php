@@ -1,3 +1,8 @@
+<style>
+body{
+	margin-top: 80px;
+}
+</style>
 <?php
 session_start();
 require_once'connect.php';
@@ -66,11 +71,21 @@ echo "<script>window.location.href='login.php'</script>";
 }
 ?>
 
+ <style>
 
+h1 {
+  color: black;
+  text-align: center;
+  margin: 0 0 5% 0;
+  padding: 0.2em;
+  margin: 0 0 2% 0;
 
+}
+
+</style>
 
 <?php include'includes/login-header.php'?>
-
+<h1><i class="fas fa-user-secret"></i> <U>LOGIN</U></h1>
 
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">						
@@ -82,11 +97,12 @@ echo "<script>window.location.href='login.php'</script>";
 					<div class="panel-heading">
 						<div class="row">
 							<div class="col-xs-6">
-								<a href="login.php" class="active" id="login-form-link">Login</a>
+								<a href="login.php" class="active" id="login-form-link"><i class="fas fa-key"></i> Login</a>
 							</div>
 							<div class="col-xs-6">
-								<a href="register.php" id="">Register</a>
+								<a href="register.php" id=""><i class="fas fa-registered"></i> Register</a>
 							</div>
+
 						</div>
 						<hr>
 					</div>
@@ -107,7 +123,7 @@ echo "<script>window.location.href='login.php'</script>";
 									<div class="form-group">
 										<div class="row">
 											<div class="col-sm-6 col-sm-offset-3">
-												<input type="submit" name="button" onclick="return login_page();"  id="button" tabindex="4" class="form-control btn btn-login" value="Log In">
+												<input type="submit" name="button" onclick="return login_page();"  id="button" tabindex="4" class="form-control btn btn-login" value="Log In ">
 											</div>
 										</div>
 									</div>
@@ -117,6 +133,9 @@ echo "<script>window.location.href='login.php'</script>";
 											<div class="col-lg-12">
 												<div class="text-center">
 													<a href="recover.php" tabindex="5" class="forgot-password">Forgot Password?</a>
+												</div><br>
+												<div class="text-center">
+													<a href="INDEX.php" tabindex="5" class="BACK"><i class="fas fa-backward"></i> GO BACK</a>
 												</div>
 											</div>
 										</div>
