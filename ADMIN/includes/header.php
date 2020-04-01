@@ -33,6 +33,8 @@
   background-size: cover;
 }
 
+
+
   .card{
     opacity: 0.8;
   
@@ -42,7 +44,18 @@
   .content-wrapper {
 
     background-image: url('img/hacker2.jpg');
+
+
   }
+      h1 {
+  color: white;
+  text-align:center;
+  margin: 0 0 5% 0;
+  padding: 0.5em;
+  margin: 0 0 5% 0;
+
+
+}
 }
 
 
@@ -65,5 +78,5 @@
             
               <div class="container">
                   
-                <div class="row mb-5">
+                <div class="row mb-3">
                     <div class="col-sm-6">
