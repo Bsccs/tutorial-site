@@ -28,7 +28,7 @@
     <ul class="nav navbar-nav float-md-right">
     	      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         <?php echo $_SESSION['name']; ?>
+         <?php echo $_SESSION['name1']; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="profile.php">PROFILE</a>
