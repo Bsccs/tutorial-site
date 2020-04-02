@@ -81,7 +81,7 @@ html {
         <p class="title">BSC COMPUTER SCIENCE</p>
         <p>PERSON WHO LEADS THIS TEAM</p>
         <p>sibinmathew@gmail.com</p>
-        <p><button class="button">Contact</button></p>
+        <!-- <p><button class="button">Contact</button></p> -->
       </div>
     </div>
   </div>
@@ -93,8 +93,8 @@ html {
         <h2>JOBY GEORGE</h2>
         <p class="title">BSC COMPUTER SCIENCE</p>
         <p>BRAINS BEHIND THIS TEAM</p>
-        <p>jobygeorge@gmail.com</p>
-        <p><button class="button">Contact</button></p>
+        <p>jobygeorge995@gmail.com</p>
+        <!-- <p><button class="button">Contact</button></p> -->
       </div>
     </div>
   </div>
@@ -103,11 +103,11 @@ html {
     <div class="card">
       <img src="img/3.jpg" alt="John" style="width:100%">
       <div class="container">
-        <h2>HEMANT P HAREESH</h2>
+        <h2>HEMANT P </h2>
         <p class="title">BSC COMPUTER SCIENCE</p>
         <p>IDEA BEHIND THIS PROJECT</p>
         <p>hemantphareesh@gmail.com</p>
-        <p><button class="button">Contact</button></p>
+        <!-- <p><button class="button">Contact</button></p> -->
       </div>
     </div>
   </div>
