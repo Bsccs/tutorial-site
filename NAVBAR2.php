@@ -21,7 +21,7 @@ include "connect.php";
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item">
-        <li class="nav-item active">
+        <li class="nav-item">
         <a class="nav-link" href="index2.php"><i class="fas fa-home"></i> HOME</a>
       </li>
         <a class="nav-link" href="feedback.php"><i class="fas fa-envelope"></i> FEEDBACK</a>
@@ -33,7 +33,7 @@ include "connect.php";
     <ul class="nav navbar-nav float-md-right">
     	      <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <i class="fas fa-user-graduate"> <?php echo $_SESSION['name']; ?>
+          <i class="fas fa-user-graduate"></i> <?php echo $_SESSION['name']; ?>
          
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
