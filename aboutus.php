@@ -1,15 +1,3 @@
-<?php include'includes/header.php'?>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<body>
-	<div class="body-wrap">
-   		<?php include'NAVBAR.php'?>  
-  	 		<div class="container">
-
-				<!-- main content -->
-				<h1><i class="far fa-address-card"></i> <U>ABOUT US</U> </h1>
-
-
 <style>
 
 
@@ -71,6 +59,19 @@ html {
   }
 }
 </style>
+<?php include'includes/header.php'?>
+
+
+<body>
+	<div class="body-wrap">
+   		<?php include'NAVBAR.php'?>  
+  	 		<div class="container">
+
+				<!-- main content -->
+				<h1><i class="far fa-address-card"></i> <U>ABOUT US</U> </h1>
+
+
+
 <div class="row">
   <div class="column">
     <div class="card">
