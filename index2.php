@@ -14,6 +14,12 @@ session_start();
 				<!-- main content closing -->
 			</div>
 	</div>
+	<script type="text/javascript">
+
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 
 <?php include'includes/footer.php'?>
 

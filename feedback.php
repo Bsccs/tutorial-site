@@ -69,39 +69,85 @@ $mail->Body    = "<html>
      echo 'Mailer Error: ' . $mail->ErrorInfo;
      exit;
   }
-echo "<script>window.location.href='feedback.php'</script>";
+  echo'<div class="alert alert-warning alert-dismissible fade show" role="alert">
+  <strong>message send:</strong> thank you for your valuable feedback.
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>';
+/*echo "<script>window.location.href='feedback.php'</script>";*/
 
 }
 
 
 ?>
+<style>
+.card-body{
+    width:auto;
+    height:auto;
+    border:2px solid #000;
+    font-family:verdana,arial,helvetica,sans-serif;
+    font-size:15px;
+    overflow:auto;
+    flex-wrap: auto;
+    background-color: #f5f3f3;
+ }
+ 
+</style>
 
+
+
+</script>
+ <div class="card-body">
 <form id="emailForm" name="emailForm" method="post" action="" >
 <table width="100%" border="0" align="center" cellpadding="4" cellspacing="1">
-	
+
 <tr>
-  <td colspan="2"><strong>FEEDBACK FORM</strong></td>
+  
 </tr>
 <tr>
   <td>E-mail :</td>
-  <td><input name="email" type="text" id="email"></td>
+  <td><input class="form-control" name="email" type="text" id="email"><span id="sp1" style="color:red"></span></td>
 </tr>
 <tr>
   <td>Message :</td>
   <td>
-  <textarea name="msg" cols="45" rows="5" id="msg"></textarea>
+  <textarea class="form-control" name="msg" cols="45" rows="10" id="msg"></textarea>
   </td>
 </tr>
+
 <tr>
   <td>&nbsp;</td>
-  <td><input name="SubmitBtn" type="submit" id="SubmitBtn" value="Submit"></td>
+  <td>
+  	<input name="SubmitBtn"  class="btn btn-danger" onclick="return feedback();" type="submit" id="SubmitBtn" value="Submit"></td>
 </tr>
+
 </table>
 </form>
+</div>
+
+
 
 				<!-- main content closing -->
 			</div>
 	</div>
+	<script type="text/javascript">
+function feedback()
+	{
+		var email=document.getElementById('email').value;
 
+		if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
+		{
+			document.getElementById('sp1').innerHTML="mail@gmail.com required";
+			return false;
+		}
 
+	}
+</script>
+<script type="text/javascript">
+
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 <?php include'includes/footer.php'?>

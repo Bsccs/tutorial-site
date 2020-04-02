@@ -281,3 +281,9 @@ function checkusername(va) {
 
 }
 </script>
+<script type="text/javascript">
+
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>

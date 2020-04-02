@@ -70,4 +70,10 @@ if(isset($_POST['submit']))
 <!-- container closing -->
 </div>
 </body>
+<script type="text/javascript">
+
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
+}
+</script>
 </html>
