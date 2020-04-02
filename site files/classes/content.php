@@ -138,7 +138,7 @@ $conid=mysqli_insert_id($this->connection);
               if(isset($_SESSION['templevel']))
               {
                   
-                $sql="SELECT content_name FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel']." AND content_id IN (SELECT content_id FROM student_log WHERE content_id IN(SELECT content_id FROM student_log WHERE student_id=".$_SESSION['id']."))";
+                $sql="SELECT content_name,content_id FROM content WHERE inspector_approved=1 AND content_depth=".$_SESSION['templevel']." AND content_id IN (SELECT content_id FROM student_log WHERE content_id IN(SELECT content_id FROM student_log WHERE student_id=".$_SESSION['id']."))";
               //  echo $sql;
                 return $sql;
               }

@@ -1,7 +1,8 @@
 <?php
 // inlude("payment.php")
 
-class admin /*implements payment*/ {
+class admin /*implements payment*/
+ {
     public $connection;
       function __construct($connection) {
         $this->connection = $connection;

@@ -43,9 +43,9 @@ $sql="SELECT content_id,content_name FROM content WHERE inspector_approved=1 AND
     <tr>
     <td><?php echo "$video"; ?></td>
     <td><form method="post" action="">
-		<input type="hidden" name="conid" value="<?php echo $contentid; ?>">
-    	<input type="submit" name="submit" value="Buy"></td>
-    	</form>
+		    <input type="hidden" name="conid" value="<?php echo $contentid; ?>">
+    	  <input type="submit" name="submit" value="Buy"></td>
+    	  </form>
 </td>
     </tr>
 <?php  }  ?>

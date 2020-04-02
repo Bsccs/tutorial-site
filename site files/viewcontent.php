@@ -60,10 +60,14 @@ echo '</pre>';*/
                 while($row = mysqli_fetch_assoc($result)) 
                 {
                 $embed=$row['content_name'];
+                $conid=$row['content_id'];
                ?><tr>
                	<td><?php echo $embed; ?></td>
                	<td> </td>
-               	<td><a href="feedback.php">Feedback</a><td>
+               	<td><form method="post" action="../STUDENT/studentfeedback.php">
+                    <input type="hidden" name="contentid" value="<?php echo $conid; ?>">
+                    <input type="submit" name="submit" value="Feedback"></td>
+                    </form><td>
                	</tr>
                	<br><br>
                	<?php
