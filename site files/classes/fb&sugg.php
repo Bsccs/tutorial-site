@@ -24,12 +24,13 @@ class fbandsugg
     public function add_feedback($feedback,$conid) {
         // TODO implement here
        // $_SESSION['sessid']='01';
-        $sql="INSERT INTO stud_feedback VALUES('".$_SESSION['id']."','$conid','$feedback') WHERE student_id='".$_SESSION['id']."'";
+        $sql="INSERT INTO stud_feedback VALUES(".$_SESSION['id'].",$conid,'$feedback')";
+        // if already exists then replace it.
         echo $sql;
         $result=mysqli_query($this->connection,$sql);
         if($result)
         {
-            echo "<alert>feedback submitted</alert>";
+            echo "<script>alert('feedback submitted');</script>";
         }
 
 
