@@ -195,7 +195,7 @@ h1 {
       </div>
       <div class="back">
         <h3><i class="fas fa-info-circle"></i> <u>DETAILS</u>:</h3>
-        <p>for computer science students-programming languages</p>
+        <p>for computer science students programming languages</p>
        <?php  $_SESSION['templevel']=2; ?>
         <a href="login.php"><i class="fas fa-power-off"></i> OPEN</a>
       </div>
