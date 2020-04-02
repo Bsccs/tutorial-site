@@ -17,10 +17,13 @@
   </button>
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-<!--       <li class="nav-item active">
-        <a class="nav-link" href="#">REGISTER AS CONTENT-DEVELOPER<span class="sr-only">(current)</span></a>
+    <ul  class="navbar-nav mr-auto">
+<!--     	      <li class="nav-item active">
+        <a class="nav-link active" href="index.php">HOME<span class="sr-only">(current)</span></a>
       </li> -->
+      <li class="nav-item">
+        <a class="nav-link" href="index.php"><i class="fas fa-home"></i> HOME</a>
+      </li>
        <li class="nav-item">
         <a class="nav-link" href="feedback.php"><i class="fas fa-envelope"></i> FEEDBACK</a>
       </li>

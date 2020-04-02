@@ -7,6 +7,7 @@
    		<?php include'NAVBAR.php'?> 
    		 
    		<!-- navbar closing -->
+
   	 		<div class="container">
 
 				<!-- main content -->
@@ -15,6 +16,7 @@
 
 				<!-- main content closing -->
 			</div>
+			
 	</div>
 
 <?php include'includes/footer.php'?>

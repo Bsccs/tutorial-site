@@ -6,7 +6,7 @@
   	 		<div class="container">
 
 				<!-- main content -->
-
+				<h1><i class="far fa-address-card"></i> <U>ABOUT US</U> </h1>
 					
 
 				<!-- main content closing -->
