@@ -46,6 +46,7 @@ if(mysqli_num_rows($ret) > 0)
       {
              $_SESSION['login_id'] = $row['login_id'];
              $_SESSION['role'] = $row['role'];
+             $_SESSION['name2'] = $row['name2'];
          
          header("location:INSPECTOR/INDEX.php");
 
@@ -58,6 +59,7 @@ if(mysqli_num_rows($ret) > 0)
 			 $_SESSION['name']= $row['name'];
 			 $_SESSION['id']= $row['student_id'];
 			 mysqli_query($connection,"UPDATE `student_details` SET `last_login` = now()");
+			 //in db last login should be in time stamp.
          header("location: index2.php");					
 
  
