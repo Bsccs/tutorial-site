@@ -57,6 +57,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['role'] = $row['role'];
 			 $_SESSION['name']= $row['name'];
 			 $_SESSION['id']= $row['student_id'];
+			 mysqli_query($connection,"UPDATE `student_details` SET `last_login` = now()");
          header("location: index2.php");					
 
  
