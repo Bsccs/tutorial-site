@@ -43,7 +43,7 @@
 
           <a class="dropdown-item" href="register.php"><i class="fas fa-user-graduate"></i> STUDENT</a>
           <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="register.php"><i class="fas fa-graduation-cap"></i> CONTENT DEVELOPER </a>
+          <a class="dropdown-item" href="register2.php"><i class="fas fa-graduation-cap"></i> CONTENT DEVELOPER </a>
           </div>
 
       </li>

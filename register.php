@@ -168,6 +168,9 @@ echo "<script>window.location.href='otp.php'</script>";
 									<div class="form-group">
 										<div class="row">
 											<div class="col-lg-12">
+											<div class="text-center">
+													<p><a href="register2.php"tabindex="5" class="BACK"><i class="fas fa-undo"></i> REGISTER AS CONTENT DEVELOPER</a></p>
+												</div>
 												<div class="text-center">
 													<a href="INDEX.php" tabindex="5" class="BACK"><i class="fas fa-backward"></i> GO BACK</a>
 												</div>

@@ -30,6 +30,8 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 	return $r1;
 	}
 
+
+
 // Function for signin
 public function signin($uemail,$pasword)
 	{
@@ -37,6 +39,20 @@ public function signin($uemail,$pasword)
 	return $result;
 	}
 
+	 public function contentdev_signin($email,$password,$name,$file_name,$expertise)
+{
+	$r2=mysqli_query($this->dbh,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$email','$password','con_developer') ");
+
+	$login_id=mysqli_insert_id($this->dbh);
+
+	$r2=mysqli_query($this->dbh,"INSERT INTO `content_developer`(`login_id`, `name1`, `quali_doc`, `expertise`) VALUES ('$login_id','$name','$file_name','$expertise')");
+
+	return $r2;
 
 }
+
+
+}
+
+
 ?>

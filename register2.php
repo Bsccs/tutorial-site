@@ -24,16 +24,17 @@ $otp = rand();
 if(isset($_POST['register-submit']))
 {
 // Posted Values
-$uemail=$_POST['email'];
-$uname=$_POST['username'];
-$gender=$_POST['gender'];
-$country=$_POST['country'];
-$state=$_POST['state'];
-$phone=$_POST['phone'];
-$age=$_POST['age'];
+$email=$_POST['email'];
+$name=$_POST['username'];
 $password=$_POST['password'];
+$expertise=$_POST['expertise'];
+  $document=$_FILES["document"]["name"];
+$file_details=pathinfo($document);
+   $file_ext=$file_details['extension'];
+   $file_name=str_replace(" ", "_", strtolower($name)).rand().'.'.$file_ext;
+move_uploaded_file($_FILES["document"]["tmp_name"], "doc/".$file_name);
 
-$_SESSION['user_info'] = array('email' =>$uemail , 'username'=>$uname ,'gender'=>$gender ,'country'=>$country, 'state'=>$state,'phone'=>$phone,'age'=>$age,'password'=>$password );
+$_SESSION['user_info'] = array('email' =>$email ,'password'=>$password,'username'=>$name,'document'=>$file_name,'expertise'=>$expertise);
 
 	$_SESSION['u_id']=$otp;
 
@@ -51,7 +52,7 @@ $mail->Port = 465;
 /*$mail->SMTPDebug = 2;*/                             //Set the SMTP port number - 587 for authenticated TLS
 $mail->setFrom('hackerzdom@gmail.com', 'HACKERZDOM');     //Set who the message is to be sent from
 
-$mail->addAddress($uemail); 
+$mail->addAddress($email); 
            
 //$mail->addCC('example@xyz.com', 'name');
 //$mail->addBCC('example@xyz.com', 'name');
@@ -95,7 +96,7 @@ $mail->Body    = "<html>
      echo 'Mailer Error: ' . $mail->ErrorInfo;
      exit;
   }
-echo "<script>window.location.href='otp.php'</script>";
+echo "<script>window.location.href='otp2.php'</script>";
 
 }
 
@@ -105,7 +106,7 @@ echo "<script>window.location.href='otp.php'</script>";
 
 
 <?php include'includes/login-header.php'?>
-<h1><i class="fas fa-user-graduate"></i> <U>CONTENT DEVELOPER REGISTRATION</U></h1>
+<h1><i class="fas fa-chalkboard-teacher"></i> <U>CONTENT DEVELOPER REGISTRATION</U></h1>
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">					
 		</div>
@@ -127,16 +128,23 @@ echo "<script>window.location.href='otp.php'</script>";
 					<div class="panel-body">
 						<div class="row">
 							<div class="col-lg-12">
-								<form id="register-form" method="post" role="form" autocomplete="off" >
+								<form id="register-form" method="post" enctype="multipart/form-data"role="form" autocomplete="off" >
 									<div class="form-group">
-										<input type="email" name="email" id="email" tabindex="1" class="form-control" placeholder="Email" value="" required ><span id="sp1" style="color:red"></span>
+										<input type="email" name="email" id="email" tabindex="1" class="form-control"  placeholder="Email" value="" required ><span id="sp1" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="text" name="username" id="username" tabindex="1" class="form-control" onblur="checkusername(this.value)" placeholder="fullname" value="" required ><span id="sp2" style="color:red"></span>
+										<input type="text" name="username" id="username" tabindex="1" class="form-control"  placeholder="fullname" value="" required ><span id="sp2" style="color:red"></span>
 									</div>
 
 									<div class="form-group">
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required><span id="sp8" style="color:red"></span>
+									</div>
+									<div class="form-group">
+										<input type="password" name="expertise" id="expertise" tabindex="2" class="form-control" placeholder="expertise" required><span id="sp10" style="color:red"></span>
+									</div>
+									<label>Qualification document:</label>
+									<div class="form-group">
+									<input type="file" name="document" id="document" class="form-control" ><span id="sp9" style="color:red"></span>
 									</div>
 									<div class="form-group">
 										<div class="row">
@@ -150,8 +158,12 @@ echo "<script>window.location.href='otp.php'</script>";
 										<div class="row">
 											<div class="col-lg-12">
 												<div class="text-center">
+													<p><a href="register.php"tabindex="5" class="BACK"><i class="fas fa-undo"></i> REGISTER AS STUDENT</a></p>
+												</div>
+												<div class="text-center">
 													<a href="INDEX.php" tabindex="5" class="BACK"><i class="fas fa-backward"></i> GO BACK</a>
 												</div>
+
 											</div>
 										</div>
 									</div>
@@ -174,18 +186,12 @@ function reg_valid()
 		var email=document.getElementById('email').value;
 
 		var name=document.getElementById('username').value;
-
-		var gender=document.getElementById('gender').value;
-
-		var country=document.getElementById('country').value;
-
-		var state=document.getElementById('state').value;
-		
-		var phone=document.getElementById('phone').value;
-		
-		var age=document.getElementById('age').value;	
 		
 		var Password=document.getElementById('password').value;
+
+		var documents=document.getElementById('document').value;
+
+		var expertise=document.getElementById('expertise').value;
 
 
 		if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
@@ -200,43 +206,25 @@ function reg_valid()
 			return false;
 		}
 
-		if(gender=="")
-		{
-			document.getElementById('sp3').innerHTML="Gender required";
-			return false;
-		}
-
-		if(country=="")
-		{
-			document.getElementById('sp4').innerHTML="country required";
-			//alert('name required');
-			return false;
-		}
-
-		if(state=="")
-		{
-			document.getElementById('sp5').innerHTML="state required";
-			//alert('name required');
-			return false;
-		}
-
-
-		if(phone=="" || isNaN(phone) || phone.length>10)
-		{
-			document.getElementById('sp6').innerHTML="mobile number required";
-			return false;
-		}
-
-		if(age=="")
-		{
-			document.getElementById('sp7').innerHTML="age required";
-			//alert('name required');
-			return false;
-		}
 		
 		if(Password=="")
 		{
 			document.getElementById('sp8').innerHTML="password required";
+			//alert('name required');
+			return false;
+		}
+
+		if(expertise=="")
+		{
+			document.getElementById('sp10').innerHTML="expertise required";
+			//alert('name required');
+			return false;
+		}
+
+
+		if(documents=="")
+		{
+			document.getElementById('sp9').innerHTML="document required";
 			//alert('name required');
 			return false;
 		}
