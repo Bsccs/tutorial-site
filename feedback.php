@@ -131,6 +131,7 @@ $mail->Body    = "<html>
 				<!-- main content closing -->
 			</div>
 	</div>
+	<!-- validation -->
 	<script type="text/javascript">
 function feedback()
 	{
@@ -144,10 +145,13 @@ function feedback()
 
 	}
 </script>
+
+<!-- to prevent resubmission -->
 <script type="text/javascript">
 
 if ( window.history.replaceState ) {
   window.history.replaceState( null, null, window.location.href );
 }
 </script>
+
 <?php include'includes/footer.php'?>
