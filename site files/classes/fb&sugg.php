@@ -3,7 +3,7 @@
 class fbandsugg 
 {
 
-    public $feedbk text;
+   // public $feedback;
 
     public $connection;
     
@@ -13,18 +13,24 @@ class fbandsugg
 
       }
 
-    public function view feedback() {
+    public function view_feedback() {
         // TODO implement here
     }
 
-    public function view suggestion() {
+    public function view_suggestion() {
         // TODO implement here
     }
 
-    public function add_feedback($feedback) {
+    public function add_feedback($feedback,$conid) {
         // TODO implement here
-        $_SESSION['sessid']='01';
-        $sql="INSERT INTO 'stud_feedback' VALUES (NULL,'456',) WHERE student_id='".$_SESSION['id']."'";
+       // $_SESSION['sessid']='01';
+        $sql="INSERT INTO stud_feedback VALUES('".$_SESSION['id']."','$conid','$feedback') WHERE student_id='".$_SESSION['id']."'";
+        echo $sql;
+        $result=mysqli_query($this->connection,$sql);
+        if($result)
+        {
+            echo "<alert>feedback submitted</alert>";
+        }
 
 
     }

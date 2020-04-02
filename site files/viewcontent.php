@@ -8,6 +8,15 @@ include'../STUDENT/includes/header.php'?>
 
 <?php
 		
+    if (isset($_POST['submit']))
+    {
+      $_SESSION['temp123']=$_POST['contentid'];
+      header("Location:../STUDENT/studentfeedback.php");
+    }
+
+
+
+
   include "classes/content.php";
   include 'connect.php';
   $content2=new content($connection);
@@ -60,12 +69,13 @@ echo '</pre>';*/
                 while($row = mysqli_fetch_assoc($result)) 
                 {
                 $embed=$row['content_name'];
-                $conid=$row['content_id'];
+                //$conid=$row['content_id'];
+                //echo $row['content_id'];
                ?><tr>
                	<td><?php echo $embed; ?></td>
                	<td> </td>
-               	<td><form method="post" action="../STUDENT/studentfeedback.php">
-                    <input type="hidden" name="contentid" value="<?php echo $conid; ?>">
+               	<td><form method="post" action="">
+                    <input type="hidden" name="contentid" value="<?php echo $row['content_id']; ?>">
                     <input type="submit" name="submit" value="Feedback"></td>
                     </form><td>
                	</tr>
@@ -78,6 +88,7 @@ echo '</pre>';*/
             
 		</body>
 		</html>
+
 
 
 	<!-- main content closing -->

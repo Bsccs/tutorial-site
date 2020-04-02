@@ -1,5 +1,4 @@
 <?php 
-$conid;
 // session_start();
  include '../site files/session.php';
 
@@ -12,29 +11,19 @@ $conid;
 
 <?php
 //include 'session.php';
-
+ include "../site files/connect.php";
+ include "../site files/classes/fb&sugg.php";
 if (isset($_POST['submit']))
  {
- 	echo "hiii";
- 	if(isset($_POST['conid']))
- 	{
- 		echo "hiii2";
- 	$conid=$_POST['contentid'];
- 	echo $conid;
-    }
 
- 	if(isset($_POST['feedback']))
- 	{
- 		echo $conid;
- 		include "../site files/connect.php";
- 		include "../site files/classes/admin.php";
- 		echo $_POST['feedback'];
- 		//$feedback=new fb&sugg($connection);
-		//$feedback->add_feedback($_POST['feedback']);
 
  		echo $_POST['feedback'];
+ 		$feedback=new fbandsugg($connection);
+		$feedback->add_feedback($_POST['feedback'],$_SESSION['temp123']);
+
+ 		//echo $_POST['feedback'];
  		mysqli_close($connection);
-    }
+    	unset($_SESSION['temp123']);
  }
 
 /* function do()
