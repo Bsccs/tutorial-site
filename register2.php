@@ -32,11 +32,6 @@ $email=$_POST['email'];
 $name=$_POST['username'];
 $password=$_POST['password'];
 $expertise=$_POST['expertise'];
-  $document=$_FILES["document"]["name"];
-$file_details=pathinfo($document);
-   $file_ext=$file_details['extension'];
-   $file_name=str_replace(" ", "_", strtolower($name)).rand().'.'.$file_ext;
-move_uploaded_file($_FILES["document"]["tmp_name"], "doc/".$file_name);
 
 $r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$email."'");
 
@@ -54,6 +49,12 @@ $r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$email."'"
 
 	}
 	else{
+		  $document=$_FILES["document"]["name"];
+$file_details=pathinfo($document);
+   $file_ext=$file_details['extension'];
+   $file_name=str_replace(" ", "_", strtolower($name)).rand().'.'.$file_ext;
+move_uploaded_file($_FILES["document"]["tmp_name"], "doc/".$file_name);
+
 $_SESSION['user_info'] = array('email' =>$email ,'password'=>$password,'username'=>$name,'document'=>$file_name,'expertise'=>$expertise);
 
 	$_SESSION['u_id']=$otp;
