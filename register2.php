@@ -160,7 +160,7 @@ echo "<script>window.location.href='otp2.php'</script>";
 										<input type="password" name="password" id="password" tabindex="2" class="form-control" placeholder="Password" required><span id="sp8" style="color:red"></span>
 									</div>
 									<div class="form-group">
-										<input type="password" name="expertise" id="expertise" tabindex="2" class="form-control" placeholder="expertise" required><span id="sp10" style="color:red"></span>
+										<input type="text" name="expertise" id="expertise" tabindex="2" class="form-control" placeholder="expertise" required><span id="sp10" style="color:red"></span>
 									</div>
 									<label>Qualification document:</label>
 									<div class="form-group">
