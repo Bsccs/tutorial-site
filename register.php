@@ -14,7 +14,7 @@ h1 {
 session_start();
 // include Function  file
 include_once('CLASS/function.php');
-
+include 'connect.php';
 require 'PLUGINS/PHPMailer/PHPMailerAutoload.php';
 
 $otp = rand();
@@ -33,6 +33,22 @@ $state=$_POST['state'];
 $phone=$_POST['phone'];
 $age=$_POST['age'];
 $password=$_POST['password'];
+$r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$uemail."'");
+
+    	if (!$r2)
+    {
+        die('Error: ' . mysqli_error($connection));
+    }
+
+	if(mysqli_num_rows($r2) > 0){
+
+    	echo '<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>ALERT!</strong> The email address already exists:Please login to continue!.
+</div>';
+
+	}
+	else{
 
 $_SESSION['user_info'] = array('email' =>$uemail , 'username'=>$uname ,'gender'=>$gender ,'country'=>$country, 'state'=>$state,'phone'=>$phone,'age'=>$age,'password'=>$password );
 
@@ -98,6 +114,7 @@ $mail->Body    = "<html>
   }
 echo "<script>window.location.href='otp.php'</script>";
 
+}
 }
 
 
@@ -269,19 +286,7 @@ function reg_valid()
 
 
 </script>
- <script>
-function checkusername(va) {
-  $.ajax({
-  type: "POST",
-  url: "check_availability.php",
-  data:'username='+va,
-  success: function(data){
-  $("#usernameavailblty").html(data);
-  }
-  });
 
-}
-</script>
 <script type="text/javascript">
 
 if ( window.history.replaceState ) {

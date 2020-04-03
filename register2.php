@@ -10,10 +10,14 @@ h1 {
 }
 
 </style>
+<?php include'includes/login-header.php'?>
+<h1><i class="fas fa-chalkboard-teacher"></i> <U>CONTENT DEVELOPER REGISTRATION</U></h1>
+<div class="container">
 <?php
 session_start();
 // include Function  file
 include_once('CLASS/function.php');
+include 'connect.php';
 
 require 'PLUGINS/PHPMailer/PHPMailerAutoload.php';
 
@@ -38,14 +42,14 @@ $r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$email."'"
 
     	if (!$r2)
     {
-        die('Error: ' . mysqli_error($this->dbh));
+        die('Error: ' . mysqli_error($connection));
     }
 
 	if(mysqli_num_rows($r2) > 0){
 
     	echo '<div class="alert alert-warning alert-dismissible" role="alert">
   <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>Warning!</strong> Better check yourself, you are not looking too good.
+  <strong>ALERT!</strong> The email address already exists:please login to continue!.
 </div>';
 
 	}
@@ -122,8 +126,7 @@ echo "<script>window.location.href='otp2.php'</script>";
 
 
 
-<?php include'includes/login-header.php'?>
-<h1><i class="fas fa-chalkboard-teacher"></i> <U>CONTENT DEVELOPER REGISTRATION</U></h1>
+
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">					
 		</div>
@@ -251,16 +254,10 @@ function reg_valid()
 
 
 </script>
- <script>
-function checkusername(va) {
-  $.ajax({
-  type: "POST",
-  url: "check_availability.php",
-  data:'username='+va,
-  success: function(data){
-  $("#usernameavailblty").html(data);
-  }
-  });
 
+<script type="text/javascript">
+
+if ( window.history.replaceState ) {
+  window.history.replaceState( null, null, window.location.href );
 }
 </script>
