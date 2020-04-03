@@ -41,7 +41,8 @@ public function signin($uemail,$pasword)
 	}
 
 	 public function contentdev_signin($email,$password,$name,$file_name,$expertise)
-{
+{		
+
 	$r2=mysqli_query($this->dbh,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$email','$password','con_developer') ");
 
 	$login_id=mysqli_insert_id($this->dbh);
@@ -50,7 +51,35 @@ public function signin($uemail,$pasword)
 
 	return $r2;
 
+
 }
+public function pass_reset($email,$password)
+{
+	$r3=mysqli_query($this->dbh,"UPDATE `login` SET `password`='$password' WHERE `email`='$email'");
+	return $r3;
+
+
+}
+public function email_exist($email)
+{
+	$query = mysqli_query($dbl, "SELECT * FROM `login` WHERE email='".$email."'");
+
+    if (!$query)
+    {
+        die('Error: ' . mysqli_error($dbl));
+    }
+
+if(mysqli_num_rows($query) > 0){
+
+    echo "email already exists";
+
+}else{
+
+    // do something
+
+}
+}
+
 
 
 }

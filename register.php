@@ -21,6 +21,7 @@ $otp = rand();
 
 // Object creation
 
+
 if(isset($_POST['register-submit']))
 {
 // Posted Values

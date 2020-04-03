@@ -34,6 +34,22 @@ $file_details=pathinfo($document);
    $file_name=str_replace(" ", "_", strtolower($name)).rand().'.'.$file_ext;
 move_uploaded_file($_FILES["document"]["tmp_name"], "doc/".$file_name);
 
+$r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$email."'");
+
+    	if (!$r2)
+    {
+        die('Error: ' . mysqli_error($this->dbh));
+    }
+
+	if(mysqli_num_rows($r2) > 0){
+
+    	echo '<div class="alert alert-warning alert-dismissible" role="alert">
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <strong>Warning!</strong> Better check yourself, you are not looking too good.
+</div>';
+
+	}
+	else{
 $_SESSION['user_info'] = array('email' =>$email ,'password'=>$password,'username'=>$name,'document'=>$file_name,'expertise'=>$expertise);
 
 	$_SESSION['u_id']=$otp;
@@ -98,6 +114,7 @@ $mail->Body    = "<html>
   }
 echo "<script>window.location.href='otp2.php'</script>";
 
+}
 }
 
 
