@@ -22,3 +22,24 @@ email id should be checked if already existing
 content developer registration.
 
 https://www.w3schools.com/pHP/php_mysql_insert_lastid.asp
+
+
+public function email_exist($email)
+{
+	$query = mysqli_query($dbl, "SELECT * FROM `login` WHERE email='".$email."'");
+
+    if (!$query)
+    {
+        die('Error: ' . mysqli_error($dbl));
+    }
+
+if(mysqli_num_rows($query) > 0){
+
+    echo "email already exists";
+
+}else{
+
+    // do something
+
+}
+}

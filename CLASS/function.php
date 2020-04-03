@@ -60,26 +60,6 @@ public function pass_reset($email,$password)
 
 
 }
-public function email_exist($email)
-{
-	$query = mysqli_query($dbl, "SELECT * FROM `login` WHERE email='".$email."'");
-
-    if (!$query)
-    {
-        die('Error: ' . mysqli_error($dbl));
-    }
-
-if(mysqli_num_rows($query) > 0){
-
-    echo "email already exists";
-
-}else{
-
-    // do something
-
-}
-}
-
 
 
 }
