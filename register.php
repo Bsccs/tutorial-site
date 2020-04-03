@@ -8,8 +8,10 @@ h1 {
   margin: 0 0 2% 0;
 
 }
-
 </style>
+<?php include'includes/login-header.php'?>
+<h1><i class="fas fa-user-graduate"></i> <U>STUDENT REGISTRATION</U></h1>
+<div class="container">
 <?php
 session_start();
 // include Function  file
@@ -43,9 +45,9 @@ $r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$uemail."'
 	if(mysqli_num_rows($r2) > 0){
 
     	echo '<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><center>
   <strong>ALERT!</strong> The email address already exists:Please login to continue!.
-</div>';
+</div></center>';
 
 	}
 	else{
@@ -122,8 +124,7 @@ echo "<script>window.location.href='otp.php'</script>";
 
 
 
-<?php include'includes/login-header.php'?>
-<h1><i class="fas fa-user-graduate"></i> <U>STUDENT REGISTRATION</U></h1>
+
 	<div class="row">
 		<div class="col-lg-6 col-lg-offset-3">					
 		</div>
@@ -201,6 +202,8 @@ echo "<script>window.location.href='otp.php'</script>";
 				</div>
 			</div>
 		</div>
+	</div>
+	
 
 <!-- container closing -->
 </div>

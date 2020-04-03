@@ -48,9 +48,9 @@ $r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$email."'"
 	if(mysqli_num_rows($r2) > 0){
 
     	echo '<div class="alert alert-warning alert-dismissible" role="alert">
-  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-  <strong>ALERT!</strong> The email address already exists:please login to continue!.
-</div>';
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button><center>
+  <strong>ALERT!</strong> The email address already exists:Please login to continue!.
+</div></center>';
 
 	}
 	else{
@@ -193,6 +193,7 @@ echo "<script>window.location.href='otp2.php'</script>";
 				</div>
 			</div>
 		</div>
+	</div>
 
 <!-- container closing -->
 </div>
