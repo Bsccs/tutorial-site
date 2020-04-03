@@ -2,7 +2,7 @@
 session_start();
 include_once('CLASS/function.php');
 require 'PLUGINS/PHPMailer/PHPMailerAutoload.php';
-$otp = rand();
+$otp = rand(1000,9999);
 if(isset($_POST['recover-submit']))
 {
 	$email=$_POST['email'];

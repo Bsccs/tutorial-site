@@ -21,7 +21,7 @@ include 'connect.php';
 
 require 'PLUGINS/PHPMailer/PHPMailerAutoload.php';
 
-$otp = rand();
+$otp = rand(1000,9999);
 
 // Object creation
 
