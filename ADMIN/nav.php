@@ -25,29 +25,29 @@
         	<!-- Left side content -->
         	<ul class="navbar-nav">
         		<!-- admin -->
-          		<li class="nav-item"><a href="index.php" class="nav-link">ADMIN</a></li>
+          		<li class="nav-item"><a href="index.php" class="nav-link"><i class="fas fa-home"></i> HOME</a></li>
           		<!-- login details -->   		 
-          		<li class="nav-item"><a href="login_details.php" class="nav-link">LOGINS</a></li>
+          		<li class="nav-item"><a href="login_details.php" class="nav-link"><i class="fas fa-server"></i> LOGINS</a></li>
           		<!-- feedback details -->
           		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
-                aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">FEEDBACK</a>
+                aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-envelope-open-text"></i> FEEDBACK</a>
                 <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                    <li><a href="inspector_feedback.php" class="dropdown-item">inspector</a></li>
-                    <li><a href="student_feedback.php" class="dropdown-item">student</a></li>
+                    <li><a href="inspector_feedback.php" class="dropdown-item">FROM INSPECTOR </a></li>
+                    <li><a href="student_feedback.php" class="dropdown-item">FROM STUDENTS</a></li>
                 </ul>
               </li>
           		<!-- inspector -->
           		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
-          			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">INSPECTOR</a>
+          			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-spell-check"></i> INSPECTOR</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                   <li><a href="insp_details.php" class="dropdown-item">details</a></li>
-              			<li><a href="add_login.php" class="dropdown-item">add-inspector</a></li>
-              			<li><a href="approval_details.php" class="dropdown-item">approval</a></li>
+                   <li><a href="insp_details.php" class="dropdown-item"><i class="fas fa-eye"></i> details</a></li>
+              			<li><a href="add_login.php" class="dropdown-item"><i class="far fa-plus-square"></i> add-inspector</a></li>
+              			<li><a href="approval_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> approval</a></li>
             		</ul>
           		</li>
           		<!-- student -->
            		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
-           			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">STUDENT</a>
+           			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-user-graduate"></i> STUDENT</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               			<li><a href="std_reg.php" class="dropdown-item">details</a></li>
               			<li><a href="stud_request.php" class="dropdown-item">request</a></li>
@@ -55,12 +55,12 @@
           		</li>
           		<!-- CONTENT -->
             	<li class="nav-item dropdown">
-            		<a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle">CONTENT</a>
+            		<a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-chalkboard-teacher"></i> CONTENT DEVELOPER</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               			<li><a href="#" class="dropdown-item">from teachers</a></li>
               			<li><a href="#" class="dropdown-item">to inspector</a></li>
                     <li><a href="develop_details.php" class="dropdown-item">developer</a></li>
-                    <li><a href="keyword.php" class="dropdown-item">keyword</a></li>
+                    <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> keyword</a></li>
             		</ul>
           		</li>
 
@@ -70,7 +70,7 @@
       			<!-- logout -->
             <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          <?php echo $_SESSION['email']; ?>
+          <i class="fas fa-users-cog"></i> <?php echo $_SESSION['email']; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
           <a class="dropdown-item" href="#">profile</a>
