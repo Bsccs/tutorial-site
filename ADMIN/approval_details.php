@@ -1,5 +1,6 @@
 <!-- php -->
-<?php include_once('CLASS/ADMIN.php');
+<?php session_start();
+include_once('CLASS/ADMIN.php');
 $approval_details=new ADMIN();
 $reg=$approval_details->approval_details();
 ?>

@@ -1,5 +1,6 @@
 <!-- php -->
-<?php include_once('../site files/classes/admin.php');
+<?php session_start(); 
+include_once('../site files/classes/admin.php');
 include "connect.php";
   $view_keywords=new admin($connection);
   $reg=$view_keywords->view_keywords();

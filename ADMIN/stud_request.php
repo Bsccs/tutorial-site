@@ -1,5 +1,12 @@
+<?php
+session_start();
+  include_once('../site files/classes/admin.php');
+include "connect.php";
+  $add_expertise=new admin($connection);
+  ?>
 <!-- php -->
-<?php include 'connect.php';
+<?php  
+
 $reg=mysqli_query($connection,"SELECT * FROM `request` order by 'student_id'");
 ?>
 <!-- html part -->

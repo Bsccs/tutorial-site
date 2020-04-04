@@ -1,5 +1,5 @@
 <!-- php -->
-<?php
+<?php session_start();
 	include_once('../site files/classes/admin.php');
 include "connect.php";
   $add_login=new admin($connection);

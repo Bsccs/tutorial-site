@@ -1,3 +1,4 @@
+
 <style type="text/css">
 .navbar-dark{
   background-color: black;
@@ -70,10 +71,20 @@
       		<!-- Right navbar links -->
       		<ul class="order-1 order-md-4 navbar-nav navbar-expand ml-auto">
       			<!-- logout -->
-        		<li class="nav-item">
-        			<a href="logout.php" class="nav-link"><i class="fas fa-sign-out-alt">   LOGOUT</i></a> 
-        		</li>
+            <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          <?php echo $_SESSION['email']; ?>
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="#">Action</a>
+          <a class="dropdown-item" href="#">Another action</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
+        </div>
+      </li>
+
       		</ul>
+
     	</div>
   	</div>
 </nav>
