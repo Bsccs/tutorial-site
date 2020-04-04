@@ -63,10 +63,7 @@
                     <li><a href="keyword.php" class="dropdown-item">keyword</a></li>
             		</ul>
           		</li>
-          		<!-- visit site -->
-          		<li class="nav-item">
-            		<a href="../index.php" class="nav-link">VISIT SITE</a>
-          		</li>
+
             </ul>
       		<!-- Right navbar links -->
       		<ul class="order-1 order-md-4 navbar-nav navbar-expand ml-auto">
@@ -76,8 +73,9 @@
           <?php echo $_SESSION['email']; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Action</a>
-          <a class="dropdown-item" href="#">Another action</a>
+          <a class="dropdown-item" href="#">profile</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="../index.php">visit site</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
         </div>
