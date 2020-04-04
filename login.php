@@ -27,7 +27,7 @@ if(mysqli_num_rows($ret) > 0)
 
          $_SESSION['login_id'] = $row['login_id'];
          $_SESSION['role'] = $row['role'];
-         
+         $_SESSION['email']= $row['email'];         
          
          header("location:ADMIN/index.php");
 

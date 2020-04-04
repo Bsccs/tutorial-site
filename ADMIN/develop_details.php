@@ -1,5 +1,6 @@
 <!-- php -->
-<?php include_once('../site files/classes/admin.php');
+<?php session_start();
+include_once('../site files/classes/admin.php');
 include "connect.php";
   $condev_details=new admin($connection);
   $reg=$condev_details->condev_details();

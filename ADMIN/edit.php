@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 include_once('../site files/classes/admin.php');
 include "connect.php";
 $developer_id=$_GET['d_id'];
