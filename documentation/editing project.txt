@@ -1,0 +1,51 @@
+We can add any content as needed by the users. We can interact with all the users and give them necessary guide as per they desire. Mission of the project is education to all at a small cost, in Englione needsh.s
+
+
+
+https://www.tutorialspoint.com/system_analysis_and_design/system_analysis_and_design_object_oriented_approach.htm
+
+future plans:
+
+1)	Less data consuming: most sites require a high speed internet and big data plans as they use up lot of internet data of the user. 
+
+2)	Should load faster, should be able to make notes or video offline.
+
+3)	Login easily using google or Facebook. 
+
+4)	Live projects -we can work on sample projects, materials available in pdf, inbuilt text editors (we can use online editors without downloading software).
+
+
+2.1.1 DEFINING THE PROBLEM
+The proposed system is been hosted for very low cost and have features learn from scratch tutorials with explanations pretty slow and words are of high quality with all the content freely available for download in high quality from YouTube and materials are freely available for all to download. The site is responsive and can be used for all the application as per desire of the students.
+
+ADMINISTRATOR MODULE
+  Admin should be able to add videos and content, view users, view videos and content accepted by inspector and accept payments and view payment details.
+
+
+INSPECTOR MODULE
+Inspector should be able to view contents provided by admin and make sure it is relevant and if necessary should be able to add to website and else should be able to remove those.
+
+STUDENT MODULE
+Students should be able to view courses(and demo classes) see their progress, attend tests and request for contents not available in this site. To create interest in students badges can be made given based on their progress.
+
+TEACHER MODULE
+Provide content to the admin which are inspected by the inpector and approved or rejected by the same.if approved they get money for the work.
+
+
+
+
+
+Apart from admin and the user there should be an inspector (or pool of inspectors) and content developers who provide the content.
+
+
+Ask father:
+Which person...while writing documentation
+headings and heading numbering
+legal feasibilty
+hardware and software requirements //////user or owner???
+COST ESTIMATION AND SCHEDULING 
+
+Software cost estimation is the process of predicting the effort required to develop a software system.
+
+
+https://www.javatpoint.com/software-cost-estimation
