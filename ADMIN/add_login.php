@@ -5,10 +5,12 @@ include "connect.php";
   $add_login=new admin($connection);
 	if(isset($_POST['button']))
 		{
-  			$Username=$_POST['email'];
+  			$email=$_POST['email'];
   			$Password=$_POST['password'];
+        $name=$_POST['name'];
   			$type=$_POST['type'];
-        $ret=$add_login->add_inspector($Username,$Password,$type);
+
+        $ret=$add_login->add_inspector($email,$Password,$type,$name);
   			echo "<script>alert('details added successfully');</script>";
 			echo"<script>window.history.back();</script>";
 		}
@@ -35,23 +37,29 @@ include "connect.php";
               <form class="form-horizontal-sm" method="post" enctype="multipart/form-data">
                 <div class="card-body">
                   <div class="form-group row">
-                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <label for="email" class="col-sm-2 col-form-label">EMAIL</label>
                     <div class="col-sm-10">
                       <input type="email" name="email" class="form-control" id="email" placeholder="Email"><span id="sp1" style="color:red"></span>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="password" class="col-sm-2 col-form-label">Password</label>
+                    <label for="password" class="col-sm-2 col-form-label">PASSWORD</label>
                     <div class="col-sm-10">
                       <input type="password" name="password" class="form-control" id="password" placeholder="Password"><span id="sp2" style="color:red"></span>
                     </div>
                   </div>
                   <div class="form-group row">
-                    <label for="type" class="col-sm-2 col-form-label">type</label>
+                    <label for="password" class="col-sm-2 col-form-label">NAME</label>
+                    <div class="col-sm-10">
+                      <input type="text" name="name" class="form-control" id="name" placeholder="name"><span id="sp3" style="color:red"></span>
+                    </div>
+                  </div>
+                  <div class="form-group row">
+                    <label for="type" class="col-sm-2 col-form-label">ROLE</label>
                     <div class="col-sm-10">
                       <select class="custom-select" name="type">
-                          <option value="admin">admin</option>
-                          <option value="teacher">teacher</option>
+<!--                           <option value="admin">admin</option>
+                          <option value="teacher">teacher</option> -->
                           <option value="inspector">inspector</option>
                         </select>
                     </div>
@@ -77,6 +85,7 @@ include "connect.php";
   {
     var email=document.getElementById('email').value;
     var Password=document.getElementById('password').value;
+    var name=document.getElementById('name').value;
 
     if(email==""|| email.indexOf('@')==-1 || email.indexOf('.')==-1)
     {
@@ -86,6 +95,12 @@ include "connect.php";
     if(Password=="")
     {
       document.getElementById('sp2').innerHTML="password required";
+ 
+      return false;
+    }
+    if(name=="")
+    {
+      document.getElementById('sp3').innerHTML="name required";
  
       return false;
     }

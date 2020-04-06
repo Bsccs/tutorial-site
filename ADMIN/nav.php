@@ -28,19 +28,12 @@
           		<li class="nav-item"><a href="index.php" class="nav-link"><i class="fas fa-home"></i> HOME</a></li>
           		<!-- login details -->   		 
           		<li class="nav-item"><a href="login_details.php" class="nav-link"><i class="fas fa-server"></i> LOGINS</a></li>
-          		<!-- feedback details -->
-          		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
-                aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-envelope-open-text"></i> FEEDBACK</a>
-                <ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                    <li><a href="inspector_feedback.php" class="dropdown-item">FROM INSPECTOR </a></li>
-                    <li><a href="student_feedback.php" class="dropdown-item">FROM STUDENTS</a></li>
-                </ul>
-              </li>
           		<!-- inspector -->
           		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
           			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-spell-check"></i> INSPECTOR</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-                   <li><a href="insp_details.php" class="dropdown-item"><i class="fas fa-eye"></i> details</a></li>
+                   <li><a href="insp_details.php" class="dropdown-item"><i class="fas fa-eye"></i> DETAILS
+                   <li><a href="inspector_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i>  FEEDBACK</a></li>
               			<li><a href="add_login.php" class="dropdown-item"><i class="far fa-plus-square"></i> add-inspector</a></li>
               			<li><a href="approval_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> approval</a></li>
             		</ul>
@@ -51,6 +44,7 @@
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
               			<li><a href="std_reg.php" class="dropdown-item">details</a></li>
               			<li><a href="stud_request.php" class="dropdown-item">request</a></li>
+                    <li><a href="student_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i> FEEDBACK</a></li>
             		</ul>
           		</li>
           		<!-- CONTENT -->

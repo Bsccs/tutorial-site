@@ -6,7 +6,7 @@ include "connect.php";
   ?>
 <!-- php -->
 <?php 
-$reg=mysqli_query($connection,"SELECT * FROM `login` ORDER BY 'login_id'");
+$reg=mysqli_query($connection,"SELECT * FROM `login` WHERE `role` <> 'admin'");
 
 ?>
 <!-- html part -->
@@ -17,6 +17,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `login` ORDER BY 'login_id'");
       				</div>
     			</div>  			
     	        <!-- Main content opening -->
+              
     	   		<div class="card">
             		<div class="card-header">
               			
@@ -32,7 +33,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `login` ORDER BY 'login_id'");
                   							<th>SL.No</th>
                   							<th>EMAIL</th>
                   							<th>PASSWORD</th>
-                  							<th>TYPE</th>
+                  							<th>ROLE</th>
                   							<th>ACTION</th>
                  						</tr>
                 					</thead>

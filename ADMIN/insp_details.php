@@ -35,9 +35,9 @@ include "connect.php";
                                   <td><?php echo $count; ?></td>
                                   
                                   <td><?php echo $row_data['email']; ?></td>
-                                  <td><?php echo $row_data['name']; ?></td>
+                                  <td><?php echo $row_data['name2']; ?></td>
                                   <div class="btn-group">
-                                      <td><a href="delete3.php?l_id= <?php echo $row_data['inspector_id'];?>"  onclick="return confirm('do you want to delete');"><button      type="button"class="btn btn-secondary">DELETE</button></a>
+                                      <td><a href="delete3.php?l_id= <?php echo $row_data['login_id'];?>"  onclick="return confirm('do you want to delete');"><button type="button"class="btn btn-secondary">DELETE</button></a>
                                       </td>
                                 </div>
 

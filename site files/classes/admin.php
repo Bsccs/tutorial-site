@@ -36,10 +36,13 @@ class admin /*implements payment*/
     }
 
 
-    public function add_inspector($Username,$Password,$type) {
+    public function add_inspector($email,$Password,$type,$name) {
     					
 
-    	     $result=mysqli_query($this->connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$Username','$Password','$type')");
+    	     $result=mysqli_query($this->connection,"INSERT INTO `login`(`email`, `password`, `role`) VALUES ('$email','$Password','$type')");
+             $login_id=mysqli_insert_id($this->connection);
+             $result=mysqli_query($this->connection,"INSERT INTO `inspector`(`login_id`, `name2`) VALUES ('$login_id','$name')");
+
 		     return $result;
         
 
@@ -61,7 +64,7 @@ class admin /*implements payment*/
 
     public function view_inspctr_details()
     {
-    	$result=mysqli_query($this->connection,"SELECT * FROM `inspector` order by inspector_id");
+    	$result=mysqli_query($this->connection,"SELECT `login`.`email`,name2,`login`.`login_id` FROM `inspector` JOIN `login` ON `login`.`login_id`=`inspector`.`login_id`");
 			return $result;
         
 
