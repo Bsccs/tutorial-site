@@ -6,7 +6,7 @@ include "connect.php";
   ?>
 <!-- php -->
 <?php 
-$reg=mysqli_query($connection,"SELECT * FROM `insp_feedback` ORDER BY content_id");
+$reg=mysqli_query($connection,"SELECT `insp_feedback`.`feedback`,`content`.`content_id`,`content`.`content_name` FROM `insp_feedback` JOIN `content`ON `content`.`content_id`= `insp_feedback`.`content_id`");
 
 ?>
 <!-- html part -->
@@ -26,6 +26,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `insp_feedback` ORDER BY content_id
                             <thead>
                               <tr>
                                 <th>SL.No</th>
+                                <th>CONTENT NAME</th>
                                 <th>FEEDBACK</th>
                               </tr>
                             </thead>
@@ -35,6 +36,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `insp_feedback` ORDER BY content_id
                                 { $count++; ?>
                               <tr>
                                   <td><?php echo $count; ?></td>
+                                  <td><?php echo $row_data['content_name']; ?></td>
                                   <td><?php echo $row_data['feedback']; ?></td>               
                               </tr>
                               <?php } ?>

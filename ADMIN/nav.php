@@ -15,7 +15,7 @@
 <nav class="main-header navbar navbar-expand-sm navbar-dark navbar-light">
     <div class="container">
     	<!-- responsive menu icon opening --> 
-        <a href="dashboard.php" class="navbar-brand"></a>      
+        <a href="index.php" class="navbar-brand">HACKERZDOM</a>      
       	<button class="navbar-toggler order-1" type="button" data-toggle="collapse" data-target="#navbarCollapse" 
       		aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
            <span class="navbar-toggler-icon"></span>
@@ -34,8 +34,8 @@
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                    <li><a href="insp_details.php" class="dropdown-item"><i class="fas fa-eye"></i> DETAILS
                    <li><a href="inspector_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i>  FEEDBACK</a></li>
-              			<li><a href="add_login.php" class="dropdown-item"><i class="far fa-plus-square"></i> add-inspector</a></li>
-              			<li><a href="approval_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> approval</a></li>
+              			<li><a href="add_login.php" class="dropdown-item"><i class="far fa-plus-square"></i> ADD INSPECTOR</a></li>
+              			<li><a href="approval_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> APPROVAL</a></li>
             		</ul>
           		</li>
           		<!-- student -->
