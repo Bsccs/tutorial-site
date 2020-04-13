@@ -37,7 +37,7 @@ include "connect.php";
          
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="logout.php"><i class="far fa-user-circle"></i> PROFILE</a>
+          <a class="dropdown-item" href="profile.php"><i class="far fa-user-circle"></i> PROFILE</a>
            <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="logout.php"> <i class="fas fa-sign-out-alt"></i> LOGOUT </a>
         </div>
