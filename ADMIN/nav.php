@@ -35,15 +35,15 @@
                    <li><a href="insp_details.php" class="dropdown-item"><i class="fas fa-eye"></i> DETAILS
                    <li><a href="inspector_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i>  FEEDBACK</a></li>
               			<li><a href="add_login.php" class="dropdown-item"><i class="far fa-plus-square"></i> ADD INSPECTOR</a></li>
-              			<li><a href="approval_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> APPROVAL</a></li>
+              			<li><a href="approval_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> APPROVED CONTENT</a></li>
             		</ul>
           		</li>
           		<!-- student -->
            		<li class="nav-item dropdown"><a id="dropdownSubMenu1" href="#" data-toggle="dropdown" 
            			aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-user-graduate"></i> STUDENT</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              			<li><a href="std_reg.php" class="dropdown-item">details</a></li>
-              			<li><a href="stud_request.php" class="dropdown-item">request</a></li>
+              			<li><a href="std_reg.php" class="dropdown-item"><i class="fas fa-eye"></i> DETAILS</a></li>
+              			<li><a href="stud_request.php" class="dropdown-item"><i class="fas fa-question-circle"></i> REQUEST</a></li>
                     <li><a href="student_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i> FEEDBACK</a></li>
             		</ul>
           		</li>
@@ -51,10 +51,8 @@
             	<li class="nav-item dropdown">
             		<a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-chalkboard-teacher"></i> CONTENT DEVELOPER</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
-              			<li><a href="#" class="dropdown-item">from teachers</a></li>
-              			<li><a href="#" class="dropdown-item">to inspector</a></li>
-                    <li><a href="develop_details.php" class="dropdown-item">developer</a></li>
-                    <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> keyword</a></li>
+                    <li><a href="develop_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> APPROVAL</a></li>
+                    <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> KEYWORD</a></li>
             		</ul>
           		</li>
 
@@ -67,9 +65,9 @@
           <i class="fas fa-users-cog"></i> <?php echo $_SESSION['email']; ?>
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">profile</a>
-          <div class="dropdown-divider"></div>
-          <a class="dropdown-item" href="../index.php">visit site</a>
+          <!-- <a class="dropdown-item" href="#">profile</a> -->
+         <!--  <div class="dropdown-divider"></div> -->
+          <a class="dropdown-item" href="../index.php"><i class="fas fa-glasses"></i> VISIT SITE</a>
           <div class="dropdown-divider"></div>
           <a class="dropdown-item" href="logout.php"><i class="fas fa-sign-out-alt"></i> LOGOUT</a>
         </div>

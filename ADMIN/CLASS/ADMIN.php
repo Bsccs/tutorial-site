@@ -23,7 +23,7 @@ class ADMIN
 			}
 		public function approval_details()
 			{
-				$result=mysqli_query($this->dbh,"SELECT * FROM `approvals` order by 'content id'");
+				$result=mysqli_query($this->dbh,"SELECT * FROM `content` WHERE `inspector_approved`='1'");
 				return $result;
 
 			}

@@ -21,7 +21,11 @@ $reg=$approval_details->approval_details();
                 					<thead>
                 						<tr>
                   							<th>SL.No</th>
-                  							<th>APPROVED</th>
+                  							<th>CONTENT</th>
+                  							<th>CONTENT DEPTH</th>
+                  							<th>PEOPLE VIEWED</th>
+                  							<th>CONTENT LENGTH</th>
+                  							<th>PAYMENT</th>
                  						</tr>
                 					</thead>
                 					<tbody>
@@ -30,7 +34,11 @@ $reg=$approval_details->approval_details();
                   							{ $count++; ?>
                 							<tr>
                   								<td><?php echo $count; ?></td>
-                  								<td><?php echo $row_data['approved']; ?></td>              
+                  								<td><?php echo $row_data['content_name']; ?></td>
+                  								<td><?php echo $row_data['content_depth']; ?></td>
+                  								<td><?php echo $row_data['people_viewed']; ?></td>
+                  								<td><?php echo $row_data['content_length']; ?></td>   
+                  								<td><?php echo $row_data['paid']; ?></td>
                 							</tr>
                     					<?php } ?>
                 					</tbody>
