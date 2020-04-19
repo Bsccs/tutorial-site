@@ -79,7 +79,7 @@ html {
       <div class="container">
         <h2>SIBIN MATHEW</h2>
         <p class="title">BSC COMPUTER SCIENCE</p>
-        <p>PERSON WHO LEADS THIS TEAM</p>
+        
         <p>sibinmathew@gmail.com</p>
         <!-- <p><button class="button">Contact</button></p> -->
       </div>
@@ -92,7 +92,7 @@ html {
       <div class="container">
         <h2>JOBY GEORGE</h2>
         <p class="title">BSC COMPUTER SCIENCE</p>
-        <p>BRAINS BEHIND THIS TEAM</p>
+        
         <p>jobygeorge995@gmail.com</p>
         <!-- <p><button class="button">Contact</button></p> -->
       </div>
@@ -105,7 +105,7 @@ html {
       <div class="container">
         <h2>HEMANT P </h2>
         <p class="title">BSC COMPUTER SCIENCE</p>
-        <p>IDEA BEHIND THIS PROJECT</p>
+        
         <p>hemantphareesh@gmail.com</p>
         <!-- <p><button class="button">Contact</button></p> -->
       </div>
