@@ -35,7 +35,7 @@ echo "Failed to connect to MySQL: " . mysqli_connect_error();
 // Function for signin
 public function signin($uemail,$pasword)
 	{
-	$result=mysqli_query($this->dbh,"SELECT `content_developer`.`name1`,`content_developer`.`developer_id`,`student_details`.`student_id`,`student_details`.`name`,`login`.`login_id`,`role`,`login`.`email`,`login`.`password` FROM `login` LEFT JOIN `student_details` ON `login`.`login_id` = `student_details`.`login_id` LEFT JOIN `content_developer` ON `login`.`login_id` = `content_developer`.`login_id` WHERE `login`.`email` ='".$uemail."'AND `login`.`password` ='".$pasword."'");
+	$result=mysqli_query($this->dbh,"SELECT `inspector`.`name2`,`content_developer`.`name1`,`content_developer`.`developer_id`,`student_details`.`student_id`,`student_details`.`name`,`login`.`login_id`,`role`,`login`.`email`,`login`.`password` FROM `login` LEFT JOIN `student_details` ON `login`.`login_id` = `student_details`.`login_id` LEFT JOIN `content_developer` ON `login`.`login_id` = `content_developer`.`login_id` LEFT JOIN `inspector` ON `login`.`login_id` = `inspector`.`login_id`  WHERE `login`.`email` ='".$uemail."'AND `login`.`password` ='".$pasword."'");
 	
 	return $result;
 	}
