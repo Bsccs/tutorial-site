@@ -5,10 +5,10 @@
 
 
 <h1>Rules:</h1>
-1. Check if the content is genuine.
-2. Check if the headings of video, tags, etc matches the content.
+1. Check if the content is genuine.<br>
+2. Check if the headings of video, tags, etc matches the content.<br>
 3. If the video seems apt based on its learning level (level one, two and three) and the above conditions then you may approve it otherwise may disapprove.
-<br>
+<br><br>
 Please note:
 Not responding to any of the videos will be identified, approving or disapproving inappropriately will 
 also be noted by the admin.
