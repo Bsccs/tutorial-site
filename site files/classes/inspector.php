@@ -16,8 +16,8 @@ class inspector {
 
     public function approve_content($approve_id) {
     	
-    	$result=mysqli_query($this->connection,"UPDATE `content` SET inspector_approved='1' WHERE content_id='$approve_id'");
-        
+    	$result=mysqli_query($this->connection,"UPDATE `content` SET inspector_approved='1' WHERE content_id='$approve_id'");        
+              
              return $result;
     }
 
