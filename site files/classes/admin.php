@@ -19,7 +19,9 @@ class admin /*implements payment*/
     }*/
 
     public function pay() {
-        // TODO implement here
+
+
+        
     }
 
     public function approve_dev($approve_id) {
@@ -92,7 +94,8 @@ class admin /*implements payment*/
     }
 
     public function payment_details() {
-        // TODO implement here
+    $result=mysqli_query($this->connection,"SELECT `trans_num`, `login_id`, `content_id`, `trans_date`, `trans_amount`,`login`.`email` FROM `payment` JOIN `login` WHERE `login`.`login_id`=`payment`.`login_id` ");
+        return $result;
     }
 
    

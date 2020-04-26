@@ -45,6 +45,7 @@
               			<li><a href="std_reg.php" class="dropdown-item"><i class="fas fa-eye"></i> DETAILS</a></li>
               			<li><a href="stud_request.php" class="dropdown-item"><i class="fas fa-question-circle"></i> REQUEST</a></li>
                     <li><a href="student_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i> FEEDBACK</a></li>
+                    <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> KEYWORD</a></li>
             		</ul>
           		</li>
           		<!-- CONTENT -->
@@ -52,7 +53,8 @@
             		<a id="dropdownSubMenu1" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="nav-link dropdown-toggle"><i class="fas fa-chalkboard-teacher"></i> CONTENT DEVELOPER</a>
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                     <li><a href="develop_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> APPROVAL</a></li>
-                    <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> KEYWORD</a></li>
+                    <!-- <li><a href="payment.php" class="dropdown-item"> PAYMENT-DETAILS</a></li> -->
+
             		</ul>
           		</li>
 
