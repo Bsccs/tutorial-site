@@ -46,3 +46,6 @@ if(mysqli_num_rows($query) > 0){
 
 
 qualification document in admin section need view document.
+
+
+any isssue with php mailer first on the less secure app option on gmail.
