@@ -1,5 +1,6 @@
 <?php
- include "session.php";
+session_start();
+ //include "session.php";
  include'includes/header.php'?>
 
 	<!-- main content opening -->
@@ -8,11 +9,11 @@
 
 include "connect.php";
 include "classes/contentdev.php";
-$_SESSION['id']=1;
+$id=$_SESSION['id'];
 if (isset($_POST['submit']))
 { 
 $con_dev=new contentdev($connection);
-$con_dev->suggest($_POST['suggestion'],$_SESSION['id']);
+$con_dev->suggest($_SESSION['id'],$_POST['suggestion'],'$date');
 }
 ?>
 <!DOCTYPE html>
@@ -28,6 +29,7 @@ Please tell us about it briefly(30 words)
 	<textarea name="suggestion" maxlength="155" cols="50" rows="5"></textarea>
 	<br>
 	<input type="submit" name="submit">
+	<a href="INDEX.php"><input type="button" value="CANCEL"></a>
 </form>
 </body>
 </html>

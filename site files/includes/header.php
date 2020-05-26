@@ -15,12 +15,26 @@
 		<!---plugins closing----->
 	</head>
 	<!-- head part closing------>
+	<style type="text/css">
+		
+		body{
+  background-image: url('Programmer-at-computer-illustration1.png');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+
+	}
+
+	</style>
     <!-- body part opening ------>
+   
     <body>
     	<!-- body-wrap-opening -->
     	<div class="body-wrap">
     	<!-- Navbar -->
-        <?php include'../site files/NAVBAR.php' ?>
+        <?php include'NAVBAR.php' ?>
                 <!-- nabar-closing-->
+                
                 <!-- container class opening -->
-                        <div class="container-fluid">
+                        <div class="container">

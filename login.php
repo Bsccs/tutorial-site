@@ -38,6 +38,7 @@ if(mysqli_num_rows($ret) > 0)
              $_SESSION['name1'] = $row['name1'];
              $_SESSION['id']=$row['developer_id'];
              $_SESSION['email']= $row['email']; 
+             /*$_SESSION['admin_aproved']=$row['admin_aproved'];*/
          
          header("location:site files/INDEX.php");
  

@@ -8,7 +8,7 @@ class contentdev {
     	$this->connection=$connection;
     }
 
-    public function suggest($suggestion,$id) {
+    public function suggest($id,$suggestion,$date) {
     	
         //echo $suggestion;
         $date=date('Y/m/d');
@@ -16,7 +16,7 @@ class contentdev {
      //   $id=$_SESSION['id'];
         //	$id=1;
 
-        $sql="INSERT INTO suggestion VALUES('','$id','$suggestion','$date')";
+        $sql="INSERT INTO `suggestion`(`developer_id`, `suggestion`, `date`)VALUES('$id','$suggestion','$date')";
         $result=mysqli_query($this->connection,$sql);
         if($result)
         {	
