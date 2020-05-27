@@ -52,7 +52,7 @@ $r2 = mysqli_query($connection, "SELECT * FROM `login` WHERE email='".$email."'"
 		  $document=$_FILES["document"]["name"];
 $file_details=pathinfo($document);
    $file_ext=$file_details['extension'];
-   $file_name=str_replace(" ", "_", strtolower($name)).rand().'.'.$file_ext;
+   $file_name=str_replace(" ", "_", strtolower($email)).rand(1000,15000).'.'.$file_ext;
 move_uploaded_file($_FILES["document"]["tmp_name"], "doc/".$file_name);
 
 $_SESSION['user_info'] = array('email' =>$email ,'password'=>$password,'username'=>$name,'document'=>$file_name,'expertise'=>$expertise);
