@@ -78,6 +78,8 @@ echo '</pre>';*/
                     <input type="hidden" name="contentid" value="<?php echo $row['content_id']; ?>">
                     <input type="submit" name="submit" value="Feedback"></td>
                     </form><td>
+                <!-- <td><a href="attendtest.php" target="_blank" >Attend test</a>
+                    <?php $_SESSION['tempconid']=$row['content_id']?></td> -->
                	</tr>
                	<br><br>
                	<?php

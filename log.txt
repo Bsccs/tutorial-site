@@ -17,6 +17,8 @@ qef
 
 forgot password
 email id should be checked if already existing
+
+
 session for all pages --approval page
 inspector should view content as per experience
 
