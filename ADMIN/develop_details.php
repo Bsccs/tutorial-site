@@ -42,7 +42,7 @@ include "connect.php";
                                   <td><?php echo $count; ?></td>
                                   
                                   <td><?php echo $row_data['name1']; ?></td>
-                                  <td><a href='<?php echo "../doc/".$row_data['quali_doc']; ?>' target="_blank">open qualification document</a></td>
+                                  <td><a href="../doc/<?php echo $row_data['quali_doc']; ?>"><button      type="button"class="btn btn-outline-dark">OPEN DOCUMENT</button></a></td>
                                   <td><?php echo $row_data['expertise']; ?></td>
 
                                   <td align="center"><?php if($row_data['admin_aproved']==0) { ?><a class="btn btn-block btn-danger btn-sm" href="admin_approve.php?pst_id=<?php echo $row_data['developer_id']; ?>">APPROVE</a><?php } else { ?><a class="btn btn-block btn-success">APPROVED</button> <?php } ?></td> 

@@ -95,10 +95,7 @@ $mail->Body    = "<html>
  
 </style>
 
-
-
-</script>
- <div class="card-body">
+<div class="card-body">
 <form id="emailForm" name="emailForm" method="post" action="" >
 <table width="100%" border="0" align="center" cellpadding="4" cellspacing="1">
 
