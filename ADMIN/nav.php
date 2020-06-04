@@ -54,6 +54,7 @@
             		<ul aria-labelledby="dropdownSubMenu1" class="dropdown-menu border-0 shadow">
                     <li><a href="develop_details.php" class="dropdown-item"><i class="fas fa-thumbs-up"></i> APPROVAL</a></li>
                     <!-- <li><a href="payment.php" class="dropdown-item"> PAYMENT-DETAILS</a></li> -->
+                    <li><a href="topic.php" class="dropdown-item"> TOPICS</a></li>
 
             		</ul>
           		</li>

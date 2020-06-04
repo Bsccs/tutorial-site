@@ -26,7 +26,7 @@ class fbandsugg
        // $_SESSION['sessid']='01';
         $sql="INSERT INTO stud_feedback VALUES(".$_SESSION['id'].",$conid,'$feedback')";
         // if already exists then replace it.
-        echo $sql;
+        //echo $sql;
         $result=mysqli_query($this->connection,$sql);
         if($result)
         {

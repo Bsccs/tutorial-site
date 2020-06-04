@@ -17,7 +17,7 @@ if (isset($_POST['submit']))
  {
 
 
- 		echo $_POST['feedback'];
+ 		//echo $_POST['feedback'];
  		$feedback=new fbandsugg($connection);
 		$feedback->add_feedback($_POST['feedback'],$_SESSION['temp123']);
 

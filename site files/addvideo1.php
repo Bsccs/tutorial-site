@@ -30,13 +30,13 @@ if (isset($_POST['submit']))
 	
 <form action="" method="post">
 Video link:<input type="text" name="embedvideo" />
-<br>
+<!-- <br>
 Enter min 2 tags to specify the area of your video:
 tag1 <input type="text" name="tag1"/>
 tag2 <input type="text" name="tag2"/>
 tag3 <input type="text" name="tag3"/>
 tag4 <input type="text" name="tag4"/>
-<br>
+<br> -->
 Content Depth 
 <select name="depth">
   <option value="2">Advanced</option>
