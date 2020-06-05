@@ -6,12 +6,12 @@ include "connect.php";
   $num_of_content=mysqli_query($connection,"SELECT COUNT(content_name) FROM content");
   $num_of_student=mysqli_query($connection,"SELECT COUNT(email) FROM login WHERE role='student'");
   $num_of_teachers=mysqli_query($connection,"SELECT COUNT(name1) FROM content_developer WHERE admin_aproved='1' ");
-  $num_of_questions=mysqli_query($connection,"SELECT COUNT(question_num) FROM `tests`");
+  $num_of_inspector=mysqli_query($connection,"SELECT COUNT(email) FROM login WHERE role='inspector'");
   
  $r1=mysqli_fetch_assoc($num_of_content);
   $r2=mysqli_fetch_assoc($num_of_student); 
   $r3=mysqli_fetch_assoc($num_of_teachers);
-  $r4=mysqli_fetch_assoc($num_of_questions);
+  $r4=mysqli_fetch_assoc($num_of_inspector);
   $r1=implode($r1);
   $r2=implode($r2);
   $r3=implode($r3);
@@ -101,7 +101,7 @@ h1 {
                   <div class="small-box bg-success">
                     <div class="inner">
                       <h3><?php echo $r4;?></h3>
-                      <p>NUMBER OF TEST QUESTIONS</p>
+                      <p>NUMBER OF INSPECTOR</p>
                     </div>
                     <div class="icon">
                      <i class="far fa-file-alt"></i>
