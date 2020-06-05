@@ -45,7 +45,7 @@ $conid=mysqli_insert_id($this->connection);
     //echo " yes $conid";
     // print_r($tags);
     // echo sizeof($tags);
-
+/*
     if($tags['0']!=NULL) 
     {
       //  echo " t1"; echo $tags[0];
@@ -67,7 +67,7 @@ $conid=mysqli_insert_id($this->connection);
     $sql="INSERT INTO `content_keyword` VALUES (NULL,'$conid','$tags[3]');";
     $result=mysqli_query($this->connection,$sql);
     }
- //   header('Location: ../addvideo.html');
+ //*/  //header('Location: ../addvideo.html');
 
     }
 
