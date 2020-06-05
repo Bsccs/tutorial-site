@@ -26,7 +26,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `request` order by 'student_id'");
                 						<tr>
                   							<th>SL.No</th>
                   							<th>REQUEST</th>
-                                <th>DATE</th>
+                                <!-- <th>DATE</th> -->
                  						</tr>
                 					</thead>
                 					<tbody>
@@ -36,7 +36,7 @@ $reg=mysqli_query($connection,"SELECT * FROM `request` order by 'student_id'");
                 							<tr>
                   								<td><?php echo $count; ?></td>
                   								<td><?php echo $row_data['requests']; ?></td>
-                                  <td><?php echo $row_data['date']; ?></td>                
+                                                 
                 							</tr>
                     					<?php } ?>
                 					</tbody>

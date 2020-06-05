@@ -45,7 +45,7 @@
               			<li><a href="std_reg.php" class="dropdown-item"><i class="fas fa-eye"></i> DETAILS</a></li>
               			<li><a href="stud_request.php" class="dropdown-item"><i class="fas fa-question-circle"></i> REQUEST</a></li>
                     <li><a href="student_feedback.php" class="dropdown-item"><i class="fas fa-envelope-open-text"></i> FEEDBACK</a></li>
-                    <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> KEYWORD</a></li>
+                   <!--  <li><a href="keyword.php" class="dropdown-item"><i class="fas fa-search"></i> KEYWORD</a></li> -->
             		</ul>
           		</li>
           		<!-- CONTENT -->
